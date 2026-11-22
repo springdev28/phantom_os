@@ -1,3 +1,9 @@
+> Prompt 11 update: the published Chromium 159 CI run fails 13 mobile framebuffer
+> cases. The commands below intentionally reproduce that open failure. Chrome 157
+> and Firefox 159 local results remain scoped to their recorded environments.
+> See [the blocker and evidence](chromium-mobile-blocker.md). Do not interpret the
+> earlier clean-source local results as a passing public CI run.
+
 # Reproduce compatibility results
 
 This protocol tests PHANTOM itself. A recognized header, canvas or successful API

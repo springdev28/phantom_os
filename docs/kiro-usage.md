@@ -11,8 +11,9 @@ Kiro session, not proof that Kiro created or used them. No Kiro transcript, task
 result or attributable code commit is currently recorded.
 
 Start with [the Kiro work queue](../.kiro/specs/submission-validation/tasks.md).
-K1 cancellation validation, K2 source-audit hardening, K3 hosted acceptance and
-K4 reproducible runtime rebuild are concrete remaining engineering work. Select
+K1 cancellation validation, K2 source-audit hardening, K3 hosted acceptance,
+K4 reproducible runtime rebuild and K6 the newly reproduced Chromium 159 mobile
+framebuffer defect are concrete remaining engineering work. Select
 one in Kiro, inspect the result, run its tests and record the actual contribution.
 Do not merely ask Kiro to summarize Codex's completed work to imply authorship.
 

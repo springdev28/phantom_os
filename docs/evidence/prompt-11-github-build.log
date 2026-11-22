@@ -1,0 +1,91 @@
+
+> phantom-os@0.1.0 prebuild
+> npm run runtime:assets
+
+
+> phantom-os@0.1.0 runtime:assets
+> npm run audit:sources && node scripts/runtime-assets.mjs
+
+
+> phantom-os@0.1.0 audit:sources
+> python3 scripts/audit-source-bundles.py && python3 tests/source-bundles.test.py
+
+{
+  "sourceArchiveAudit": "passed",
+  "archives": [
+    {
+      "archive": "dosbox-source.tar.gz",
+      "entries": 346,
+      "unpackedBytes": 5586570
+    },
+    {
+      "archive": "emulators-source.zip",
+      "entries": 246,
+      "unpackedBytes": 4042560
+    },
+    {
+      "archive": "freecom-source.zip",
+      "entries": 826,
+      "unpackedBytes": 2821219
+    },
+    {
+      "archive": "mem-source.zip",
+      "entries": 29,
+      "unpackedBytes": 155897
+    },
+    {
+      "archive": "browser-pack-6.1.0.tgz",
+      "entries": 25,
+      "unpackedBytes": 29953
+    },
+    {
+      "archive": "core-js-3.30.0.tgz",
+      "entries": 3338,
+      "unpackedBytes": 1122687
+    },
+    {
+      "archive": "process-0.11.10.tgz",
+      "entries": 7,
+      "unpackedBytes": 15325
+    },
+    {
+      "archive": "zlib-1.2.13.tar.gz",
+      "entries": 284,
+      "unpackedBytes": 4190019
+    }
+  ]
+}
+.......
+----------------------------------------------------------------------
+Ran 7 tests in 0.009s
+
+OK
+
+> phantom-os@0.1.0 build
+> npm run typecheck && vite build
+
+
+> phantom-os@0.1.0 typecheck
+> tsc --noEmit
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 74 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          1.07 kB │ gzip:   0.55 kB
+dist/assets/index-zeG4_nD6.css          32.73 kB │ gzip:   7.41 kB
+dist/assets/probe-labels-DLjXlW5P.js     0.60 kB │ gzip:   0.37 kB
+dist/assets/adapter-BEQ83A4P.js          0.71 kB │ gzip:   0.46 kB
+dist/assets/Configure-COEzXdWf.js        1.77 kB │ gzip:   0.90 kB
+dist/assets/Home-BIYVB0BL.js             4.21 kB │ gzip:   1.66 kB
+dist/assets/errors-CBO-VkZs.js           4.88 kB │ gzip:   2.19 kB
+dist/assets/ProfilePanel-cwLxy5FD.js     7.54 kB │ gzip:   2.51 kB
+dist/assets/Workspace-Bcy_-R0Y.js        7.79 kB │ gzip:   2.46 kB
+dist/assets/adapter-CdJNnPUz.js          8.66 kB │ gzip:   3.75 kB
+dist/assets/Player-DU6waotH.js           8.93 kB │ gzip:   3.21 kB
+dist/assets/Compatibility-BodQZpZm.js    9.87 kB │ gzip:   3.56 kB
+dist/assets/Inspect-_N4gXwgz.js         14.32 kB │ gzip:   4.38 kB
+dist/assets/index-DH_BwhyJ.js          338.18 kB │ gzip: 111.27 kB
+
+✓ built in 627ms

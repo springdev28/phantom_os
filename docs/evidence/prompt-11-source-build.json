@@ -21,5 +21,6 @@
       "bytes": 1504628,
       "sha256": "f312a7b059f6827739f0bfced6813a9d73dbd954d12ab52357cc321d3668b77f"
     }
-  }
+  },
+  "emsdkGitCommit": "63a63e1664d4b656994606c6e334d1e11e4d9f10"
 }

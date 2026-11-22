@@ -1,0 +1,810 @@
+acceptance	Run npm run check	﻿2026-11-22T04:52:30.5080171Z ##[group]Run npm run check
+acceptance	Run npm run check	2026-11-22T04:52:30.5080496Z ^[[36;1mnpm run check^[[0m
+acceptance	Run npm run check	2026-11-22T04:52:30.5106600Z shell: /usr/bin/bash -e {0}
+acceptance	Run npm run check	2026-11-22T04:52:30.5107034Z env:
+acceptance	Run npm run check	2026-11-22T04:52:30.5107265Z   CI: true
+acceptance	Run npm run check	2026-11-22T04:52:30.5107502Z   PLAYWRIGHT_CHANNEL: chromium
+acceptance	Run npm run check	2026-11-22T04:52:30.5107752Z ##[endgroup]
+acceptance	Run npm run check	2026-11-22T04:52:30.5810894Z 
+acceptance	Run npm run check	2026-11-22T04:52:30.5811541Z > phantom-os@0.1.0 check
+acceptance	Run npm run check	2026-11-22T04:52:30.5812569Z > npm run typecheck && npm run lint && npm test && npm run build && npm run test:browser && npm run test:production && npm run test:compatibility
+acceptance	Run npm run check	2026-11-22T04:52:30.5813182Z 
+acceptance	Run npm run check	2026-11-22T04:52:30.6517336Z 
+acceptance	Run npm run check	2026-11-22T04:52:30.6518178Z > phantom-os@0.1.0 typecheck
+acceptance	Run npm run check	2026-11-22T04:52:30.6518537Z > tsc --noEmit
+acceptance	Run npm run check	2026-11-22T04:52:30.6518770Z 
+acceptance	Run npm run check	2026-11-22T04:52:33.6902495Z 
+acceptance	Run npm run check	2026-11-22T04:52:33.6903507Z > phantom-os@0.1.0 lint
+acceptance	Run npm run check	2026-11-22T04:52:33.6903927Z > eslint . --max-warnings 0
+acceptance	Run npm run check	2026-11-22T04:52:33.6904115Z 
+acceptance	Run npm run check	2026-11-22T04:52:37.0593173Z 
+acceptance	Run npm run check	2026-11-22T04:52:37.0594117Z > phantom-os@0.1.0 test
+acceptance	Run npm run check	2026-11-22T04:52:37.0595016Z > vitest run
+acceptance	Run npm run check	2026-11-22T04:52:37.0595173Z 
+acceptance	Run npm run check	2026-11-22T04:52:37.2777616Z 
+acceptance	Run npm run check	2026-11-22T04:52:37.2780762Z ^[[1m^[[30m^[[46m RUN ^[[49m^[[39m^[[22m ^[[36mv5.1.1 ^[[39m^[[90m/home/runner/work/phantom_os/phantom_os^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:37.2781291Z 
+acceptance	Run npm run check	2026-11-22T04:52:37.6721174Z  ^[[32m✓^[[39m src/inspection/selection-inspector.test.ts ^[[2m(^[[22m^[[2m46 tests^[[22m^[[2m)^[[22m^[[32m 102^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:37.7901008Z  ^[[32m✓^[[39m src/workspace/opfs-workspace.test.ts ^[[2m(^[[22m^[[2m20 tests^[[22m^[[2m)^[[22m^[[32m 215^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:37.8797655Z  ^[[32m✓^[[39m src/packages/package-import.test.ts ^[[2m(^[[22m^[[2m43 tests^[[22m^[[2m)^[[22m^[[33m 301^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:37.9010078Z  ^[[32m✓^[[39m src/planner/compatibility-planner.test.ts ^[[2m(^[[22m^[[2m31 tests^[[22m^[[2m)^[[22m^[[32m 37^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:37.9699975Z  ^[[32m✓^[[39m src/runtime/boxedwine/adapter.test.ts ^[[2m(^[[22m^[[2m14 tests^[[22m^[[2m)^[[22m^[[32m 25^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.0308987Z  ^[[32m✓^[[39m src/domain/session-machine.test.ts ^[[2m(^[[22m^[[2m9 tests^[[22m^[[2m)^[[22m^[[32m 7^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.0622434Z  ^[[32m✓^[[39m src/planner/verification.test.ts ^[[2m(^[[22m^[[2m11 tests^[[22m^[[2m)^[[22m^[[32m 31^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.1248539Z  ^[[32m✓^[[39m src/profiles/launch-profile.test.ts ^[[2m(^[[22m^[[2m29 tests^[[22m^[[2m)^[[22m^[[32m 22^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.2116443Z  ^[[32m✓^[[39m src/runtime/registry.test.ts ^[[2m(^[[22m^[[2m6 tests^[[22m^[[2m)^[[22m^[[32m 51^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.2849521Z  ^[[32m✓^[[39m src/runtime/dos/config.test.ts ^[[2m(^[[22m^[[2m17 tests^[[22m^[[2m)^[[22m^[[32m 24^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.3802754Z  ^[[32m✓^[[39m src/security/boundaries.test.ts ^[[2m(^[[22m^[[2m21 tests^[[22m^[[2m)^[[22m^[[32m 35^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.4263290Z  ^[[32m✓^[[39m src/packages/zip-worker-client.test.ts ^[[2m(^[[22m^[[2m4 tests^[[22m^[[2m)^[[22m^[[32m 13^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.5090700Z  ^[[32m✓^[[39m src/intake/local-file.test.ts ^[[2m(^[[22m^[[2m8 tests^[[22m^[[2m)^[[22m^[[32m 13^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.5229952Z  ^[[32m✓^[[39m src/inspection/property.test.ts ^[[2m(^[[22m^[[2m12 tests^[[22m^[[2m)^[[22m^[[32m 290^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.5713903Z  ^[[32m✓^[[39m src/app/compatibility-report.test.ts ^[[2m(^[[22m^[[2m2 tests^[[22m^[[2m)^[[22m^[[32m 8^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.6121430Z  ^[[32m✓^[[39m src/app/logger.test.ts ^[[2m(^[[22m^[[2m2 tests^[[22m^[[2m)^[[22m^[[32m 3^[[2mms^[[22m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.6172504Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.6176238Z ^[[2m Test Files ^[[22m ^[[1m^[[32m16 passed^[[39m^[[22m^[[90m (16)^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.6177540Z ^[[2m      Tests ^[[22m ^[[1m^[[32m275 passed^[[39m^[[22m^[[90m (275)^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:38.6179302Z ^[[2m   Start at ^[[22m 04:52:37
+acceptance	Run npm run check	2026-11-22T04:52:38.6181528Z ^[[2m   Duration ^[[22m 1.33s^[[2m (tests 54%, transform 25%, import 18%, worker 3%)^[[22m
+acceptance	Run npm run check	2026-11-22T04:52:38.6189277Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.6189867Z ^[[2m    Isolate ^[[22m ^[[33m16 workers spawned^[[39m^[[2m · ~94ms startup each (spawn + environment, per file)^[[22m
+acceptance	Run npm run check	2026-11-22T04:52:38.6190693Z ^[[2m            ^[[22m ^[[2mat least ~407ms faster with ^[[22m^[[33misolate: false^[[39m^[[2m — reuses workers across files instead of one per file^[[22m
+acceptance	Run npm run check	2026-11-22T04:52:38.6191327Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.7387808Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.7388709Z > phantom-os@0.1.0 prebuild
+acceptance	Run npm run check	2026-11-22T04:52:38.7389114Z > npm run runtime:assets
+acceptance	Run npm run check	2026-11-22T04:52:38.7389343Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.8119603Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.8120385Z > phantom-os@0.1.0 runtime:assets
+acceptance	Run npm run check	2026-11-22T04:52:38.8120993Z > npm run audit:sources && node scripts/runtime-assets.mjs
+acceptance	Run npm run check	2026-11-22T04:52:38.8121263Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.8817276Z 
+acceptance	Run npm run check	2026-11-22T04:52:38.8818394Z > phantom-os@0.1.0 audit:sources
+acceptance	Run npm run check	2026-11-22T04:52:38.8819121Z > python3 scripts/audit-source-bundles.py && python3 tests/source-bundles.test.py
+acceptance	Run npm run check	2026-11-22T04:52:38.8819397Z 
+acceptance	Run npm run check	2026-11-22T04:52:39.1974781Z {
+acceptance	Run npm run check	2026-11-22T04:52:39.1975327Z   "sourceArchiveAudit": "passed",
+acceptance	Run npm run check	2026-11-22T04:52:39.1975685Z   "archives": [
+acceptance	Run npm run check	2026-11-22T04:52:39.1975948Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1976205Z       "archive": "dosbox-source.tar.gz",
+acceptance	Run npm run check	2026-11-22T04:52:39.1977124Z       "entries": 346,
+acceptance	Run npm run check	2026-11-22T04:52:39.1977402Z       "unpackedBytes": 5586570
+acceptance	Run npm run check	2026-11-22T04:52:39.1977775Z     },
+acceptance	Run npm run check	2026-11-22T04:52:39.1978043Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1978293Z       "archive": "emulators-source.zip",
+acceptance	Run npm run check	2026-11-22T04:52:39.1978573Z       "entries": 246,
+acceptance	Run npm run check	2026-11-22T04:52:39.1978850Z       "unpackedBytes": 4042560
+acceptance	Run npm run check	2026-11-22T04:52:39.1979100Z     },
+acceptance	Run npm run check	2026-11-22T04:52:39.1979341Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1979580Z       "archive": "freecom-source.zip",
+acceptance	Run npm run check	2026-11-22T04:52:39.1979846Z       "entries": 826,
+acceptance	Run npm run check	2026-11-22T04:52:39.1980117Z       "unpackedBytes": 2821219
+acceptance	Run npm run check	2026-11-22T04:52:39.1980359Z     },
+acceptance	Run npm run check	2026-11-22T04:52:39.1980594Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1980826Z       "archive": "mem-source.zip",
+acceptance	Run npm run check	2026-11-22T04:52:39.1981087Z       "entries": 29,
+acceptance	Run npm run check	2026-11-22T04:52:39.1981355Z       "unpackedBytes": 155897
+acceptance	Run npm run check	2026-11-22T04:52:39.1981597Z     },
+acceptance	Run npm run check	2026-11-22T04:52:39.1981807Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1982075Z       "archive": "browser-pack-6.1.0.tgz",
+acceptance	Run npm run check	2026-11-22T04:52:39.1982357Z       "entries": 25,
+acceptance	Run npm run check	2026-11-22T04:52:39.1982619Z       "unpackedBytes": 29953
+acceptance	Run npm run check	2026-11-22T04:52:39.1982865Z     },
+acceptance	Run npm run check	2026-11-22T04:52:39.1983075Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1983305Z       "archive": "core-js-3.30.0.tgz",
+acceptance	Run npm run check	2026-11-22T04:52:39.1983599Z       "entries": 3338,
+acceptance	Run npm run check	2026-11-22T04:52:39.1983880Z       "unpackedBytes": 1122687
+acceptance	Run npm run check	2026-11-22T04:52:39.1984121Z     },
+acceptance	Run npm run check	2026-11-22T04:52:39.1984331Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1984565Z       "archive": "process-0.11.10.tgz",
+acceptance	Run npm run check	2026-11-22T04:52:39.1984819Z       "entries": 7,
+acceptance	Run npm run check	2026-11-22T04:52:39.1985120Z       "unpackedBytes": 15325
+acceptance	Run npm run check	2026-11-22T04:52:39.1985359Z     },
+acceptance	Run npm run check	2026-11-22T04:52:39.1985566Z     {
+acceptance	Run npm run check	2026-11-22T04:52:39.1985792Z       "archive": "zlib-1.2.13.tar.gz",
+acceptance	Run npm run check	2026-11-22T04:52:39.1986036Z       "entries": 284,
+acceptance	Run npm run check	2026-11-22T04:52:39.1986328Z       "unpackedBytes": 4190019
+acceptance	Run npm run check	2026-11-22T04:52:39.1986600Z     }
+acceptance	Run npm run check	2026-11-22T04:52:39.1986955Z   ]
+acceptance	Run npm run check	2026-11-22T04:52:39.1987177Z }
+acceptance	Run npm run check	2026-11-22T04:52:39.2837582Z .......
+acceptance	Run npm run check	2026-11-22T04:52:39.2838573Z ----------------------------------------------------------------------
+acceptance	Run npm run check	2026-11-22T04:52:39.2839419Z Ran 7 tests in 0.004s
+acceptance	Run npm run check	2026-11-22T04:52:39.2839653Z 
+acceptance	Run npm run check	2026-11-22T04:52:39.2839819Z OK
+acceptance	Run npm run check	2026-11-22T04:52:39.5978462Z 
+acceptance	Run npm run check	2026-11-22T04:52:39.5979268Z > phantom-os@0.1.0 build
+acceptance	Run npm run check	2026-11-22T04:52:39.5979666Z > npm run typecheck && vite build
+acceptance	Run npm run check	2026-11-22T04:52:39.5979823Z 
+acceptance	Run npm run check	2026-11-22T04:52:39.6641973Z 
+acceptance	Run npm run check	2026-11-22T04:52:39.6642847Z > phantom-os@0.1.0 typecheck
+acceptance	Run npm run check	2026-11-22T04:52:39.6643199Z > tsc --noEmit
+acceptance	Run npm run check	2026-11-22T04:52:39.6643347Z 
+acceptance	Run npm run check	2026-11-22T04:52:42.7247048Z ^[[36mvite v8.3.8 ^[[32mbuilding client environment for production...^[[36m^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:42.7349395Z transforming...
+acceptance	Run npm run check	2026-11-22T04:52:42.8024782Z ✓ 74 modules transformed.
+acceptance	Run npm run check	2026-11-22T04:52:42.8346740Z rendering chunks...
+acceptance	Run npm run check	2026-11-22T04:52:42.8796149Z computing gzip size...
+acceptance	Run npm run check	2026-11-22T04:52:42.8846181Z dist/index.html                          1.07 kB │ gzip:   0.55 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8847107Z dist/assets/index-zeG4_nD6.css          32.73 kB │ gzip:   7.41 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8848470Z dist/assets/probe-labels-DLjXlW5P.js     0.60 kB │ gzip:   0.37 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8849194Z dist/assets/adapter-BEQ83A4P.js          0.71 kB │ gzip:   0.46 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8849898Z dist/assets/Configure-COEzXdWf.js        1.77 kB │ gzip:   0.90 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8850566Z dist/assets/Home-BIYVB0BL.js             4.21 kB │ gzip:   1.66 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8851058Z dist/assets/errors-CBO-VkZs.js           4.88 kB │ gzip:   2.19 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8852525Z dist/assets/ProfilePanel-cwLxy5FD.js     7.54 kB │ gzip:   2.51 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8853164Z dist/assets/Workspace-Bcy_-R0Y.js        7.79 kB │ gzip:   2.46 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8853824Z dist/assets/adapter-CdJNnPUz.js          8.66 kB │ gzip:   3.75 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8854501Z dist/assets/Player-DU6waotH.js           8.93 kB │ gzip:   3.21 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8855071Z dist/assets/Compatibility-BodQZpZm.js    9.87 kB │ gzip:   3.56 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8855666Z dist/assets/Inspect-_N4gXwgz.js         14.32 kB │ gzip:   4.38 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8857380Z dist/assets/index-DH_BwhyJ.js          338.18 kB │ gzip: 111.27 kB
+acceptance	Run npm run check	2026-11-22T04:52:42.8857622Z 
+acceptance	Run npm run check	2026-11-22T04:52:42.8857893Z ^[[32m✓ built in 159ms^[[39m
+acceptance	Run npm run check	2026-11-22T04:52:42.9704525Z 
+acceptance	Run npm run check	2026-11-22T04:52:42.9705335Z > phantom-os@0.1.0 test:browser
+acceptance	Run npm run check	2026-11-22T04:52:42.9705693Z > playwright test
+acceptance	Run npm run check	2026-11-22T04:52:42.9705835Z 
+acceptance	Run npm run check	2026-11-22T04:52:43.9629879Z [WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] 
+acceptance	Run npm run check	2026-11-22T04:52:43.9630773Z [WebServer] ----------------------------------------------------------------------
+acceptance	Run npm run check	2026-11-22T04:52:43.9631456Z [WebServer] Ran 7 tests in 0.004s
+acceptance	Run npm run check	2026-11-22T04:52:43.9631819Z [WebServer] 
+acceptance	Run npm run check	2026-11-22T04:52:43.9632136Z [WebServer] OK
+acceptance	Run npm run check	2026-11-22T04:52:45.7966960Z 
+acceptance	Run npm run check	2026-11-22T04:52:45.7967715Z Running 92 tests using 2 workers
+acceptance	Run npm run check	2026-11-22T04:52:45.7968223Z 
+acceptance	Run npm run check	2026-11-22T04:52:51.1400350Z   ✓   1 [desktop-chrome] › tests/browser/accessibility.spec.ts:31:1 › keyboard flow, readable contrast, reduced motion and 200% layout (3.0s)
+acceptance	Run npm run check	2026-11-22T04:52:51.2028550Z   ✓   2 [desktop-chrome] › tests/browser/analyzer.spec.ts:20:1 › different selected bytes produce distinct reports with inspectable evidence (3.0s)
+acceptance	Run npm run check	2026-11-22T04:52:52.1454394Z   ✓   4 [desktop-chrome] › tests/browser/analyzer.spec.ts:83:1 › corrupted data leaves a readable diagnostic and supports a fresh selection (919ms)
+acceptance	Run npm run check	2026-11-22T04:52:52.7969585Z   ✓   5 [desktop-chrome] › tests/browser/analyzer.spec.ts:96:1 › a File read failure exposes a fixed human-readable error without private exception text (640ms)
+acceptance	Run npm run check	2026-11-22T04:52:54.3659126Z   ✓   3 [desktop-chrome] › tests/browser/analyzer.spec.ts:53:1 › all fixture analysis remains local, without page/worker requests or persisted reports (3.2s)
+acceptance	Run npm run check	2026-11-22T04:52:56.9843998Z   ✓   6 [desktop-chrome] › tests/browser/boxedwine-disabled.spec.ts:17:1 › PE32 and NE preserve reports/profiles while every Windows launch path stays disabled (4.1s)
+acceptance	Run npm run check	2026-11-22T04:52:59.3656599Z   ✓   7 [desktop-chrome] › tests/browser/boxedwine-disabled.spec.ts:74:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest (5.0s)
+acceptance	Run npm run check	2026-11-22T04:53:09.2269284Z   ✓   8 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (12.2s)
+acceptance	Run npm run check	2026-11-22T04:53:17.3632721Z   ✓  10 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch (8.1s)
+acceptance	Run npm run check	2026-11-22T04:53:17.5203606Z   ✓   9 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch (18.1s)
+acceptance	Run npm run check	2026-11-22T04:53:23.5810976Z   ✓  11 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker (6.2s)
+acceptance	Run npm run check	2026-11-22T04:53:25.0561682Z   ✓  12 [desktop-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeDOS MEM (7.5s)
+acceptance	Run npm run check	2026-11-22T04:53:26.5345584Z   ✓  14 [desktop-chrome] › tests/browser/launch-journey.spec.ts:74:1 › unsupported architecture has a copyable report and a denied-clipboard fallback (1.5s)
+acceptance	Run npm run check	2026-11-22T04:53:29.9290836Z   ✓  15 [desktop-chrome] › tests/browser/launch-journey.spec.ts:104:1 › file drop, folder-drop guidance, picker fallback and large-file feedback (3.4s)
+acceptance	Run npm run check	2026-11-22T04:53:30.3979631Z   ✓  13 [desktop-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeCOM (6.8s)
+acceptance	Run npm run check	2026-11-22T04:53:33.0125824Z   ✓  17 [desktop-chrome] › tests/browser/packages.spec.ts:20:1 › real ZIP picker preserves the mixed package and asks for an explicit executable (2.6s)
+acceptance	Run npm run check	2026-11-22T04:53:34.6877571Z   ✓  18 [desktop-chrome] › tests/browser/packages.spec.ts:46:1 › native folder input preserves relative paths including empty resources (1.7s)
+acceptance	Run npm run check	2026-11-22T04:53:36.0296367Z   ✓  19 [desktop-chrome] › tests/browser/packages.spec.ts:68:1 › empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem (1.3s)
+acceptance	Run npm run check	2026-11-22T04:53:37.0168293Z   ✓  16 [desktop-chrome] › tests/browser/launch-journey.spec.ts:133:1 › runtime download progress is visible and full-screen denial preserves the real session (7.1s)
+acceptance	Run npm run check	2026-11-22T04:53:37.3542577Z   ✓  20 [desktop-chrome] › tests/browser/packages.spec.ts:83:1 › package explorer paginates and does not silently expand a nested archive (1.3s)
+acceptance	Run npm run check	2026-11-22T04:53:37.7883041Z   ✓  21 [desktop-chrome] › tests/browser/packages.spec.ts:100:1 › real worker preserves every file hash at the adapter package boundary (747ms)
+acceptance	Run npm run check	2026-11-22T04:53:38.3339498Z   ✓  22 [desktop-chrome] › tests/browser/packages.spec.ts:125:1 › page and worker traffic carry no names or bytes; no storage or script execution occurs (965ms)
+acceptance	Run npm run check	2026-11-22T04:53:40.1137248Z   ✓  24 [desktop-chrome] › tests/browser/planner.spec.ts:27:1 › header-based candidate, keyboard override and reset never enable Run (1.8s)
+acceptance	Run npm run check	2026-11-22T04:53:41.3230300Z   ✓  23 [desktop-chrome] › tests/browser/packages.spec.ts:153:1 › cancelling a real extraction terminates its worker and a fresh package still imports (3.5s)
+acceptance	Run npm run check	2026-11-22T04:53:41.7300250Z   ✓  25 [desktop-chrome] › tests/browser/planner.spec.ts:44:1 › ambiguous ZIP asks for entrypoint, then replans for the chosen executable (1.6s)
+acceptance	Run npm run check	2026-11-22T04:53:43.2934709Z   ✓  26 [desktop-chrome] › tests/browser/planner.spec.ts:62:1 › imports missing dependencies, edits limits and exports a local JSON profile without content (1.9s)
+acceptance	Run npm run check	2026-11-22T04:53:45.2690237Z   ✓  28 [desktop-chrome] › tests/browser/planner.spec.ts:134:1 › invalid imports preserve a working profile, reject forged verification and recover on reset (2.0s)
+acceptance	Run npm run check	2026-11-22T04:53:46.4682558Z   ✓  27 [desktop-chrome] › tests/browser/planner.spec.ts:101:1 › unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export (4.7s)
+acceptance	Run npm run check	2026-11-22T04:53:47.3911827Z   ✓  29 [desktop-chrome] › tests/browser/planner.spec.ts:154:1 › a profile can be imported before files and reload clears its temporary state (2.1s)
+acceptance	Run npm run check	2026-11-22T04:53:49.0807162Z   ✓  30 [desktop-chrome] › tests/browser/planner.spec.ts:167:1 › COM confirmation remains separate from static recognition, and corrupt input remains invalid (2.6s)
+acceptance	Run npm run check	2026-11-22T04:53:49.7008014Z   ✓  31 [desktop-chrome] › tests/browser/security.spec.ts:8:1 › hostile PE, disk and ZIP inputs stay inert and recover without leaking metadata (2.2s)
+acceptance	Run npm run check	2026-11-22T04:53:57.9559786Z   ✓  32 [desktop-chrome] › tests/browser/security.spec.ts:40:1 › refresh during actual DOS execution destroys the worker and does not restore temporary files (8.8s)
+acceptance	Run npm run check	2026-11-22T04:54:02.8719965Z   ✓  33 [desktop-chrome] › tests/browser/security.spec.ts:58:1 › silent real-worker termination is detected and a fresh session recovers (13.1s)
+acceptance	Run npm run check	2026-11-22T04:54:04.1099403Z   ✓  34 [desktop-chrome] › tests/browser/security.spec.ts:73:1 › storage denial preserves a temporary real session and explicit export without host permissions (6.1s)
+acceptance	Run npm run check	2026-11-22T04:54:07.2282442Z   ✓  36 [desktop-chrome] › tests/browser/smoke.spec.ts:17:1 › selects a local file, checks access, explains unavailable execution and clears the workspace (3.1s)
+acceptance	Run npm run check	2026-11-22T04:54:09.4764085Z   ✓  37 [desktop-chrome] › tests/browser/smoke.spec.ts:53:1 › all six screens have accessible navigation, direct links and no horizontal overflow (2.2s)
+acceptance	Run npm run check	2026-11-22T04:54:10.3893371Z   ✓  38 [desktop-chrome] › tests/browser/smoke.spec.ts:72:1 › keyboard selection is reachable and navigation transfers focus to the new heading (905ms)
+acceptance	Run npm run check	2026-11-22T04:54:11.3249695Z   ✓  39 [desktop-chrome] › tests/browser/smoke.spec.ts:87:1 › a reload discards the temporary selection and selecting the same file again works (922ms)
+acceptance	Run npm run check	2026-11-22T04:54:12.2233571Z   ✓  40 [desktop-chrome] › tests/browser/smoke.spec.ts:100:1 › an empty file shows a recoverable error instead of a compatibility result (890ms)
+acceptance	Run npm run check	2026-11-22T04:54:13.6405400Z   ✓  41 [desktop-chrome] › tests/browser/smoke.spec.ts:110:1 › loading is cancellable and an old read cannot revive a cleared selection (1.4s)
+acceptance	Run npm run check	2026-11-22T04:54:28.3329288Z   ✓  42 [desktop-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete (14.7s)
+acceptance	Run npm run check	2026-11-22T04:54:33.2123238Z   ✓  43 [desktop-chrome] › tests/browser/workspace.spec.ts:85:1 › profile-only save requires original software and is isolated by origin (4.9s)
+acceptance	Run npm run check	2026-11-22T04:54:37.3625124Z   ✓  44 [desktop-chrome] › tests/browser/workspace.spec.ts:107:1 › quota failure keeps the saved workspace and corrupt stored bytes cannot launch (4.1s)
+acceptance	Run npm run check	2026-11-22T04:54:40.8762238Z   ✓  45 [desktop-chrome] › tests/browser/workspace.spec.ts:132:59 › denied OPFS retains temporary inspection and profile export (3.5s)
+acceptance	Run npm run check	2026-11-22T04:54:44.3956671Z   ✓  46 [desktop-chrome] › tests/browser/workspace.spec.ts:132:59 › unavailable OPFS retains temporary inspection and profile export (3.5s)
+acceptance	Run npm run check	2026-11-22T04:54:48.9671783Z   ✓  47 [mobile-chrome] › tests/browser/accessibility.spec.ts:31:1 › keyboard flow, readable contrast, reduced motion and 200% layout (4.0s)
+acceptance	Run npm run check	2026-11-22T04:54:51.2079551Z   ✓  48 [mobile-chrome] › tests/browser/analyzer.spec.ts:20:1 › different selected bytes produce distinct reports with inspectable evidence (2.2s)
+acceptance	Run npm run check	2026-11-22T04:54:53.8513525Z   ✓  49 [mobile-chrome] › tests/browser/analyzer.spec.ts:53:1 › all fixture analysis remains local, without page/worker requests or persisted reports (2.6s)
+acceptance	Run npm run check	2026-11-22T04:54:54.7053731Z   ✓  50 [mobile-chrome] › tests/browser/analyzer.spec.ts:83:1 › corrupted data leaves a readable diagnostic and supports a fresh selection (837ms)
+acceptance	Run npm run check	2026-11-22T04:54:55.4224583Z   ✓  51 [mobile-chrome] › tests/browser/analyzer.spec.ts:96:1 › a File read failure exposes a fixed human-readable error without private exception text (704ms)
+acceptance	Run npm run check	2026-11-22T04:54:59.8968580Z   ✓  52 [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:17:1 › PE32 and NE preserve reports/profiles while every Windows launch path stays disabled (4.4s)
+acceptance	Run npm run check	2026-11-22T04:55:06.1612114Z   ✓  35 [desktop-chrome] › tests/browser/security.spec.ts:97:1 › the one-minute configured deadline stops a real guest, with no implicit save (1.1m)
+acceptance	Run npm run check	2026-11-22T04:55:10.8827372Z   ✘  53 [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:74:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest (10.6s)
+acceptance	Run npm run check	2026-11-22T04:55:16.1020399Z   ✘  54 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (9.1s)
+acceptance	Run npm run check	2026-11-22T04:55:20.8508515Z   ✘  55 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch (9.2s)
+acceptance	Run npm run check	2026-11-22T04:55:25.7397127Z   ✘  56 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch (8.9s)
+acceptance	Run npm run check	2026-11-22T04:55:30.5045350Z   ✘  57 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker (8.9s)
+acceptance	Run npm run check	2026-11-22T04:55:35.7346390Z   ✘  58 [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeDOS MEM (9.2s)
+acceptance	Run npm run check	2026-11-22T04:55:37.7132721Z   ✓  60 [mobile-chrome] › tests/browser/launch-journey.spec.ts:74:1 › unsupported architecture has a copyable report and a denied-clipboard fallback (1.5s)
+acceptance	Run npm run check	2026-11-22T04:55:40.0320314Z   ✘  59 [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeCOM (8.8s)
+acceptance	Run npm run check	2026-11-22T04:55:41.1972614Z   ✓  61 [mobile-chrome] › tests/browser/launch-journey.spec.ts:104:1 › file drop, folder-drop guidance, picker fallback and large-file feedback (3.5s)
+acceptance	Run npm run check	2026-11-22T04:55:42.8810588Z   ✓  63 [mobile-chrome] › tests/browser/packages.spec.ts:20:1 › real ZIP picker preserves the mixed package and asks for an explicit executable (1.6s)
+acceptance	Run npm run check	2026-11-22T04:55:44.5231221Z   ✓  64 [mobile-chrome] › tests/browser/packages.spec.ts:46:1 › native folder input preserves relative paths including empty resources (1.6s)
+acceptance	Run npm run check	2026-11-22T04:55:45.8043032Z   ✓  65 [mobile-chrome] › tests/browser/packages.spec.ts:68:1 › empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem (1.3s)
+acceptance	Run npm run check	2026-11-22T04:55:46.8101206Z   ✓  66 [mobile-chrome] › tests/browser/packages.spec.ts:83:1 › package explorer paginates and does not silently expand a nested archive (988ms)
+acceptance	Run npm run check	2026-11-22T04:55:47.4039288Z   ✓  67 [mobile-chrome] › tests/browser/packages.spec.ts:100:1 › real worker preserves every file hash at the adapter package boundary (571ms)
+acceptance	Run npm run check	2026-11-22T04:55:48.2769598Z   ✓  68 [mobile-chrome] › tests/browser/packages.spec.ts:125:1 › page and worker traffic carry no names or bytes; no storage or script execution occurs (855ms)
+acceptance	Run npm run check	2026-11-22T04:55:51.6244708Z   ✓  69 [mobile-chrome] › tests/browser/packages.spec.ts:153:1 › cancelling a real extraction terminates its worker and a fresh package still imports (3.3s)
+acceptance	Run npm run check	2026-11-22T04:55:51.7738410Z   ✘  62 [mobile-chrome] › tests/browser/launch-journey.spec.ts:133:1 › runtime download progress is visible and full-screen denial preserves the real session (10.9s)
+acceptance	Run npm run check	2026-11-22T04:55:53.1122283Z   ✓  70 [mobile-chrome] › tests/browser/planner.spec.ts:27:1 › header-based candidate, keyboard override and reset never enable Run (1.5s)
+acceptance	Run npm run check	2026-11-22T04:55:54.2170973Z   ✓  71 [mobile-chrome] › tests/browser/planner.spec.ts:44:1 › ambiguous ZIP asks for entrypoint, then replans for the chosen executable (1.8s)
+acceptance	Run npm run check	2026-11-22T04:55:55.1169193Z   ✓  72 [mobile-chrome] › tests/browser/planner.spec.ts:62:1 › imports missing dependencies, edits limits and exports a local JSON profile without content (2.0s)
+acceptance	Run npm run check	2026-11-22T04:55:57.0009638Z   ✓  74 [mobile-chrome] › tests/browser/planner.spec.ts:134:1 › invalid imports preserve a working profile, reject forged verification and recover on reset (1.9s)
+acceptance	Run npm run check	2026-11-22T04:55:58.4150363Z   ✓  73 [mobile-chrome] › tests/browser/planner.spec.ts:101:1 › unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export (4.2s)
+acceptance	Run npm run check	2026-11-22T04:55:59.7444163Z   ✓  75 [mobile-chrome] › tests/browser/planner.spec.ts:154:1 › a profile can be imported before files and reload clears its temporary state (2.7s)
+acceptance	Run npm run check	2026-11-22T04:56:01.5343001Z   ✓  76 [mobile-chrome] › tests/browser/planner.spec.ts:167:1 › COM confirmation remains separate from static recognition, and corrupt input remains invalid (3.1s)
+acceptance	Run npm run check	2026-11-22T04:56:01.9654792Z   ✓  77 [mobile-chrome] › tests/browser/security.spec.ts:8:1 › hostile PE, disk and ZIP inputs stay inert and recover without leaking metadata (2.1s)
+acceptance	Run npm run check	2026-11-22T04:56:11.3526151Z   ✘  78 [mobile-chrome] › tests/browser/security.spec.ts:40:1 › refresh during actual DOS execution destroys the worker and does not restore temporary files (9.3s)
+acceptance	Run npm run check	2026-11-22T04:56:11.5785124Z   ✘  79 [mobile-chrome] › tests/browser/security.spec.ts:58:1 › silent real-worker termination is detected and a fresh session recovers (9.4s)
+acceptance	Run npm run check	2026-11-22T04:56:21.4595902Z   ✘  81 [mobile-chrome] › tests/browser/security.spec.ts:97:1 › the one-minute configured deadline stops a real guest, with no implicit save (8.9s)
+acceptance	Run npm run check	2026-11-22T04:56:21.4955507Z   ✘  80 [mobile-chrome] › tests/browser/security.spec.ts:73:1 › storage denial preserves a temporary real session and explicit export without host permissions (9.3s)
+acceptance	Run npm run check	2026-11-22T04:56:25.6075217Z   ✓  83 [mobile-chrome] › tests/browser/smoke.spec.ts:53:1 › all six screens have accessible navigation, direct links and no horizontal overflow (3.6s)
+acceptance	Run npm run check	2026-11-22T04:56:26.1422625Z   ✓  82 [mobile-chrome] › tests/browser/smoke.spec.ts:17:1 › selects a local file, checks access, explains unavailable execution and clears the workspace (4.1s)
+acceptance	Run npm run check	2026-11-22T04:56:26.5993555Z   ✓  84 [mobile-chrome] › tests/browser/smoke.spec.ts:72:1 › keyboard selection is reachable and navigation transfers focus to the new heading (978ms)
+acceptance	Run npm run check	2026-11-22T04:56:27.2687572Z   ✓  85 [mobile-chrome] › tests/browser/smoke.spec.ts:87:1 › a reload discards the temporary selection and selecting the same file again works (1.1s)
+acceptance	Run npm run check	2026-11-22T04:56:27.7125217Z   ✓  86 [mobile-chrome] › tests/browser/smoke.spec.ts:100:1 › an empty file shows a recoverable error instead of a compatibility result (1.1s)
+acceptance	Run npm run check	2026-11-22T04:56:28.9217824Z   ✓  87 [mobile-chrome] › tests/browser/smoke.spec.ts:110:1 › loading is cancellable and an old read cannot revive a cleared selection (1.6s)
+acceptance	Run npm run check	2026-11-22T04:56:34.2958212Z   ✓  89 [mobile-chrome] › tests/browser/workspace.spec.ts:85:1 › profile-only save requires original software and is isolated by origin (5.3s)
+acceptance	Run npm run check	2026-11-22T04:56:37.1817222Z   ✘  88 [mobile-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete (9.2s)
+acceptance	Run npm run check	2026-11-22T04:56:38.4306160Z   ✓  90 [mobile-chrome] › tests/browser/workspace.spec.ts:107:1 › quota failure keeps the saved workspace and corrupt stored bytes cannot launch (4.1s)
+acceptance	Run npm run check	2026-11-22T04:56:41.2170950Z   ✓  91 [mobile-chrome] › tests/browser/workspace.spec.ts:132:59 › denied OPFS retains temporary inspection and profile export (3.5s)
+acceptance	Run npm run check	2026-11-22T04:56:42.5155271Z   ✓  92 [mobile-chrome] › tests/browser/workspace.spec.ts:132:59 › unavailable OPFS retains temporary inspection and profile export (4.1s)
+acceptance	Run npm run check	2026-11-22T04:56:42.5993208Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6000062Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6008654Z   1) [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:74:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest 
+acceptance	Run npm run check	2026-11-22T04:56:42.6009429Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6009625Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6009965Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6010353Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6010940Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6011282Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6011581Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6011762Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6011864Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6012575Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6013560Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6014820Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6015650Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6015882Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6015890Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6016063Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6016316Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6016999Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6017991Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6018672Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6019096Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6020002Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6020385Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6020902Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6021491Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6022282Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/boxedwine-disabled.spec.ts:100:3
+acceptance	Run npm run check	2026-11-22T04:56:42.6023065Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6023640Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6024466Z     test-results/boxedwine-disabled-Windows-ad228-ill-launches-the-real-guest-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6025287Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6025658Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6026183Z     Error Context: test-results/boxedwine-disabled-Windows-ad228-ill-launches-the-real-guest-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6026685Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6027459Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6028084Z     test-results/boxedwine-disabled-Windows-ad228-ill-launches-the-real-guest-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6028569Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6028674Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6029083Z         npx playwright show-trace test-results/boxedwine-disabled-Windows-ad228-ill-launches-the-real-guest-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6029517Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6029783Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6030027Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6030577Z   2) [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch 
+acceptance	Run npm run check	2026-11-22T04:56:42.6030981Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6031145Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6031315Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6031609Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6032055Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6032300Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6032640Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6032822Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6032967Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6033494Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6034207Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6035163Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6036017Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6036196Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6036201Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6036317Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6036499Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6037163Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6037940Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6038419Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6038721Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6039041Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6039433Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6039930Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6040651Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6041174Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/dos-runtime.spec.ts:24:29
+acceptance	Run npm run check	2026-11-22T04:56:42.6041455Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6041814Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6042449Z     test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6043106Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6043346Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6043716Z     Error Context: test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6044121Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6044451Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6045053Z     test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6045507Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6045642Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6046041Z         npx playwright show-trace test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6046436Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6046716Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6047141Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6047544Z   3) [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch 
+acceptance	Run npm run check	2026-11-22T04:56:42.6047925Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6048055Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6048257Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6048578Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6049011Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6049262Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6049593Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6049735Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6049887Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6050544Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6051277Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6052251Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6052886Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6053068Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6053074Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6053206Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6053683Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6054157Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6054937Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6055408Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6055719Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6056034Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6056420Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6057043Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6057587Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6058114Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/dos-runtime.spec.ts:24:29
+acceptance	Run npm run check	2026-11-22T04:56:42.6058484Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6058826Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6059449Z     test-results/dos-runtime-real-DOS-worke-b8e13-est-files-stop-and-relaunch-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6060094Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6060326Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6060701Z     Error Context: test-results/dos-runtime-real-DOS-worke-b8e13-est-files-stop-and-relaunch-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6061133Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6061449Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6062013Z     test-results/dos-runtime-real-DOS-worke-b8e13-est-files-stop-and-relaunch-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6062469Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6062600Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6062976Z         npx playwright show-trace test-results/dos-runtime-real-DOS-worke-b8e13-est-files-stop-and-relaunch-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6063482Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6063909Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6064194Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6064767Z   4) [mobile-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch 
+acceptance	Run npm run check	2026-11-22T04:56:42.6065291Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6065456Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6065764Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6066201Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6066962Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6067310Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6067533Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6067676Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6067748Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6068320Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6069198Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6070189Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6070847Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6071000Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6071005Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6071148Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6071311Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6071723Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6072540Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6073137Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6073423Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6073744Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6074109Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6074580Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6075144Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6075659Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/dos-runtime.spec.ts:82:64
+acceptance	Run npm run check	2026-11-22T04:56:42.6075932Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6076255Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6077087Z     test-results/dos-runtime-a-guest-IPX-co-f3650-nd-the-package-can-relaunch-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6077771Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6078001Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6078401Z     Error Context: test-results/dos-runtime-a-guest-IPX-co-f3650-nd-the-package-can-relaunch-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6078817Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6079112Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6079718Z     test-results/dos-runtime-a-guest-IPX-co-f3650-nd-the-package-can-relaunch-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6080174Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6080277Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6080663Z         npx playwright show-trace test-results/dos-runtime-a-guest-IPX-co-f3650-nd-the-package-can-relaunch-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6081107Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6081368Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6081609Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6082122Z   5) [mobile-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker 
+acceptance	Run npm run check	2026-11-22T04:56:42.6082467Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6082647Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6082874Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6083150Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6083586Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6083821Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6084048Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6084190Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6084284Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6084802Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6085764Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6087182Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6087949Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6088145Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6088150Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6088322Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6088477Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6088851Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6089531Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6090002Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6090298Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6090676Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6091033Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6091507Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6092122Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6092828Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/dos-runtime.spec.ts:103:36
+acceptance	Run npm run check	2026-11-22T04:56:42.6093220Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6093675Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6094500Z     test-results/dos-runtime-offline-asset--05592-er-releases-the-real-worker-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6095407Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6095756Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6096308Z     Error Context: test-results/dos-runtime-offline-asset--05592-er-releases-the-real-worker-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6097187Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6097663Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6098642Z     test-results/dos-runtime-offline-asset--05592-er-releases-the-real-worker-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6099289Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6099410Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6100001Z         npx playwright show-trace test-results/dos-runtime-offline-asset--05592-er-releases-the-real-worker-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6100596Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6101040Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6101396Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6101911Z   6) [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeDOS MEM 
+acceptance	Run npm run check	2026-11-22T04:56:42.6102429Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6102646Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6102882Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6103536Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6104174Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6104436Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6104698Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6104823Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6104928Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6105429Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6106138Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6107419Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6108079Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6108242Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6108284Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6108404Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6108585Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6108932Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6109647Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6110123Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6110414Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6110743Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6111117Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6111595Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6112147Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6112667Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/launch-journey.spec.ts:33:3
+acceptance	Run npm run check	2026-11-22T04:56:42.6112965Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6113302Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6113893Z     test-results/launch-journey-guided-first-launch-and-export-FreeDOS-MEM-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6114569Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6114808Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6115168Z     Error Context: test-results/launch-journey-guided-first-launch-and-export-FreeDOS-MEM-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6115555Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6115907Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6116477Z     test-results/launch-journey-guided-first-launch-and-export-FreeDOS-MEM-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6117166Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6117349Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6117721Z         npx playwright show-trace test-results/launch-journey-guided-first-launch-and-export-FreeDOS-MEM-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6118143Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6118435Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6118638Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6119059Z   7) [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeCOM 
+acceptance	Run npm run check	2026-11-22T04:56:42.6119484Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6119615Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6119819Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6120129Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6120587Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6120818Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6121053Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6121195Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6121379Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6122154Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6122893Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6123946Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6124598Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6124776Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6124781Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6124920Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6125151Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6125552Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6126235Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6126700Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6127188Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6127511Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6127935Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6128394Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6128922Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6129466Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/launch-journey.spec.ts:33:3
+acceptance	Run npm run check	2026-11-22T04:56:42.6129750Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6130097Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6130689Z     test-results/launch-journey-guided-first-launch-and-export-FreeCOM-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6131318Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6131563Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6131896Z     Error Context: test-results/launch-journey-guided-first-launch-and-export-FreeCOM-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6132309Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6132627Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6133206Z     test-results/launch-journey-guided-first-launch-and-export-FreeCOM-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6133629Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6133759Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6134141Z         npx playwright show-trace test-results/launch-journey-guided-first-launch-and-export-FreeCOM-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6134516Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6134803Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6135215Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6135690Z   8) [mobile-chrome] › tests/browser/launch-journey.spec.ts:133:1 › runtime download progress is visible and full-screen denial preserves the real session 
+acceptance	Run npm run check	2026-11-22T04:56:42.6136131Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6136257Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6136449Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6136892Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6137350Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6137595Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6137852Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6138002Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6138099Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6138698Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6139415Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6140415Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6141106Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6141257Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6141262Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6141418Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6141671Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6142144Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6143049Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6143676Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6143978Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6144285Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6144681Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6145176Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6145819Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6146340Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/launch-journey.spec.ts:146:3
+acceptance	Run npm run check	2026-11-22T04:56:42.6146633Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6147163Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6147846Z     test-results/launch-journey-runtime-dow-2da04--preserves-the-real-session-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6148493Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6148755Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6149132Z     Error Context: test-results/launch-journey-runtime-dow-2da04--preserves-the-real-session-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6149681Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6149974Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6150584Z     test-results/launch-journey-runtime-dow-2da04--preserves-the-real-session-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6151036Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6151165Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6151566Z         npx playwright show-trace test-results/launch-journey-runtime-dow-2da04--preserves-the-real-session-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6151994Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6152290Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6152503Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6152994Z   9) [mobile-chrome] › tests/browser/security.spec.ts:40:1 › refresh during actual DOS execution destroys the worker and does not restore temporary files 
+acceptance	Run npm run check	2026-11-22T04:56:42.6153464Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6153617Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6153825Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6154106Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6154552Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6154797Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6155021Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6155168Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6155278Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6155958Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6156984Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6158205Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6159050Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6159220Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6159225Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6159434Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6159647Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6160229Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6161241Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6161932Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6162335Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6162787Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6163330Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6164015Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6164853Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6165623Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/security.spec.ts:42:52
+acceptance	Run npm run check	2026-11-22T04:56:42.6166042Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6166595Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6167741Z     test-results/security-refresh-during-ac-b2055-not-restore-temporary-files-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6168802Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6169117Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6169708Z     Error Context: test-results/security-refresh-during-ac-b2055-not-restore-temporary-files-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6170366Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6170807Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6171967Z     test-results/security-refresh-during-ac-b2055-not-restore-temporary-files-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6172572Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6172723Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6173371Z         npx playwright show-trace test-results/security-refresh-during-ac-b2055-not-restore-temporary-files-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6174030Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6174438Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6174937Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6175549Z   10) [mobile-chrome] › tests/browser/security.spec.ts:58:1 › silent real-worker termination is detected and a fresh session recovers 
+acceptance	Run npm run check	2026-11-22T04:56:42.6176152Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6176387Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6176640Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6177342Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6177989Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6178411Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6178756Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6178977Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6179134Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6179890Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6180960Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6182486Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6183445Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6183739Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6183747Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6183907Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6184160Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6184732Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6185824Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6186520Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6187141Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6187638Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6188206Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6188912Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6190024Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6190819Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/security.spec.ts:59:52
+acceptance	Run npm run check	2026-11-22T04:56:42.6191277Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6191823Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6192880Z     test-results/security-silent-real-worke-4c29e-nd-a-fresh-session-recovers-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6193835Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6194202Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6194779Z     Error Context: test-results/security-silent-real-worke-4c29e-nd-a-fresh-session-recovers-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6195236Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6195581Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6196184Z     test-results/security-silent-real-worke-4c29e-nd-a-fresh-session-recovers-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6196624Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6196988Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6197482Z         npx playwright show-trace test-results/security-silent-real-worke-4c29e-nd-a-fresh-session-recovers-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6198073Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6198382Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6198604Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6199156Z   11) [mobile-chrome] › tests/browser/security.spec.ts:73:1 › storage denial preserves a temporary real session and explicit export without host permissions 
+acceptance	Run npm run check	2026-11-22T04:56:42.6199604Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6199735Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6199938Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6200237Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6200691Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6200928Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6201162Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6201313Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6201420Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6201932Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6202685Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6203621Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6204290Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6204443Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6204448Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6204590Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6204770Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6205112Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6205854Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6206355Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6206663Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6207139Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6207491Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6208030Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6208570Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6209073Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/security.spec.ts:83:64
+acceptance	Run npm run check	2026-11-22T04:56:42.6209348Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6209656Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6210308Z     test-results/security-storage-denial-pr-bbd3f-rt-without-host-permissions-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6211058Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6211357Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6211726Z     Error Context: test-results/security-storage-denial-pr-bbd3f-rt-without-host-permissions-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6212133Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6212439Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6213658Z     test-results/security-storage-denial-pr-bbd3f-rt-without-host-permissions-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6214114Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6214252Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6214630Z         npx playwright show-trace test-results/security-storage-denial-pr-bbd3f-rt-without-host-permissions-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6215058Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6215321Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6215566Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6216026Z   12) [mobile-chrome] › tests/browser/security.spec.ts:97:1 › the one-minute configured deadline stops a real guest, with no implicit save 
+acceptance	Run npm run check	2026-11-22T04:56:42.6216429Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6216581Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6216891Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6217247Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6217706Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6217922Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6218173Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6218432Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6218545Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6219060Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6219791Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6220721Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6221398Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6221597Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6221601Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6221742Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6221881Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6222277Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6222970Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6223422Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6223761Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6224101Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6224469Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6224998Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6225527Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6226103Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/security.spec.ts:103:88
+acceptance	Run npm run check	2026-11-22T04:56:42.6226348Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6226669Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6227464Z     test-results/security-the-one-minute-co-bc2d2-guest-with-no-implicit-save-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6228123Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6228374Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6228809Z     Error Context: test-results/security-the-one-minute-co-bc2d2-guest-with-no-implicit-save-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6229298Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6229620Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6230201Z     test-results/security-the-one-minute-co-bc2d2-guest-with-no-implicit-save-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6230671Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6230774Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6231172Z         npx playwright show-trace test-results/security-the-one-minute-co-bc2d2-guest-with-no-implicit-save-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6231601Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6231876Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6232144Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6232628Z   13) [mobile-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete 
+acceptance	Run npm run check	2026-11-22T04:56:42.6233064Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6233213Z     Error: expect(locator).toBeVisible() failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6233407Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6233738Z     Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6234157Z     Expected: visible
+acceptance	Run npm run check	2026-11-22T04:56:42.6234404Z     Received: hidden
+acceptance	Run npm run check	2026-11-22T04:56:42.6234675Z     Timeout:  5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6234790Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6234886Z     Call log:
+acceptance	Run npm run check	2026-11-22T04:56:42.6235409Z       - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+acceptance	Run npm run check	2026-11-22T04:56:42.6236102Z       - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+acceptance	Run npm run check	2026-11-22T04:56:42.6237236Z         14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+acceptance	Run npm run check	2026-11-22T04:56:42.6237888Z            - unexpected value "hidden"
+acceptance	Run npm run check	2026-11-22T04:56:42.6238074Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6238084Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6238185Z        at ../fixtures/dos-browser.ts:23
+acceptance	Run npm run check	2026-11-22T04:56:42.6238392Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6238743Z       21 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+acceptance	Run npm run check	2026-11-22T04:56:42.6239453Z       22 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+acceptance	Run npm run check	2026-11-22T04:56:42.6239967Z     > 23 |   await expect(canvas).toBeVisible();
+acceptance	Run npm run check	2026-11-22T04:56:42.6240265Z          |                        ^
+acceptance	Run npm run check	2026-11-22T04:56:42.6240567Z       24 |   await expect.poll(() => canvas.evaluate(element => {
+acceptance	Run npm run check	2026-11-22T04:56:42.6240979Z       25 |     const screen = element as HTMLCanvasElement;
+acceptance	Run npm run check	2026-11-22T04:56:42.6241459Z       26 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+acceptance	Run npm run check	2026-11-22T04:56:42.6241999Z         at start (/home/runner/work/phantom_os/phantom_os/tests/fixtures/dos-browser.ts:23:24)
+acceptance	Run npm run check	2026-11-22T04:56:42.6242599Z         at /home/runner/work/phantom_os/phantom_os/tests/browser/workspace.spec.ts:21:64
+acceptance	Run npm run check	2026-11-22T04:56:42.6242876Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6243204Z     attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6243820Z     test-results/workspace-real-DOS-live-im-03fff-d-restore-backup-and-delete-mobile-chrome/test-failed-1.png
+acceptance	Run npm run check	2026-11-22T04:56:42.6244479Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6244726Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6245102Z     Error Context: test-results/workspace-real-DOS-live-im-03fff-d-restore-backup-and-delete-mobile-chrome/error-context.md
+acceptance	Run npm run check	2026-11-22T04:56:42.6245517Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6245842Z     attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6246519Z     test-results/workspace-real-DOS-live-im-03fff-d-restore-backup-and-delete-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6247235Z     Usage:
+acceptance	Run npm run check	2026-11-22T04:56:42.6247372Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6247755Z         npx playwright show-trace test-results/workspace-real-DOS-live-im-03fff-d-restore-backup-and-delete-mobile-chrome/trace.zip
+acceptance	Run npm run check	2026-11-22T04:56:42.6248177Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6248487Z     ────────────────────────────────────────────────────────────────────────────────────────────────
+acceptance	Run npm run check	2026-11-22T04:56:42.6248733Z 
+acceptance	Run npm run check	2026-11-22T04:56:42.6248814Z   13 failed
+acceptance	Run npm run check	2026-11-22T04:56:42.6249450Z     [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:74:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest 
+acceptance	Run npm run check	2026-11-22T04:56:42.6250347Z     [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch 
+acceptance	Run npm run check	2026-11-22T04:56:42.6251070Z     [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch 
+acceptance	Run npm run check	2026-11-22T04:56:42.6251866Z     [mobile-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch 
+acceptance	Run npm run check	2026-11-22T04:56:42.6252641Z     [mobile-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker 
+acceptance	Run npm run check	2026-11-22T04:56:42.6253389Z     [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeDOS MEM 
+acceptance	Run npm run check	2026-11-22T04:56:42.6254049Z     [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeCOM 
+acceptance	Run npm run check	2026-11-22T04:56:42.6254804Z     [mobile-chrome] › tests/browser/launch-journey.spec.ts:133:1 › runtime download progress is visible and full-screen denial preserves the real session 
+acceptance	Run npm run check	2026-11-22T04:56:42.6255716Z     [mobile-chrome] › tests/browser/security.spec.ts:40:1 › refresh during actual DOS execution destroys the worker and does not restore temporary files 
+acceptance	Run npm run check	2026-11-22T04:56:42.6256508Z     [mobile-chrome] › tests/browser/security.spec.ts:58:1 › silent real-worker termination is detected and a fresh session recovers 
+acceptance	Run npm run check	2026-11-22T04:56:42.6257585Z     [mobile-chrome] › tests/browser/security.spec.ts:73:1 › storage denial preserves a temporary real session and explicit export without host permissions 
+acceptance	Run npm run check	2026-11-22T04:56:42.6259768Z     [mobile-chrome] › tests/browser/security.spec.ts:97:1 › the one-minute configured deadline stops a real guest, with no implicit save 
+acceptance	Run npm run check	2026-11-22T04:56:42.6260705Z     [mobile-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete 
+acceptance	Run npm run check	2026-11-22T04:56:42.6261226Z   79 passed (4.0m)
+acceptance	Run npm run check	2026-11-22T04:56:42.7712826Z ##[error]Process completed with exit code 1.

@@ -16,7 +16,13 @@ All tasks are unchecked. Their presence is not completion evidence.
 - [ ] K5: Record Kiro participation with dated evidence, reviewed diffs/commits
   and exact commands. Have the owner verify the written account before submitting.
 
+- [ ] K6: Reproduce and fix the actual Chromium 159 mobile zero-height framebuffer
+  defect described in `docs/chromium-mobile-blocker.md`. Preserve DPR, sandbox and
+  visibility assertions. Validate real guest input/export/cleanup and the existing
+  Chrome/Firefox paths; rerun the complete unchanged CI gate. This is unresolved
+  Codex-observed behavior, not prior Kiro work.
+
 Suggested first prompt in Kiro: “Read AGENTS.md and the PHANTOM core docs. Work
-only on K1 in .kiro/specs/submission-validation/tasks.md. Inspect before editing,
+only on K6 in .kiro/specs/submission-validation/tasks.md. Inspect before editing,
 preserve privacy and Windows-disabled state, run real browser acceptance, and
 report your actual diff, commands, outcomes and unresolved blockers.”

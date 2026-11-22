@@ -1,0 +1,28 @@
+{
+  "date": "2026-11-22",
+  "repository": "https://github.com/springdev28/phantom_os",
+  "sourceCommit": "ef8994bf4312f738319a19a572ecec94961845ec",
+  "visibility": "public",
+  "githubDetectedLicense": "GPL-2.0",
+  "originalSourceGrant": "GPL-2.0-only",
+  "trackedKiroFiles": 7,
+  "anonymousReadmeHttpStatus": 200,
+  "anonymousReadmeSha256": "19b1d0fa2a64fa2357065fad4853936cf192bbf0d6846ae9afadd434d87e45ac",
+  "cleanPublicClone": {
+    "path": "/private/tmp/phantom-p11-github-checkout",
+    "npmCi": "passed",
+    "npmRunBuild": "passed"
+  },
+  "ciRun": "https://github.com/springdev28/phantom_os/actions/runs/44986874082",
+  "ciStatus": "failure",
+  "httpsDemoUrl": null,
+  "youtubeUrl": null,
+  "meaningfulKiroUseEvidenced": false,
+  "ciBrowserCounts": {
+    "passed": 79,
+    "failed": 13,
+    "skipped": 0
+  },
+  "ciBlocker": "Chromium 159.0.8154.6 mobile emulation: canvas collapses to zero height inside opaque iframe. Reproduced locally; not fixed or reclassified.",
+  "ciLaterGates": "production security and Firefox/core compatibility steps not run after browser gate failed"
+}

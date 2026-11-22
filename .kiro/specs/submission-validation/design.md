@@ -23,3 +23,10 @@ ledger entry only from observed Kiro work. Store a sanitized transcript/screensh
 or export at an explicit evidence path; never capture auth tokens or personal data.
 Public release still depends on the source rebuild review, clean checkout,
 production HTTPS test and independent review of rights and event eligibility.
+
+K6 starts from the measured child/parent viewport mismatch in
+`docs/chromium-mobile-blocker.md`. The viewport-meta and explicit-dimensions
+experiments already failed and were not adopted. Isolate the behavior before
+choosing a fix; never grant same-origin privileges or change the test environment
+as a substitute for restoring visible real output. Record an upstream limitation
+if one remains, without calling that environment supported.

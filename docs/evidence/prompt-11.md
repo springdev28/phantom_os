@@ -69,12 +69,36 @@ No production engine pins were changed to conceal that outcome.
 
 ## Submission acceptance still open
 
-Meaningful Kiro work and its truthful usage explanation; runtime rebuild clearance;
+The Chromium 159 mobile CI failure; meaningful Kiro work and its truthful usage
+explanation; runtime rebuild clearance;
 an actual audited HTTPS deployment; and a public YouTube video remain outstanding.
 Do not fill missing URLs with examples or claim this task completes submission
 eligibility. Independent human usability/screen-reader validation also remains
 unperformed. Public source publication alone does not clear runtime deployment.
 
-The next permitted work is the explicit Kiro queue, beginning with K1 or K2;
+The next permitted work is the explicit Kiro queue, beginning with K6 for the
+newly discovered CI defect; K1/K2 remain further bounded work.
 K4 addresses the release blocker and K3 tests the real deployment afterward.
 No new runtime or Windows enablement is part of this preparation.
+
+## Public source verification
+
+Published [source commit ef8994b](https://github.com/springdev28/phantom_os/commit/ef8994bf4312f738319a19a572ecec94961845ec)
+to the requested public repository's `main` branch. GitHub detects GPL v2;
+all seven `.kiro` files are tracked. An unauthenticated raw README request returned
+HTTP 200. The [publication record](prompt-11-publication.json) preserves details.
+
+A fresh `git clone --depth 1` from that public URL, `npm ci` and `npm run build`
+all passed, separately from the earlier source-copy test. Logs:
+[install](prompt-11-github-install.log), [build](prompt-11-github-build.log).
+The initial push stalled on workspace object reads; an identical temporary copy
+was verified against every Git blob, tree and commit hash before finishing the
+same push. No force push, changed source identity or imported user data was used.
+
+The public [CI run](https://github.com/springdev28/phantom_os/actions/runs/44986874082)
+**failed**: 79 browser cases passed and 13 mobile canvas-visibility cases failed.
+Typecheck/lint/unit/source audit/build passed; later production/core gates did not
+run. The [exact reproduction, failed attempts and evidence](../chromium-mobile-blocker.md)
+are preserved. No product/test-environment changes were adopted to hide this result.
+These publication facts do not
+close the runtime-distribution, Kiro-participation or hosted-demo/video gates.

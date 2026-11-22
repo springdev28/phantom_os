@@ -1,0 +1,162 @@
+
+> phantom-os@0.1.0 test:browser
+> playwright test tests/browser/dos-runtime.spec.ts --project=mobile-chrome --grep MEM.EXE
+
+[WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] .[WebServer] 
+[WebServer] ----------------------------------------------------------------------
+[WebServer] Ran 7 tests in 0.008s
+[WebServer] 
+[WebServer] OK
+[WebServer] (node:29796) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 1 test using 1 worker
+
+(node:29797) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+FRAME_DIAGNOSTIC [
+  {
+    tag: 'HTML',
+    rect: {
+      x: 0,
+      y: 0,
+      width: 141.33334350585938,
+      height: 160,
+      top: 0,
+      right: 141.33334350585938,
+      bottom: 160,
+      left: 0
+    },
+    scrollHeight: 284,
+    css: {
+      display: 'block',
+      height: '160px',
+      font: '13px system-ui',
+      flex: '0 1 auto'
+    },
+    window: [ 141, 160 ]
+  },
+  {
+    tag: 'BODY',
+    rect: {
+      x: 0,
+      y: 0,
+      width: 141.33334350585938,
+      height: 160,
+      top: 0,
+      right: 141.33334350585938,
+      bottom: 160,
+      left: 0
+    },
+    scrollHeight: 284,
+    css: {
+      display: 'flex',
+      height: '160px',
+      font: '13px system-ui',
+      flex: '0 1 auto'
+    },
+    window: [ 141, 160 ]
+  },
+  {
+    tag: 'CANVAS',
+    rect: {
+      x: 0,
+      y: 24.095237731933594,
+      width: 141.33334350585938,
+      height: 0,
+      top: 24.095237731933594,
+      right: 141.33334350585938,
+      bottom: 24.095237731933594,
+      left: 0
+    },
+    scrollHeight: 0,
+    css: {
+      display: 'block',
+      height: '0px',
+      font: '13px system-ui',
+      flex: '1 1 0%'
+    },
+    window: [ 141, 160 ]
+  },
+  {
+    tag: 'NAV',
+    rect: {
+      x: 0,
+      y: 24.095237731933594,
+      width: 141.33334350585938,
+      height: 260,
+      top: 24.095237731933594,
+      right: 141.33334350585938,
+      bottom: 284.0952377319336,
+      left: 0
+    },
+    scrollHeight: 260,
+    css: {
+      display: 'flex',
+      height: '260px',
+      font: '13px system-ui',
+      flex: '0 1 auto'
+    },
+    window: [ 141, 160 ]
+  }
+]
+PARENT_DIAGNOSTIC {
+  rect: {
+    x: 21,
+    y: 141.1875,
+    width: 370,
+    height: 419.5,
+    top: 141.1875,
+    right: 391,
+    bottom: 560.6875,
+    left: 21
+  },
+  html: `<div class="runtime-viewport"><iframe title="DOS program framebuffer" class="dos-frame" sandbox="allow-scripts allow-pointer-lock" allow="autoplay; clipboard-read 'none'; clipboard-write 'none'; fullscreen 'none'; camera 'none'; microphone 'none'; geolocation 'none'; display-capture 'none'; usb 'none'; serial 'none'; hid 'none'; payment 'none'" referrerpolicy="no-referrer" src="/runtimes/js-dos/host-74394f7d792ea8c3.html"></iframe></div>`
+}
+  ✘  1 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (10.0s)
+
+
+  1) [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator:  locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+    Expected: visible
+    Received: hidden
+    Timeout:  5000ms
+
+    Call log:
+      - Expect "toBeVisible" locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen') with timeout 5000ms
+      - waiting for locator('iframe[title="DOS program framebuffer"]').contentFrame().getByLabel('DOS program screen')
+        14 × locator resolved to <canvas width="640" tabindex="0" height="400" aria-describedby="input-help" aria-label="DOS program screen">The program displays pixels. Its own interface ma…</canvas>
+           - unexpected value "hidden"
+
+
+       at ../fixtures/dos-browser.ts:28
+
+      26 |   }));
+      27 |   console.log('PARENT_DIAGNOSTIC', await page.locator('.runtime-viewport').evaluate(el => ({rect:el.getBoundingClientRect().toJSON(),html:el.outerHTML})));
+    > 28 |   await expect(canvas).toBeVisible();
+         |                        ^
+      29 |   await expect.poll(() => canvas.evaluate(element => {
+      30 |     const screen = element as HTMLCanvasElement;
+      31 |     const pixels = screen.getContext('2d')!.getImageData(0, 0, screen.width, screen.height).data;
+        at start (/private/tmp/phantom-p11-github-checkout/tests/fixtures/dos-browser.ts:28:24)
+        at /private/tmp/phantom-p11-github-checkout/tests/browser/dos-runtime.spec.ts:24:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-mobile-chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch 

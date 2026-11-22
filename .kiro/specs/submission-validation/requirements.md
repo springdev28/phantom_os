@@ -22,3 +22,8 @@ Select one task at a time. No retroactive credit for existing features.
 5. A public demo SHALL preserve complete source/license access and audited runtime
    pins. Windows SHALL stay disabled unless a separately authorized integration
    satisfies its full adoption and real-program acceptance gate.
+
+6. WHEN the real runtime produces frames in Chromium 159 mobile emulation, the
+   player SHALL keep the actual canvas visible with usable controls. Acceptance
+   SHALL retain the current DPR, sandbox and visibility/output/input checks. The
+   observed zero-height defect SHALL remain a failure until a tested fix exists.

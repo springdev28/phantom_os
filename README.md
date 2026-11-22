@@ -18,7 +18,8 @@ alone does not satisfy Kiro-use requirements.
 | --- | --- |
 | Chrome 157.0.8103.79 on macOS 26.6.2 / Apple M1, 16 GiB | Real MEM/FreeCOM launch, keyboard, guest file I/O, stop/relaunch, OPFS and privacy checks passed locally |
 | Playwright Firefox 159.0, revision 1572, same laptop | Same core workflows passed; patched automation browser, not separate verification of stock Firefox |
-| Other Chrome/Firefox versions; Windows/Linux hosts | Expected browser APIs, but no exact platform acceptance claim; Linux CI is configured and requires an actual run |
+| Chromium 159.0.8154.6 / Ubuntu 24.04, Pixel 7 emulation | First CI run: 79 browser passes, 13 mobile failures (zero-height framebuffer); later production/core gates not run. Reproduced on macOS. [Open defect](docs/chromium-mobile-blocker.md) |
+| Other Chrome/Firefox versions; Windows/Linux hosts | No broader platform acceptance claim |
 | Safari/iOS, Android/physical phones, other browsers | Unverified; responsive Chrome emulation is not device validation |
 
 Requires JavaScript, WebAssembly, workers, File/Blob, canvas and cryptographic
@@ -53,12 +54,16 @@ npm run build
 npm run preview
 ```
 
-For browser gates, install `npx playwright install chromium firefox` (Linux:
+The passing local browser baseline uses installed **Chrome 157.0.8103.79** and
+`npx playwright install firefox`, then `npm run check`. It includes 92 browser
+regressions, production security/I/O and 12 Chrome/Firefox core cases. These are
+exact observed versions, not a promise that every newer browser behaves identically.
+
+To reproduce CI, install `npx playwright install chromium firefox` (Linux:
 `npx playwright install --with-deps chromium firefox`) and run
-`PLAYWRIGHT_CHANNEL=chromium npm run check`. The default uses installed Chrome;
-`npm run test:browser` includes desktop/mobile-layout regressions,
-`npm run test:production` checks actual production security and DOS file I/O,
-and `npm run test:compatibility` runs Chrome/Firefox core acceptance.
+`PLAYWRIGHT_CHANNEL=chromium npm run check`. **This currently fails 13 mobile
+framebuffer cases in Chromium 159**; [Kiro task K6](.kiro/specs/submission-validation/tasks.md)
+tracks the real defect. The CI gate and visibility assertions have not been weakened.
 `npm run benchmark` is the separate laptop protocol, not a CI timing guarantee.
 See [reproduction steps](docs/compatibility-testing.md),
 [measured results](docs/compatibility-results.md) and
@@ -159,6 +164,7 @@ Third-party material retains its own terms; no rights to users' files are claime
 [THIRD_PARTY_NOTICES](THIRD_PARTY_NOTICES.md) links the full grants for React,
 fflate, the GPL emulator, its compiled dependencies and fixtures. Builds retain
 those source/notice files beside runtime assets. Preserve them when distributing.
+The [Chromium 159 mobile CI failure](docs/chromium-mobile-blocker.md) is unresolved.
 The upstream source rebuild review remains a public-runtime release gate; an npm
 asset copy is not a demonstrated rebuild. The corrected source audit removes two
 previously overlooked unused benchmark executables. See [release evidence](docs/evidence/prompt-11.md).

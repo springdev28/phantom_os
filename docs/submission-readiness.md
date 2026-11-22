@@ -15,9 +15,9 @@ official rules before entry; this readiness record is not an eligibility ruling.
 | Requirement | Current evidence / remaining action |
 | --- | --- |
 | Meaningful actual Kiro use | **Not evidenced.** Installed IDE/help/version is insufficient. Execute a bounded task from `.kiro/specs/submission-validation/tasks.md` in Kiro and retain the actual diff/tests/session evidence. |
-| Root `.kiro` tracked, not ignored | Specs and steering prepared in Codex; no automatic hooks. Check Git tracking after publication. This is an artifact requirement, not proof of participation. |
-| Public licensed GitHub source | Target is [springdev28/phantom_os](https://github.com/springdev28/phantom_os). Original code is GPL-2.0-only after the recorded dependency review. Publication status and exact commit belong in Prompt 11 evidence. |
-| Reproducible install/build | Fresh-source `npm ci` and full gates are recorded in Prompt 11 evidence. Do not infer a hosted CI result from a local run. |
+| Root `.kiro` tracked, not ignored | Seven specs/steering/context files are committed and not ignored; prepared in Codex, with no automatic hooks. This is an artifact requirement, not proof of participation. |
+| Public licensed GitHub source | **Published:** [springdev28/phantom_os](https://github.com/springdev28/phantom_os), source commit `ef8994b`. GitHub detects GPL v2; the original grant is GPL-2.0-only. All seven `.kiro` files are tracked; anonymous README access returned HTTP 200. |
+| Reproducible install/build | Fresh public clone `npm ci` and build passed. Local full gates passed on the recorded browsers; actual public CI has 79 browser passes and 13 Chromium 159 mobile failures. [K6 blocker](chromium-mobile-blocker.md) remains. |
 | Source/license completeness | Full grants and pinned sources retained; two unused unaudited benchmark binaries removed. Native rebuild experiment is incomplete as a release replacement; upstream bit-identical rebuild remains unproven. |
 | Deployed working HTTPS demo | **No verified URL.** Do not publish runtime assets until the source rebuild/release gate is resolved. Then preserve actual CSP/permissions, source downloads, no telemetry and page/worker privacy checks. |
 | Public YouTube video under 3 minutes | **No published URL.** A 2:55 script and reproducible genuine local evidence capture are prepared. Record/review the actual release build, publish publicly and verify signed out. |
@@ -26,7 +26,8 @@ official rules before entry; this readiness record is not an eligibility ruling.
 
 ## Remaining work in order
 
-1. Perform meaningful Kiro work using K1 or K2, then document what actually changed.
+1. Perform meaningful Kiro work using K6 (the reproduced CI defect), then document
+   the actual fix and rerun the unchanged gate. K1/K2 are further bounded tasks.
 2. Resolve runtime rebuild/source reproducibility with K4. The current SDK 3.1.28
    build needs an optimizer compatibility patch, produces different hashes and
    retains Asyncify warnings. The TypeScript wrapper and resulting guest behavior

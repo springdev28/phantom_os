@@ -10,6 +10,10 @@ Prompts 1–4 below are historical snapshots, not current engine availability.
 
 ## Submission preparation — Prompt 11
 
+The first public CI run also exposes an [unresolved Chromium 159 mobile
+framebuffer defect](chromium-mobile-blocker.md): 79 browser passes, 13 failures.
+Keep those failures visible; no compatibility promotion follows from desktop results.
+
 No runtime capability is promoted by adding Kiro files, a project license or a
 submission script. The original-source GPL-2.0-only decision and corrected source
 archive are recorded in [the release review](release-license-review.md). Existing
