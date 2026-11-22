@@ -1,0 +1,65 @@
+{
+  "purpose": "Deterministic inert hostile-input fixtures; none executed as guest programs",
+  "fixtures": [
+    {
+      "name": "PRIVATE_CORRUPT.EXE",
+      "diagnostic": "INVALID_OFFSET",
+      "size": 1024,
+      "sha256": "549dd95d4be52057b9a219ffb0c66b4b144b7250a71a7efd2726c19144eb98a3"
+    },
+    {
+      "name": "PRIVATE_ODD_DISK.IMG",
+      "diagnostic": "GPT",
+      "size": 262144,
+      "sha256": "a492d3fb85b9cf7adbca612dbc22d833dc651da0056b666848731b7a23c8d71b"
+    },
+    {
+      "id": "corrupt",
+      "message": "ZIP is corrupt",
+      "size": 106,
+      "sha256": "6443c45f7f62f5f7f0f60f59cf89b2f20d117813bb924727a47b758e3a7f8c8a"
+    },
+    {
+      "id": "traversal",
+      "message": "unsafe file name or path",
+      "size": 151,
+      "sha256": "dbf7b21104c1fe51d2c54c1ee01d240572e393a8f838b6bae4144a599732d829"
+    },
+    {
+      "id": "absolute",
+      "message": "unsafe file name or path",
+      "size": 127,
+      "sha256": "77c68ea6706e01ce09be085c038ded15b06cc52ac999c64f41350eaf05069cce"
+    },
+    {
+      "id": "symlink",
+      "message": "unsupported feature",
+      "size": 119,
+      "sha256": "d345c06f51034134902c826d96485a3ff69b442ec2049c028f277220513fc2f8"
+    },
+    {
+      "id": "declared-size",
+      "message": "package exceeds a limit",
+      "size": 113,
+      "sha256": "195230312013d0d168803a7bfae30c3d0b0e77f62905859b3ed4dbb416e733ec"
+    },
+    {
+      "id": "ratio",
+      "message": "100:1 expansion limit",
+      "size": 1139,
+      "sha256": "c8f28b74e50832b97049f7b0226c7484e1b07a63bd1ac1fc808264be21506d5f"
+    },
+    {
+      "id": "lying-size",
+      "message": "package exceeds a limit",
+      "size": 1139,
+      "sha256": "8a1b57634dc4efb2edde248501860f96459b147a09bd39b671a7d26a94cefe42"
+    },
+    {
+      "id": "item-count",
+      "message": "package exceeds a limit",
+      "size": 174016,
+      "sha256": "860752dc5661acfd8a98d30db1523f9b6a82e32d78badcc4a163e1a4ac76c013"
+    }
+  ]
+}

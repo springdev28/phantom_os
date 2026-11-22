@@ -1,0 +1,78 @@
+{
+  "release": "25R1.0",
+  "sourceCommit": "9279ab115e3c1e513aca4ea95aa30ea2f65258be",
+  "releaseSha256": "b10e46bbe8b236d9b8088b3cf8a63d285154763c07d2fc4acb26999e10ad8f7d",
+  "releaseContents": [
+    {
+      "path": "boxedwine-shell.js",
+      "bytes": 38594
+    },
+    {
+      "path": "boxedwine.css",
+      "bytes": 2383
+    },
+    {
+      "path": "boxedwine.html",
+      "bytes": 3649
+    },
+    {
+      "path": "boxedwine.js",
+      "bytes": 441587
+    },
+    {
+      "path": "boxedwine.wasm",
+      "bytes": 2303715
+    },
+    {
+      "path": "boxedwine.zip",
+      "bytes": 37247698
+    },
+    {
+      "path": "readme.txt",
+      "bytes": 373
+    },
+    {
+      "path": "ski32.zip",
+      "bytes": 39491
+    },
+    {
+      "path": "test.html",
+      "bytes": 205
+    }
+  ],
+  "engine": [
+    {
+      "name": "boxedwine.js",
+      "bytes": 441587,
+      "sha256": "e9da809cf6ef1437621e661be4a50ca6b92d7a369123d4056a3c8cfff04385af"
+    },
+    {
+      "name": "boxedwine.wasm",
+      "bytes": 2303715,
+      "sha256": "f1588fdfa3aa5024620bf5b1688745061d48a3f5f63e2e8e84a91fbe84dbb3cd"
+    }
+  ],
+  "filesystem": {
+    "name": "boxedwine.zip",
+    "bytes": 37247698,
+    "sha256": "55b26c04b46986c977d6ec18989623d983274e03a72d3dc2fb048fc74d1245f9",
+    "reason": "Wine 6.0 stripped filesystem: 1640 entries, 117830656 unpacked bytes, no license/source inventory. Not installed, served or executed.",
+    "version": "6.0",
+    "revision": "3",
+    "entries": 1640,
+    "unpackedBytes": 117830656,
+    "noticeOrSourcePaths": []
+  },
+  "notepad": {
+    "bytes": 188452,
+    "sha256": "f5232b2de3ff9a624e94b06c4faa59e5f4209fb4c288bbfa6f588daa1f3685a2",
+    "peOffset": 96,
+    "signature": "50450000",
+    "machine": "0x14c",
+    "optionalMagic": "0x10b",
+    "dosStubMarker": "Wine placeholder DLL"
+  },
+  "guestFilesExecuted": false,
+  "guestFilesDistributed": false,
+  "decision": "blocked: component provenance/license/source inventory incomplete; no standalone PE Notepad fixture"
+}

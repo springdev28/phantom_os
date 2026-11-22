@@ -1,0 +1,13 @@
+{
+  "date": "2026-11-22",
+  "markdownFiles": 20,
+  "localLinks": 164,
+  "missingLinks": [],
+  "testedSourceFiles": 99,
+  "sourceHashDrift": [],
+  "dependencyFilesUnchanged": {
+    "package.json": true,
+    "package-lock.json": true
+  },
+  "productionAssetHashMismatches": []
+}

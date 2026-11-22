@@ -1,0 +1,446 @@
+{
+  "browserCases": [
+    {
+      "file": "security.spec.ts",
+      "title": "hostile PE, disk and ZIP inputs stay inert and recover without leaking metadata",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1410,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "hostile PE, disk and ZIP inputs stay inert and recover without leaking metadata",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1440,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "refresh during actual DOS execution destroys the worker and does not restore temporary files",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 8561,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "refresh during actual DOS execution destroys the worker and does not restore temporary files",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 8511,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "silent real-worker termination is detected and a fresh session recovers",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 12961,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "silent real-worker termination is detected and a fresh session recovers",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 17719,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "storage denial preserves a temporary real session and explicit export without host permissions",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 5435,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "storage denial preserves a temporary real session and explicit export without host permissions",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 5502,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "the one-minute configured deadline stops a real guest, with no implicit save",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 63220,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "security.spec.ts",
+      "title": "the one-minute configured deadline stops a real guest, with no implicit save",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 63192,
+          "retry": 0
+        }
+      ]
+    }
+  ],
+  "records": [
+    {
+      "artifact": "security-intake.json",
+      "browser": "157.0.8103.79",
+      "project": "desktop-chrome",
+      "hostileHeaders": [
+        "PRIVATE_CORRUPT.EXE",
+        "PRIVATE_ODD_DISK.IMG"
+      ],
+      "rejectedArchives": [
+        "corrupt",
+        "traversal",
+        "absolute",
+        "symlink",
+        "declared-size",
+        "ratio",
+        "lying-size",
+        "item-count"
+      ],
+      "noDomInjection": true,
+      "traffic": [
+        "GET http://127.0.0.1:4176/ ",
+        "GET http://127.0.0.1:4176/@vite/client ",
+        "GET http://127.0.0.1:4176/src/main.tsx ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react.js?v=44592829 ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react-dom_client.js?v=7a5def8e ",
+        "GET http://127.0.0.1:4176/src/app/App.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/ErrorBoundary.tsx ",
+        "GET http://127.0.0.1:4176/src/app/logger.ts ",
+        "GET http://127.0.0.1:4176/src/styles.css ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=44592829 ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react-DgVJeC5g.js?v=60a84d74 ",
+        "GET http://127.0.0.1:4176/src/app/routes.ts ",
+        "GET http://127.0.0.1:4176/src/app/use-session.ts ",
+        "GET http://127.0.0.1:4176/src/app/screen-props.ts ",
+        "GET http://127.0.0.1:4176/src/app/components/Icon.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/Shared.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/LaunchSteps.tsx ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/src/domain/session-machine.ts ",
+        "GET http://127.0.0.1:4176/src/intake/local-file.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/selection-inspector.ts ",
+        "GET http://127.0.0.1:4176/src/planner/compatibility-planner.ts ",
+        "GET http://127.0.0.1:4176/src/profiles/launch-profile.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/registry.ts ",
+        "GET http://127.0.0.1:4176/src/packages/package-analysis.ts ",
+        "GET http://127.0.0.1:4176/src/packages/virtual-package.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip-worker-client.ts ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/app/use-runtime.ts ",
+        "GET http://127.0.0.1:4176/src/app/use-workspace.ts ",
+        "GET http://127.0.0.1:4176/src/workspace/launch.ts ",
+        "GET http://127.0.0.1:4176/src/app/demos.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/executables.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/containers.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/probe-core.ts ",
+        "GET http://127.0.0.1:4176/src/domain/runtime-descriptor.ts ",
+        "GET http://127.0.0.1:4176/src/planner/verification.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/dos/config.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/dos/descriptor.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/boxedwine/descriptor.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/app/download.ts ",
+        "GET http://127.0.0.1:4176/src/workspace/opfs-workspace.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker&inline ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react-dom-CFuoV50Q.js?v=60a84d74 ",
+        "GET http://127.0.0.1:4176/src/runtime/dos/host-manifest.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/workspace/manifest.ts ",
+        "GET http://127.0.0.1:4176/src/app/screens/Inspect.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/ProbeReport.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/PackageExplorer.tsx ",
+        "GET http://127.0.0.1:4176/src/app/probe-labels.ts ",
+        "GET http://127.0.0.1:4176/favicon.svg ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts "
+      ],
+      "errors": []
+    },
+    {
+      "artifact": "security-intake.json",
+      "browser": "157.0.8103.79",
+      "project": "mobile-chrome",
+      "hostileHeaders": [
+        "PRIVATE_CORRUPT.EXE",
+        "PRIVATE_ODD_DISK.IMG"
+      ],
+      "rejectedArchives": [
+        "corrupt",
+        "traversal",
+        "absolute",
+        "symlink",
+        "declared-size",
+        "ratio",
+        "lying-size",
+        "item-count"
+      ],
+      "noDomInjection": true,
+      "traffic": [
+        "GET http://127.0.0.1:4176/ ",
+        "GET http://127.0.0.1:4176/@vite/client ",
+        "GET http://127.0.0.1:4176/src/main.tsx ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react.js?v=44592829 ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react-dom_client.js?v=7a5def8e ",
+        "GET http://127.0.0.1:4176/src/app/App.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/ErrorBoundary.tsx ",
+        "GET http://127.0.0.1:4176/src/app/logger.ts ",
+        "GET http://127.0.0.1:4176/src/styles.css ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react_jsx-dev-runtime.js?v=44592829 ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react-DgVJeC5g.js?v=60a84d74 ",
+        "GET http://127.0.0.1:4176/src/app/routes.ts ",
+        "GET http://127.0.0.1:4176/src/app/use-session.ts ",
+        "GET http://127.0.0.1:4176/src/app/screen-props.ts ",
+        "GET http://127.0.0.1:4176/src/app/components/Icon.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/Shared.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/LaunchSteps.tsx ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/src/domain/session-machine.ts ",
+        "GET http://127.0.0.1:4176/src/intake/local-file.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/selection-inspector.ts ",
+        "GET http://127.0.0.1:4176/src/planner/compatibility-planner.ts ",
+        "GET http://127.0.0.1:4176/src/profiles/launch-profile.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/registry.ts ",
+        "GET http://127.0.0.1:4176/src/packages/package-analysis.ts ",
+        "GET http://127.0.0.1:4176/src/packages/virtual-package.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip-worker-client.ts ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/app/use-runtime.ts ",
+        "GET http://127.0.0.1:4176/src/app/use-workspace.ts ",
+        "GET http://127.0.0.1:4176/src/workspace/launch.ts ",
+        "GET http://127.0.0.1:4176/src/app/demos.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/executables.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/containers.ts ",
+        "GET http://127.0.0.1:4176/src/inspection/probe-core.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker&inline ",
+        "GET http://127.0.0.1:4176/src/domain/runtime-descriptor.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/dos/descriptor.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/boxedwine/descriptor.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/dos/config.ts ",
+        "GET http://127.0.0.1:4176/src/workspace/opfs-workspace.ts ",
+        "GET http://127.0.0.1:4176/src/app/download.ts ",
+        "GET http://127.0.0.1:4176/src/planner/verification.ts ",
+        "GET http://127.0.0.1:4176/src/runtime/dos/host-manifest.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/workspace/manifest.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/react-dom-CFuoV50Q.js?v=60a84d74 ",
+        "GET http://127.0.0.1:4176/src/app/screens/Inspect.tsx ",
+        "GET http://127.0.0.1:4176/favicon.svg ",
+        "GET http://127.0.0.1:4176/src/app/components/ProbeReport.tsx ",
+        "GET http://127.0.0.1:4176/src/app/components/PackageExplorer.tsx ",
+        "GET http://127.0.0.1:4176/src/app/probe-labels.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts ",
+        "GET http://127.0.0.1:4176/src/packages/zip.worker.ts?worker_file&type=module ",
+        "GET http://127.0.0.1:4176/node_modules/vite/dist/client/env.mjs ",
+        "GET http://127.0.0.1:4176/src/packages/zip.ts ",
+        "GET http://127.0.0.1:4176/src/domain/errors.ts ",
+        "GET http://127.0.0.1:4176/node_modules/.vite/deps/fflate.js?v=759e1ecf ",
+        "GET http://127.0.0.1:4176/src/packages/limits.ts ",
+        "GET http://127.0.0.1:4176/src/packages/paths.ts ",
+        "GET http://127.0.0.1:4176/src/packages/crc32.ts "
+      ],
+      "errors": []
+    },
+    {
+      "artifact": "security-lifecycle.json",
+      "project": "desktop-chrome",
+      "fault": "self.close() in actual emulator worker",
+      "silentWorkerFailureDetectedMs": 6377,
+      "freshRelaunchExport": true
+    },
+    {
+      "artifact": "security-lifecycle.json",
+      "project": "mobile-chrome",
+      "fault": "self.close() in actual emulator worker",
+      "silentWorkerFailureDetectedMs": 6362,
+      "freshRelaunchExport": true
+    },
+    {
+      "artifact": "security-deadline.json",
+      "project": "desktop-chrome",
+      "configuredMs": 60000,
+      "observedMsAfterFirstFrame": 59338,
+      "timersMocked": false
+    },
+    {
+      "artifact": "security-deadline.json",
+      "project": "mobile-chrome",
+      "configuredMs": 60000,
+      "observedMsAfterFirstFrame": 59293,
+      "timersMocked": false
+    }
+  ]
+}

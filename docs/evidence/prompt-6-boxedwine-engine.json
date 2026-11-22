@@ -1,0 +1,124 @@
+{
+  "scope": "engine-only bootstrap and missing-environment failure; NOT Windows application execution",
+  "browser": "157.0.8103.79",
+  "platform": "darwin",
+  "architecture": "arm64",
+  "release": "25R1.0",
+  "sourceCommit": "9279ab115e3c1e513aca4ea95aa30ea2f65258be",
+  "assets": [
+    {
+      "name": "boxedwine.js",
+      "bytes": 441587,
+      "sha256": "e9da809cf6ef1437621e661be4a50ca6b92d7a369123d4056a3c8cfff04385af"
+    },
+    {
+      "name": "boxedwine.wasm",
+      "bytes": 2303715,
+      "sha256": "f1588fdfa3aa5024620bf5b1688745061d48a3f5f63e2e8e84a91fbe84dbb3cd"
+    }
+  ],
+  "bridgeSha256": "7517c0b2f16cb6c0a1dfdd01129075a2411d0a3a17887edd942a3f2149e51daf",
+  "filesystemLoaded": false,
+  "windowsProgramLaunched": false,
+  "windowsInputTested": false,
+  "windowsCleanStopTested": false,
+  "cycles": [
+    {
+      "cycle": 1,
+      "elapsedMs": 380,
+      "frameRemovalMs": 28,
+      "report": {
+        "messages": [
+          "Starting ...",
+          "Command line arguments: \"./this.program\" \"-root\" \"/root\" \"-mount_drive\" \"/d_drive\" \"d\" \"-nosound\" \"/bin/wine\" \"notepad\"",
+          "Using root directory: /root",
+          "Launching \"/bin/wine\" \"notepad\" ",
+          "Could not find /bin/wine",
+          "Boxedwine shutdown"
+        ],
+        "stage": "main-returned",
+        "windowsProgramLaunched": false,
+        "networkAttempts": [],
+        "storageAttempts": 0,
+        "stagedText": "PHANTOM engine probe only\r\n",
+        "emptyDirectory": true,
+        "rootIsMemfs": true,
+        "additionalMounts": 0,
+        "initialized": true,
+        "wasmMemoryBytes": 536870912
+      }
+    },
+    {
+      "cycle": 2,
+      "elapsedMs": 369,
+      "frameRemovalMs": 7,
+      "report": {
+        "messages": [
+          "Starting ...",
+          "Command line arguments: \"./this.program\" \"-root\" \"/root\" \"-mount_drive\" \"/d_drive\" \"d\" \"-nosound\" \"/bin/wine\" \"notepad\"",
+          "Using root directory: /root",
+          "Launching \"/bin/wine\" \"notepad\" ",
+          "Could not find /bin/wine",
+          "Boxedwine shutdown"
+        ],
+        "stage": "main-returned",
+        "windowsProgramLaunched": false,
+        "networkAttempts": [],
+        "storageAttempts": 0,
+        "stagedText": "PHANTOM engine probe only\r\n",
+        "emptyDirectory": true,
+        "rootIsMemfs": true,
+        "additionalMounts": 0,
+        "initialized": true,
+        "wasmMemoryBytes": 536870912
+      }
+    },
+    {
+      "cycle": 3,
+      "elapsedMs": 370,
+      "frameRemovalMs": 7,
+      "report": {
+        "messages": [
+          "Starting ...",
+          "Command line arguments: \"./this.program\" \"-root\" \"/root\" \"-mount_drive\" \"/d_drive\" \"d\" \"-nosound\" \"/bin/wine\" \"notepad\"",
+          "Using root directory: /root",
+          "Launching \"/bin/wine\" \"notepad\" ",
+          "Could not find /bin/wine",
+          "Boxedwine shutdown"
+        ],
+        "stage": "main-returned",
+        "windowsProgramLaunched": false,
+        "networkAttempts": [],
+        "storageAttempts": 0,
+        "stagedText": "PHANTOM engine probe only\r\n",
+        "emptyDirectory": true,
+        "rootIsMemfs": true,
+        "additionalMounts": 0,
+        "initialized": true,
+        "wasmMemoryBytes": 536870912
+      }
+    }
+  ],
+  "traffic": [
+    "GET [loopback]/",
+    "GET [loopback]/engine-host",
+    "GET [loopback]/engine.js",
+    "GET [loopback]/engine-host",
+    "GET [loopback]/engine.js",
+    "GET [loopback]/engine-host",
+    "GET [loopback]/engine.js"
+  ],
+  "requests": [
+    "GET /",
+    "GET /engine-host",
+    "GET /engine.js",
+    "GET /engine-host",
+    "GET /engine.js",
+    "GET /engine-host",
+    "GET /engine.js"
+  ],
+  "errors": [],
+  "sockets": [],
+  "remainingWorkers": 0,
+  "serviceWorkers": 0
+}

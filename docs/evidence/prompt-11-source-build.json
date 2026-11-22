@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-22",
+  "originalAssetsReplaced": false,
+  "sdk": "3.1.28",
+  "cmake": "3.27.9",
+  "ninja": "1.11.1.1",
+  "initialOutcome": "failed: bundled SDK certificate store; retried using system trust with TLS verification enabled",
+  "configureOutcome": "passed, classic-only CMake includes; unused GL4ES disabled",
+  "firstBuild": "failed fetching zlib under network sandbox; seeded SDK port cache with retained source after exact SDK SHA-512 validation",
+  "secondBuild": "failed: SDK Acorn optimizer corrupted destructuring for-of into for(;of ...), SyntaxError at 1:22720",
+  "patchedBuild": "native target generated JS/WASM after replacing destructuring with Object.keys loop; Asyncify allowlist warnings remain",
+  "wrapperRebuild": "not performed",
+  "browserAcceptanceOfRebuiltArtifacts": "not performed; not adopted or distributed",
+  "upstreamHashMatch": false,
+  "outputs": {
+    "wdosbox.js": {
+      "bytes": 127374,
+      "sha256": "dddb3009fba38dc816ec67e269ee4f4ed17516d8ac0d873e22559bd4c1c5a817"
+    },
+    "wdosbox.wasm": {
+      "bytes": 1504628,
+      "sha256": "f312a7b059f6827739f0bfced6813a9d73dbd954d12ab52357cc321d3668b77f"
+    }
+  }
+}

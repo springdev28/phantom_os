@@ -1,0 +1,141 @@
+{
+  "date": "2026-11-22T04:35:46.475Z",
+  "capture": "unedited Playwright video of actual local browser; no narration",
+  "browser": "157.0.8103.79",
+  "fixture": "FreeCOM 0.86 / FREECOM.ZIP",
+  "exportSha256": "6f8351329b04f43e6d92cf554da5e1c9004c4d090ad5cd636605d209c285bc39",
+  "outputBytes": 16,
+  "consoleErrors": [],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:4174/",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/index-DH_BwhyJ.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/errors-CBO-VkZs.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/index-zeG4_nD6.css",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/Home-BIYVB0BL.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/favicon.svg",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/Inspect-_N4gXwgz.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/probe-labels-DLjXlW5P.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/favicon.svg",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "blob:http://127.0.0.1:4174/c535adf5-b4fd-4f8f-9cca-f80f8f557c52",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/Compatibility-BodQZpZm.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/favicon.svg",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/Configure-COEzXdWf.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/ProfilePanel-cwLxy5FD.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/favicon.svg",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/Player-DU6waotH.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/favicon.svg",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/assets/adapter-CdJNnPUz.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/runtimes/js-dos/8.5.3/emulators.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/runtimes/js-dos/8.5.3/wdosbox.js",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/runtimes/js-dos/8.5.3/wdosbox.wasm",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "http://127.0.0.1:4174/runtimes/js-dos/host-74394f7d792ea8c3.html",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "blob:null/0fb9d7bc-ea67-4371-b45f-0bd561f71463",
+      "method": "GET",
+      "body": ""
+    },
+    {
+      "url": "blob:null/20fdf55d-2293-45ae-bc39-d06f527e22f8",
+      "method": "GET",
+      "body": ""
+    }
+  ],
+  "remainingWorkers": 0,
+  "limitation": "local production preview only; not public HTTPS or a published YouTube submission",
+  "video": {
+    "file": "prompt-11-local-freecom.webm",
+    "sha256": "fa585479ebcd4c4ed9b696e778bb9393440ffbe5c56157ac6b0eca21a40e4c30",
+    "bytes": 1169032,
+    "publicYouTubeUrl": null,
+    "durationSeconds": 7.48,
+    "visuallyReviewedFrameSeconds": 4
+  }
+}

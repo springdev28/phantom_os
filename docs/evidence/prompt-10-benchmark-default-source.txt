@@ -1,0 +1,151 @@
+import assert from 'node:assert/strict';
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+import { mkdir, readFile, readdir, stat, writeFile } from 'node:fs/promises';
+import { arch, cpus, platform, release, totalmem } from 'node:os';
+import { gzipSync } from 'node:zlib';
+import { chromium, firefox, expect } from '@playwright/test';
+import type { Page } from '@playwright/test';
+import { preview } from 'vite';
+import { command, downloadGuest, start } from './fixtures/dos-browser.ts';
+
+// Benchmarks use only committed, redistributable fixtures, never user software.
+const warmCount = Number(process.env.BENCH_WARM ?? 20), coldCount = Number(process.env.BENCH_COLD ?? 5);
+assert(Number.isInteger(warmCount) && warmCount >= 1 && warmCount <= 50);
+assert(Number.isInteger(coldCount) && coldCount >= 1 && coldCount <= 20);
+const sha = (bytes: Uint8Array) => createHash('sha256').update(bytes).digest('hex');
+const round = (n: number) => Math.round(n * 100) / 100;
+const percentile = (values: number[], p: number) => [...values].sort((a, b) => a - b)[Math.ceil(values.length * p) - 1] ?? null;
+const demos = [
+  { file: 'MEM.EXE', version: '1.12', entry: 'MEM.EXE', instruction: 'MEM > MEMOUT.TXT', output: 'MEMOUT.TXT' },
+  { file: 'FREECOM.ZIP', version: '0.86', entry: 'APP/COMMAND.COM', instruction: 'ECHO BENCH OK>RESULT.TXT', output: 'RESULT.TXT' },
+] as const;
+type Sample = { index: number; firstLoadMs: number | null; inspectMs: number; firstFrameMs: number; confirmedOutputMs: number; stopMs: number; outputBytes: number; outputSha256: string };
+
+/** Sample only this dedicated browser's process tree. Sum RSS is NOT unique heap
+ * or WASM usage: shared pages may be counted twice, brief peaks may be missed. */
+function memorySampler(pid: number | undefined) {
+  const samples: { elapsedMs: number; rssBytes: number; processes: number }[] = [];
+  const began = performance.now(); let unavailable: string | null = null;
+  const sample = () => {
+    if (!pid || !['darwin', 'linux'].includes(platform())) { unavailable = 'Process-tree RSS sampling is unavailable on this platform'; return; }
+    try {
+      const rows = execFileSync('ps', ['-axo', 'pid=,ppid=,rss='], { encoding: 'utf8', timeout: 2000 })
+        .trim().split('\n').map(row => row.trim().split(/\s+/).map(Number));
+      const ids = new Set([pid]); let previous = 0;
+      while (previous !== ids.size) { previous = ids.size; for (const [id, parent] of rows) if (parent && id && ids.has(parent)) ids.add(id); }
+      const own = rows.filter(([id]) => id && ids.has(id));
+      samples.push({ elapsedMs: round(performance.now() - began), rssBytes: own.reduce((sum, row) => sum + (row[2] ?? 0) * 1024, 0), processes: own.length });
+    } catch { unavailable = 'Host process sampling was denied or timed out; no portable total-browser memory API was substituted'; }
+  };
+  sample(); const timer = setInterval(sample, 500);
+  return () => { clearInterval(timer); sample(); return { method: '500 ms sampled sum of dedicated browser process-tree RSS, shared pages not deduplicated',
+    sampledPeakBytes: samples.length ? Math.max(...samples.map(s => s.rssBytes)) : null, unavailable, samples }; };
+}
+
+async function select(page: Page, demo: typeof demos[number]) {
+  await page.goto('/#/inspect');
+  await page.getByLabel('Choose a local file', { exact: true }).setInputFiles(`tests/fixtures/dos/${demo.file}`);
+  const at = performance.now(); await page.getByRole('button', { name: 'Analyze file', exact: true }).click();
+  await expect(page.getByRole('radio', { name: `Choose ${demo.entry} as entrypoint`, exact: true })).toBeVisible();
+  const inspectMs = performance.now() - at;
+  await page.getByRole('radio', { name: `Choose ${demo.entry} as entrypoint`, exact: true }).check();
+  await page.getByRole('link', { name: 'View compatibility', exact: true }).click();
+  await page.getByRole('link', { name: 'Configure launch' }).click();
+  await page.getByRole('button', { name: 'Use these settings and continue' }).click();
+  await expect(page.getByRole('button', { name: 'Start DOS program', exact: true })).toBeEnabled();
+  return inspectMs;
+}
+async function launch(page: Page, demo: typeof demos[number]) {
+  const at = performance.now(); await start(page); const firstFrameMs = performance.now() - at;
+  await command(page, demo.instruction); const output = await downloadGuest(page, demo.output);
+  if (demo.file === 'MEM.EXE') assert.match(output.toString(), /Conventional[\s\S]*Extended \(XMS\)/);
+  else assert.equal(output.toString(), 'BENCH OK\r\n');
+  const confirmedOutputMs = performance.now() - at, stopAt = performance.now();
+  await page.getByRole('button', { name: 'Stop session' }).click();
+  await expect(page.locator('iframe')).toHaveCount(0); await expect.poll(() => page.workers().length).toBe(0);
+  const stopMs = performance.now() - stopAt; assert(stopMs < 2000);
+  return { firstFrameMs: round(firstFrameMs), confirmedOutputMs: round(confirmedOutputMs), stopMs: round(stopMs), outputBytes: output.length, outputSha256: sha(output) };
+}
+const server = await preview({ preview: { host: '127.0.0.1', port: 0, strictPort: true } });
+const address = server.httpServer.address(); assert(address && typeof address !== 'string');
+const origin = `http://127.0.0.1:${address.port}`;
+const inventory = [];
+for (const path of await readdir('dist', { recursive: true })) {
+  if (!(await stat(`dist/${path}`)).isFile() || !(path.startsWith('assets/') || /^runtimes\/js-dos\/(8\.5\.3\/|host-)/.test(path))) continue;
+  const bytes = await readFile(`dist/${path}`);
+  inventory.push({ path, bytes: bytes.length, gzipBytesForComparisonOnly: gzipSync(bytes).length, sha256: sha(bytes) });
+}
+const runs: unknown[] = [], failures: { browser: string; fixture: string; mode: string; message: string }[] = [];
+const system = { platform: platform(), release: release(), architecture: arch(), cpu: cpus()[0]?.model,
+  logicalCpus: cpus().length, totalMemoryBytes: totalmem(), node: process.version,
+  hardwareModel: platform() === 'darwin' ? execFileSync('sysctl', ['-n', 'hw.model'], { encoding: 'utf8' }).trim() : null,
+  macOS: platform() === 'darwin' ? execFileSync('sw_vers', ['-productVersion'], { encoding: 'utf8' }).trim() : null };
+try {
+  for (const [name, engine] of [['chrome', chromium], ['firefox', firefox]] as const) {
+    const processServer = await engine.launchServer({ ...(name === 'chrome' ? { channel: process.env.PLAYWRIGHT_CHANNEL ?? 'chrome' } : {}), headless: true });
+    const browser = await engine.connect(processServer.wsEndpoint());
+    const finishMemory = memorySampler(processServer.process().pid);
+    try {
+      for (const demo of demos) {
+        const cold: Sample[] = [], warm: Sample[] = [], traffic: string[] = [], errors: string[] = [];
+        let resources: unknown = null;
+        for (let i = 0; i < coldCount; i++) {
+          const context = await browser.newContext({ baseURL: origin, viewport: { width: 1440, height: 1000 } });
+          const page = await context.newPage();
+          context.on('request', r => traffic.push(`${r.method()} ${r.url()} ${r.postData() ?? ''}`));
+          page.on('pageerror', e => errors.push(e.message));
+          try {
+            if (name === 'chrome') {
+              const cdp = await context.newCDPSession(page);
+              await cdp.send('Network.enable'); await cdp.send('Network.clearBrowserCache');
+              await cdp.send('Network.emulateNetworkConditions', { offline: false, latency: 50, downloadThroughput: 20_000_000 / 8, uploadThroughput: 20_000_000 / 8 });
+            }
+            const at = performance.now(); await page.goto('/');
+            await expect(page.getByRole('button', { name: 'Open legacy software', exact: true })).toBeVisible();
+            const firstLoadMs = round(performance.now() - at), inspectMs = await select(page, demo);
+            cold.push({ index: i, firstLoadMs, inspectMs: round(inspectMs), ...await launch(page, demo) });
+            resources = await page.evaluate(() => performance.getEntriesByType('resource').map(e => {
+              const r = e as PerformanceResourceTiming; return { name: r.name, duration: r.duration, transferSize: r.transferSize, encodedBodySize: r.encodedBodySize, decodedBodySize: r.decodedBodySize };
+            }));
+          } catch (e) { failures.push({ browser: name, fixture: demo.file, mode: 'cold', message: String(e) }); break; }
+          finally { await context.close(); }
+        }
+        const context = await browser.newContext({ baseURL: origin, viewport: { width: 1440, height: 1000 } }), page = await context.newPage();
+        context.on('request', r => traffic.push(`${r.method()} ${r.url()} ${r.postData() ?? ''}`));
+        page.on('pageerror', e => errors.push(e.message));
+        try {
+          await select(page, demo); await launch(page, demo); // Uncounted warm-up, normal validation.
+          await context.setOffline(true);
+          for (let i = 0; i < warmCount; i++) {
+            const inspectMs = await select(page, demo);
+            warm.push({ index: i, firstLoadMs: null, inspectMs: round(inspectMs), ...await launch(page, demo) });
+          }
+        } catch (e) { failures.push({ browser: name, fixture: demo.file, mode: 'warm-offline', message: String(e) }); }
+        finally { await context.close(); }
+        const summary = { firstLoadMedianMs: percentile(cold.map(s => s.firstLoadMs!), .5), coldFirstFrameMedianMs: percentile(cold.map(s => s.firstFrameMs), .5),
+          warmInspectP95Ms: percentile(warm.map(s => s.inspectMs), .95), warmFirstFrameP95Ms: percentile(warm.map(s => s.firstFrameMs), .95),
+          warmConfirmedOutputP95Ms: percentile(warm.map(s => s.confirmedOutputMs), .95), stopP95Ms: percentile([...cold, ...warm].map(s => s.stopMs), .95) };
+        assert(errors.length === 0, errors.join('\n'));
+        assert(traffic.every(r => r.startsWith(`GET ${origin}/`) || r.startsWith('GET blob:')));
+        assert(!traffic.join('\n').match(/MEM\.EXE|FREECOM|COMMAND\.COM|MEMOUT|RESULT\.TXT|BENCH OK/));
+        runs.push({ browser: name, browserVersion: browser.version(), fixture: demo, fixtureSha256: sha(await readFile(`tests/fixtures/dos/${demo.file}`)),
+          coldNetwork: name === 'chrome' ? 'CDP 20 Mbit/s aggregate, minimum 50 ms request-to-headers latency; no CPU throttling' : 'unshaped loopback; not a shaped-network comparison',
+          warmNetwork: 'offline after explicit preload', cold, warm, summary, resources, errors, traffic });
+        console.log(JSON.stringify({ browser: name, fixture: demo.file, coldSamples: cold.length, warmSamples: warm.length, summary }));
+      }
+      runs.push({ browser: name, browserVersion: browser.version(), memory: finishMemory() });
+    } finally { finishMemory(); await browser.close(); await processServer.close(); }
+  }
+} finally {
+  await mkdir('test-results', { recursive: true });
+  await writeFile('test-results/benchmark.json', JSON.stringify({ date: new Date().toISOString(), system, coldCount, warmCount,
+    methodology: 'Dedicated headless browsers, sequential samples, regular preview headers. First load ends at visible Home action. Inspect starts after picker selection. First frame is not proof of program readiness. Confirmed output includes physical-key simulation at 35 ms/key plus actual guest file export. No timing is a human usability result. RSS is a sampled process-tree sum, not unique heap or peak WASM memory.',
+    runtime: JSON.parse(await readFile('vendor/dos/manifest.json', 'utf8')),
+    configuration: { cwd: '.', mount: 'whole package at C:/, writable temporary', guestMemoryMiB: 64, cycles: 3000,
+      core: 'auto', machine: 'svga_s3', xms: true, ems: true, keyboard: 'US physical', mouse: 'off', audio: false, maxSessionMinutes: 30 },
+    inventory, runs, failures, complete: failures.length === 0 && runs.length === 6 }, null, 2) + '\n');
+  await new Promise<void>((resolve, reject) => server.httpServer.close(e => e ? reject(e) : resolve()));
+}
+console.log(JSON.stringify({ runs: runs.length, failures, output: 'test-results/benchmark.json' }));
+if (failures.length) process.exitCode = 1;

@@ -1,0 +1,77 @@
+{
+  "baseline": "prompt-9-source-files.json",
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "before": null,
+      "after": "84770c823c2121f7a6579887bde50c3c258ac3a84f881ab977cd0f8b3f0a8053",
+      "change": "added"
+    },
+    {
+      "path": "package.json",
+      "before": "2288c058a1de42d100005c3a75a662d815b101fadb092d28c19729d2a5b954ee",
+      "after": "51b971164cc22dbd497b1c1ab1dbe228e04f4648ff4790922a3356203164988d",
+      "change": "modified"
+    },
+    {
+      "path": "playwright.compatibility.config.ts",
+      "before": null,
+      "after": "a03e5ae38ef6903b9fcda356bd16db7b60e3a1db34dec1f31a42f6e1aea30fdf",
+      "change": "added"
+    },
+    {
+      "path": "scripts/manual-fixtures.mjs",
+      "before": null,
+      "after": "c830295e6b4c2978636082495e81b72fddc1ea6481e6191bbf2f209630b6d693",
+      "change": "added"
+    },
+    {
+      "path": "src/inspection/property.test.ts",
+      "before": null,
+      "after": "e6af2ea884be21804c67f76ce0339b20945db3efa68196140678bad3df514e7b",
+      "change": "added"
+    },
+    {
+      "path": "tests/benchmark.ts",
+      "before": null,
+      "after": "b208212e2440e75497747a33446f4cad3bb04c17b0dc8e048a609c343b0f02ba",
+      "change": "added"
+    },
+    {
+      "path": "tests/compatibility/core.spec.ts",
+      "before": null,
+      "after": "b6e29701834e9be9b008a0524bd2f572a585ffa2dcf34ab67fe6688a2b4a9e4e",
+      "change": "added"
+    },
+    {
+      "path": "tests/fixtures/acceptance.ts",
+      "before": null,
+      "after": "9b966ce1ee5b5177b0bab51a8275dbe10a6305e681614d1681c8571f78c1c8a0",
+      "change": "added"
+    },
+    {
+      "path": "tests/fixtures/dos-browser.ts",
+      "before": "9e2144d47a16456a516e4c5e81796b854f00a6ed420d0b9e0d1253be62cfa663",
+      "after": "f8ab4dabdbf37e8201b2adefd068d4ca10d799765fd6b98227d18357f9f5eef2",
+      "change": "modified"
+    },
+    {
+      "path": "tests/manual-result.template.json",
+      "before": null,
+      "after": "de4bf16e88d44e73116c8b6c871fd5d6c8ec1607e05c5dc96fea61c98f86747f",
+      "change": "added"
+    },
+    {
+      "path": "tsconfig.json",
+      "before": "dd29649c27d9cf6d39f8510776ffb80f00120a6ccf07c79b6e7197835f1baf6a",
+      "after": "085b055c56436e157a545c74066b4a7f255288d50ec8772ece114bc829b7e617",
+      "change": "modified"
+    }
+  ],
+  "note": "11 source/test/configuration changes relative to Prompt 9. Three existing dotfiles were added only to the hash inventory. Documentation changes are listed in prompt-10.md.",
+  "inventoryOnlyUnchanged": [
+    ".gitignore",
+    ".npmrc",
+    ".nvmrc"
+  ]
+}

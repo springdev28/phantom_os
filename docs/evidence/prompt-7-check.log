@@ -1,0 +1,440 @@
+
+> phantom-os@0.1.0 check
+> npm run typecheck && npm run lint && npm test && npm run build && npm run test:browser && npm run test:production
+
+
+> phantom-os@0.1.0 typecheck
+> tsc --noEmit
+
+
+> phantom-os@0.1.0 lint
+> eslint . --max-warnings 0
+
+
+> phantom-os@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.1 /Users/baharyuksel/Documents/ChatGPT/Phantom OS
+
+
+ Test Files  13 passed (13)
+      Tests  240 passed (240)
+   Start at  03:27:25
+   Duration  451ms (tests 57%, import 22%, transform 18%, worker 3%)
+
+
+> phantom-os@0.1.0 prebuild
+> npm run runtime:assets
+
+
+> phantom-os@0.1.0 runtime:assets
+> node scripts/runtime-assets.mjs
+
+
+> phantom-os@0.1.0 build
+> npm run typecheck && vite build
+
+
+> phantom-os@0.1.0 typecheck
+> tsc --noEmit
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 67 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          0.75 kB │ gzip:   0.43 kB
+dist/assets/index-C3GbwG0A.css          27.46 kB │ gzip:   6.43 kB
+dist/assets/probe-labels-DLjXlW5P.js     0.60 kB │ gzip:   0.37 kB
+dist/assets/adapter-BSCZC4tF.js          0.71 kB │ gzip:   0.46 kB
+dist/assets/Home-CbtWf5qR.js             3.48 kB │ gzip:   1.27 kB
+dist/assets/errors-Crjp1eWj.js           4.75 kB │ gzip:   2.14 kB
+dist/assets/Player-BwqjPsXD.js           6.22 kB │ gzip:   2.42 kB
+dist/assets/adapter-BhsAm9fj.js          6.49 kB │ gzip:   2.97 kB
+dist/assets/Compatibility-CP61wa5C.js    6.61 kB │ gzip:   2.39 kB
+dist/assets/ProfilePanel-K2N8_aUP.js     7.60 kB │ gzip:   2.56 kB
+dist/assets/Workspace-Dizo_NNC.js        7.79 kB │ gzip:   2.46 kB
+dist/assets/Inspect-BNbhF1En.js         13.57 kB │ gzip:   4.15 kB
+dist/assets/index-BiU1JwvE.js          333.66 kB │ gzip: 109.71 kB
+
+✓ built in 134ms
+
+> phantom-os@0.1.0 test:browser
+> playwright test
+
+[WebServer] (node:53297) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 70 tests using 2 workers
+
+(node:53303) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:53304) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [desktop-chrome] › tests/browser/analyzer.spec.ts:20:1 › different selected bytes produce distinct reports with inspectable evidence (2.5s)
+  ✓   1 [desktop-chrome] › tests/browser/analyzer.spec.ts:53:1 › all fixture analysis remains local, without page/worker requests or persisted reports (2.6s)
+  ✓   3 [desktop-chrome] › tests/browser/analyzer.spec.ts:83:1 › corrupted data leaves a readable diagnostic and supports a fresh selection (666ms)
+  ✓   4 [desktop-chrome] › tests/browser/analyzer.spec.ts:96:1 › a File read failure exposes a fixed human-readable error without private exception text (603ms)
+  ✓   5 [desktop-chrome] › tests/browser/boxedwine-disabled.spec.ts:17:1 › PE32 and NE preserve reports/profiles while every Windows launch path stays disabled (3.0s)
+  ✓   6 [desktop-chrome] › tests/browser/boxedwine-disabled.spec.ts:70:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest (9.8s)
+  ✓   7 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (15.0s)
+  ✓   8 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch (14.7s)
+  ✓   9 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch (7.0s)
+  ✓  11 [desktop-chrome] › tests/browser/packages.spec.ts:20:1 › real ZIP picker preserves the mixed package and asks for an explicit executable (1.9s)
+  ✓  12 [desktop-chrome] › tests/browser/packages.spec.ts:46:1 › native folder input preserves relative paths including empty resources (1.5s)
+  ✓  13 [desktop-chrome] › tests/browser/packages.spec.ts:68:1 › empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem (787ms)
+  ✓  14 [desktop-chrome] › tests/browser/packages.spec.ts:83:1 › package explorer paginates and does not silently expand a nested archive (705ms)
+  ✓  10 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker (5.4s)
+  ✓  15 [desktop-chrome] › tests/browser/packages.spec.ts:100:1 › real worker preserves every file hash at the adapter package boundary (468ms)
+  ✓  16 [desktop-chrome] › tests/browser/packages.spec.ts:125:1 › page and worker traffic carry no names or bytes; no storage or script execution occurs (727ms)
+  ✓  18 [desktop-chrome] › tests/browser/planner.spec.ts:25:1 › header-based candidate, keyboard override and reset never enable Run (974ms)
+  ✓  17 [desktop-chrome] › tests/browser/packages.spec.ts:153:1 › cancelling a real extraction terminates its worker and a fresh package still imports (2.5s)
+  ✓  19 [desktop-chrome] › tests/browser/planner.spec.ts:41:1 › ambiguous ZIP asks for entrypoint, then replans for the chosen executable (1.7s)
+  ✓  20 [desktop-chrome] › tests/browser/planner.spec.ts:58:1 › imports missing dependencies, edits limits and exports a local JSON profile without content (1.6s)
+  ✓  21 [desktop-chrome] › tests/browser/planner.spec.ts:93:1 › unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export (2.6s)
+  ✓  22 [desktop-chrome] › tests/browser/planner.spec.ts:119:1 › invalid imports preserve a working profile, reject forged verification and recover on reset (1.5s)
+  ✓  23 [desktop-chrome] › tests/browser/planner.spec.ts:134:1 › a profile can be imported before files and reload clears its temporary state (1.9s)
+  ✓  24 [desktop-chrome] › tests/browser/planner.spec.ts:146:1 › COM confirmation remains separate from static recognition, and corrupt input remains invalid (1.9s)
+  ✓  25 [desktop-chrome] › tests/browser/smoke.spec.ts:17:1 › selects a local file, checks access, explains unavailable execution and clears the workspace (3.5s)
+  ✓  26 [desktop-chrome] › tests/browser/smoke.spec.ts:53:1 › all five screens have accessible navigation, direct links and no horizontal overflow (3.7s)
+  ✓  28 [desktop-chrome] › tests/browser/smoke.spec.ts:86:1 › a reload discards the temporary selection and selecting the same file again works (662ms)
+  ✓  27 [desktop-chrome] › tests/browser/smoke.spec.ts:71:1 › keyboard selection is reachable and navigation transfers focus to the new heading (1.2s)
+  ✓  29 [desktop-chrome] › tests/browser/smoke.spec.ts:99:1 › an empty file shows a recoverable error instead of a compatibility result (726ms)
+  ✓  30 [desktop-chrome] › tests/browser/smoke.spec.ts:109:1 › loading is cancellable and an old read cannot revive a cleared selection (1.3s)
+  ✓  32 [desktop-chrome] › tests/browser/workspace.spec.ts:85:1 › profile-only save requires original software and is isolated by origin (4.3s)
+  ✓  33 [desktop-chrome] › tests/browser/workspace.spec.ts:107:1 › quota failure keeps the saved workspace and corrupt stored bytes cannot launch (3.7s)
+  ✓  34 [desktop-chrome] › tests/browser/workspace.spec.ts:132:59 › denied OPFS retains temporary inspection and profile export (3.1s)
+  ✓  31 [desktop-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete (12.4s)
+(node:53655) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  35 [desktop-chrome] › tests/browser/workspace.spec.ts:132:59 › unavailable OPFS retains temporary inspection and profile export (3.2s)
+(node:53669) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  36 [mobile-chrome] › tests/browser/analyzer.spec.ts:20:1 › different selected bytes produce distinct reports with inspectable evidence (2.3s)
+  ✓  38 [mobile-chrome] › tests/browser/analyzer.spec.ts:83:1 › corrupted data leaves a readable diagnostic and supports a fresh selection (767ms)
+  ✓  39 [mobile-chrome] › tests/browser/analyzer.spec.ts:96:1 › a File read failure exposes a fixed human-readable error without private exception text (501ms)
+  ✓  37 [mobile-chrome] › tests/browser/analyzer.spec.ts:53:1 › all fixture analysis remains local, without page/worker requests or persisted reports (2.5s)
+  ✓  40 [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:17:1 › PE32 and NE preserve reports/profiles while every Windows launch path stays disabled (2.9s)
+  ✓  41 [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:70:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest (9.9s)
+  ✓  42 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (14.7s)
+  ✓  44 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch (7.0s)
+  ✓  43 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch (14.8s)
+  ✓  46 [mobile-chrome] › tests/browser/packages.spec.ts:20:1 › real ZIP picker preserves the mixed package and asks for an explicit executable (2.0s)
+  ✓  45 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker (5.0s)
+  ✓  47 [mobile-chrome] › tests/browser/packages.spec.ts:46:1 › native folder input preserves relative paths including empty resources (1.4s)
+  ✓  49 [mobile-chrome] › tests/browser/packages.spec.ts:83:1 › package explorer paginates and does not silently expand a nested archive (860ms)
+  ✓  48 [mobile-chrome] › tests/browser/packages.spec.ts:68:1 › empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem (1.0s)
+  ✓  50 [mobile-chrome] › tests/browser/packages.spec.ts:100:1 › real worker preserves every file hash at the adapter package boundary (500ms)
+  ✓  51 [mobile-chrome] › tests/browser/packages.spec.ts:125:1 › page and worker traffic carry no names or bytes; no storage or script execution occurs (779ms)
+  ✓  53 [mobile-chrome] › tests/browser/planner.spec.ts:25:1 › header-based candidate, keyboard override and reset never enable Run (1.4s)
+  ✓  52 [mobile-chrome] › tests/browser/packages.spec.ts:153:1 › cancelling a real extraction terminates its worker and a fresh package still imports (2.5s)
+  ✓  54 [mobile-chrome] › tests/browser/planner.spec.ts:41:1 › ambiguous ZIP asks for entrypoint, then replans for the chosen executable (1.7s)
+  ✓  55 [mobile-chrome] › tests/browser/planner.spec.ts:58:1 › imports missing dependencies, edits limits and exports a local JSON profile without content (1.7s)
+  ✓  57 [mobile-chrome] › tests/browser/planner.spec.ts:119:1 › invalid imports preserve a working profile, reject forged verification and recover on reset (1.6s)
+  ✓  56 [mobile-chrome] › tests/browser/planner.spec.ts:93:1 › unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export (2.6s)
+  ✓  59 [mobile-chrome] › tests/browser/planner.spec.ts:146:1 › COM confirmation remains separate from static recognition, and corrupt input remains invalid (1.8s)
+  ✓  58 [mobile-chrome] › tests/browser/planner.spec.ts:134:1 › a profile can be imported before files and reload clears its temporary state (2.4s)
+  ✓  61 [mobile-chrome] › tests/browser/smoke.spec.ts:53:1 › all five screens have accessible navigation, direct links and no horizontal overflow (2.8s)
+  ✓  60 [mobile-chrome] › tests/browser/smoke.spec.ts:17:1 › selects a local file, checks access, explains unavailable execution and clears the workspace (3.4s)
+  ✓  63 [mobile-chrome] › tests/browser/smoke.spec.ts:86:1 › a reload discards the temporary selection and selecting the same file again works (642ms)
+  ✓  62 [mobile-chrome] › tests/browser/smoke.spec.ts:71:1 › keyboard selection is reachable and navigation transfers focus to the new heading (1.2s)
+  ✓  64 [mobile-chrome] › tests/browser/smoke.spec.ts:99:1 › an empty file shows a recoverable error instead of a compatibility result (1.3s)
+  ✓  65 [mobile-chrome] › tests/browser/smoke.spec.ts:109:1 › loading is cancellable and an old read cannot revive a cleared selection (1.3s)
+  ✓  67 [mobile-chrome] › tests/browser/workspace.spec.ts:85:1 › profile-only save requires original software and is isolated by origin (4.8s)
+  ✓  68 [mobile-chrome] › tests/browser/workspace.spec.ts:107:1 › quota failure keeps the saved workspace and corrupt stored bytes cannot launch (3.6s)
+  ✓  69 [mobile-chrome] › tests/browser/workspace.spec.ts:132:59 › denied OPFS retains temporary inspection and profile export (3.1s)
+  ✓  66 [mobile-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete (12.6s)
+  ✓  70 [mobile-chrome] › tests/browser/workspace.spec.ts:132:59 › unavailable OPFS retains temporary inspection and profile export (3.3s)
+
+  70 passed (2.1m)
+
+> phantom-os@0.1.0 test:production
+> node tests/production-smoke.ts
+
+{
+  "scope": "Production intake, profiles, disabled/unverified Windows path, and real DOS execution with guest output and offline relaunch",
+  "browser": "157.0.8103.79",
+  "platform": "darwin/arm64",
+  "csp": "Main script-src self; only three fixed asset fetch URLs; opaque runtime frame/worker connect-src none",
+  "runs": [
+    {
+      "viewport": "desktop",
+      "online": "passed",
+      "offlineAfterViewsLoad": "passed",
+      "userDataRequests": 0,
+      "unexpectedRequests": 0,
+      "staticFaviconRequestsAfterLoad": 4,
+      "localBlobWorkerLoads": 2,
+      "consoleErrors": 0,
+      "completedWorkers": 2,
+      "remainingWorkers": 0,
+      "filesRetained": 8,
+      "candidates": 2,
+      "profileRoundTrips": 2,
+      "decision": "experimental-after-applying-profile",
+      "executionOffered": true,
+      "executionStarted": false
+    },
+    {
+      "viewport": "mobile",
+      "online": "passed",
+      "offlineAfterViewsLoad": "passed",
+      "userDataRequests": 0,
+      "unexpectedRequests": 0,
+      "staticFaviconRequestsAfterLoad": 4,
+      "localBlobWorkerLoads": 2,
+      "consoleErrors": 0,
+      "completedWorkers": 2,
+      "remainingWorkers": 0,
+      "filesRetained": 8,
+      "candidates": 2,
+      "profileRoundTrips": 2,
+      "decision": "experimental-after-applying-profile",
+      "executionOffered": true,
+      "executionStarted": false
+    }
+  ],
+  "windowsRuns": [
+    {
+      "viewport": "desktop",
+      "fixtures": [
+        "parser-only PE32",
+        "parser-only NE"
+      ],
+      "executionOffered": false,
+      "profileExports": 2,
+      "runtimeRequests": 0,
+      "noSelectedDataInRequests": true,
+      "noStorage": true,
+      "traffic": [
+        "GET http://127.0.0.1:60659/ ",
+        "GET http://127.0.0.1:60659/assets/index-BiU1JwvE.js ",
+        "GET http://127.0.0.1:60659/assets/errors-Crjp1eWj.js ",
+        "GET http://127.0.0.1:60659/assets/index-C3GbwG0A.css ",
+        "GET http://127.0.0.1:60659/assets/Inspect-BNbhF1En.js ",
+        "GET http://127.0.0.1:60659/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Compatibility-CP61wa5C.js ",
+        "GET http://127.0.0.1:60659/assets/ProfilePanel-K2N8_aUP.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Player-BwqjPsXD.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg "
+      ],
+      "errors": [],
+      "sockets": [],
+      "remainingWorkers": 0
+    },
+    {
+      "viewport": "mobile",
+      "fixtures": [
+        "parser-only PE32",
+        "parser-only NE"
+      ],
+      "executionOffered": false,
+      "profileExports": 2,
+      "runtimeRequests": 0,
+      "noSelectedDataInRequests": true,
+      "noStorage": true,
+      "traffic": [
+        "GET http://127.0.0.1:60659/ ",
+        "GET http://127.0.0.1:60659/assets/index-BiU1JwvE.js ",
+        "GET http://127.0.0.1:60659/assets/errors-Crjp1eWj.js ",
+        "GET http://127.0.0.1:60659/assets/index-C3GbwG0A.css ",
+        "GET http://127.0.0.1:60659/assets/Inspect-BNbhF1En.js ",
+        "GET http://127.0.0.1:60659/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Compatibility-CP61wa5C.js ",
+        "GET http://127.0.0.1:60659/assets/ProfilePanel-K2N8_aUP.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Player-BwqjPsXD.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/favicon.svg "
+      ],
+      "errors": [],
+      "sockets": [],
+      "remainingWorkers": 0
+    }
+  ],
+  "runtimeRuns": [
+    {
+      "fixture": "MEM.EXE",
+      "entry": "MEM.EXE",
+      "startupMs": 1041,
+      "stopMs": 61,
+      "outputSha256": "a89b9c2e1869c81b57d603ff9eeac228982a335d1235beb2a78bb13e55bedbfb",
+      "outputBytes": 747,
+      "offlineRelaunch": "passed",
+      "guestNetworkAttempt": "not attempted",
+      "workerUrls": [
+        "blob:null/4ece4afb-5138-42e9-86be-03ba8d31952d",
+        "blob:null/01698ae0-dacf-48b2-b767-8010b0a1dd36"
+      ],
+      "remainingWorkers": 0,
+      "traffic": [
+        "GET http://127.0.0.1:60659/ ",
+        "GET http://127.0.0.1:60659/assets/index-BiU1JwvE.js ",
+        "GET http://127.0.0.1:60659/assets/errors-Crjp1eWj.js ",
+        "GET http://127.0.0.1:60659/assets/index-C3GbwG0A.css ",
+        "GET http://127.0.0.1:60659/assets/Inspect-BNbhF1En.js ",
+        "GET http://127.0.0.1:60659/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Compatibility-CP61wa5C.js ",
+        "GET http://127.0.0.1:60659/assets/ProfilePanel-K2N8_aUP.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Player-BwqjPsXD.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/adapter-BhsAm9fj.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/5770e989-d374-46c6-a7fc-dc04b67a6985 ",
+        "GET blob:null/4ece4afb-5138-42e9-86be-03ba8d31952d ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/ff00bf54-6192-473b-9a4e-47aae8ef5d10 ",
+        "GET blob:null/01698ae0-dacf-48b2-b767-8010b0a1dd36 "
+      ],
+      "sockets": [],
+      "errors": []
+    },
+    {
+      "fixture": "FREECOM.ZIP",
+      "entry": "APP/COMMAND.COM",
+      "startupMs": 1034,
+      "stopMs": 63,
+      "outputSha256": "e90558aafe505f5d526a58eca96a088fd03b18b9940b15e3c7ec9dc7fe424fda",
+      "outputBytes": 16,
+      "offlineRelaunch": "passed",
+      "guestNetworkAttempt": "blocked, worker released, relaunch passed",
+      "workerUrls": [
+        "blob:http://127.0.0.1:60659/f6726890-27b7-406a-8fad-688339e231a8",
+        "blob:null/55398620-2570-4d19-a029-926f65928fd1",
+        "blob:null/7860fd8e-8b33-49da-a9d3-49ccf6e81ddf",
+        "blob:null/9c9eef00-39a2-4534-8828-f0bccd97e85e",
+        "blob:null/aed2a494-a9d0-47d7-a97c-523b860c205d",
+        "blob:null/5dff246b-cf1b-4a57-ac3f-2c9f52d7e50f",
+        "blob:null/f1024181-ee2d-45c9-8678-b9812c04d64a"
+      ],
+      "remainingWorkers": 0,
+      "traffic": [
+        "GET http://127.0.0.1:60659/ ",
+        "GET http://127.0.0.1:60659/assets/index-BiU1JwvE.js ",
+        "GET http://127.0.0.1:60659/assets/errors-Crjp1eWj.js ",
+        "GET http://127.0.0.1:60659/assets/index-C3GbwG0A.css ",
+        "GET http://127.0.0.1:60659/assets/Inspect-BNbhF1En.js ",
+        "GET http://127.0.0.1:60659/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET blob:http://127.0.0.1:60659/f6726890-27b7-406a-8fad-688339e231a8 ",
+        "GET http://127.0.0.1:60659/assets/Compatibility-CP61wa5C.js ",
+        "GET http://127.0.0.1:60659/assets/ProfilePanel-K2N8_aUP.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Player-BwqjPsXD.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/adapter-BhsAm9fj.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/b0b3029c-ef4d-462c-bcfc-7f1ce22bffca ",
+        "GET blob:null/55398620-2570-4d19-a029-926f65928fd1 ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/f9210cfd-879c-445e-aaca-0410bdc8d30b ",
+        "GET blob:null/7860fd8e-8b33-49da-a9d3-49ccf6e81ddf ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/aefa1103-88bf-4430-90e0-697327953945 ",
+        "GET blob:null/9c9eef00-39a2-4534-8828-f0bccd97e85e ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/78e6ab52-8bf2-4712-aae7-7d62e4c10358 ",
+        "GET blob:null/aed2a494-a9d0-47d7-a97c-523b860c205d ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/89337cc4-c2bf-48bc-b0ab-4c45eb44a1cb ",
+        "GET blob:null/5dff246b-cf1b-4a57-ac3f-2c9f52d7e50f ",
+        "GET http://127.0.0.1:60659/assets/Workspace-Dizo_NNC.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/ ",
+        "GET http://127.0.0.1:60659/assets/index-BiU1JwvE.js ",
+        "GET http://127.0.0.1:60659/assets/errors-Crjp1eWj.js ",
+        "GET http://127.0.0.1:60659/assets/index-C3GbwG0A.css ",
+        "GET http://127.0.0.1:60659/assets/Workspace-Dizo_NNC.js ",
+        "GET http://127.0.0.1:60659/assets/ProfilePanel-K2N8_aUP.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Compatibility-CP61wa5C.js ",
+        "GET http://127.0.0.1:60659/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/Player-BwqjPsXD.js ",
+        "GET http://127.0.0.1:60659/favicon.svg ",
+        "GET http://127.0.0.1:60659/assets/adapter-BhsAm9fj.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:60659/runtimes/js-dos/host-c41239cc61ec3e07.html ",
+        "GET blob:null/bb0b4089-96d4-4829-804c-644d4a8f11a5 ",
+        "GET blob:null/f1024181-ee2d-45c9-8678-b9812c04d64a "
+      ],
+      "sockets": [],
+      "errors": []
+    }
+  ],
+  "workspaceRuns": [
+    {
+      "fixture": "FREECOM.ZIP",
+      "liveImport": "passed",
+      "guestEditAndExport": "passed",
+      "explicitSoftwareAndDocumentsSave": "passed",
+      "reloadAndRestore": "passed",
+      "noAutomaticLaunch": true,
+      "restoredFileSha256": "5a477ff0d53d2b50195662b92ad50b2b58d487250860fdbaf579a8241a3f6645"
+    }
+  ],
+  "assets": {
+    "/favicon.svg": "dad32c0e4815ac493f88ec90e65a36c5b53fcf2047f0501f280ee61c5c3f5e0e",
+    "/index.html": "eec2748d0df45e018b633318379e2f039d78658fe682f846350230518395b8a9",
+    "/third-party-notices.txt": "8578776082f4cfffb07060ebbeb1938ea53e28ebac8c37baa788e4978a854018",
+    "/runtimes/js-dos/NOTICE.txt": "b09e659e1e16c6ccc21a7176e526b494796189e25471484763110fe3cb5aa04b",
+    "/runtimes/js-dos/host-c41239cc61ec3e07.html": "c41239cc61ec3e073408395f82daab3427f69cb1d55db919b2aabbca521973b6",
+    "/runtimes/js-dos/source/NOTICE.txt": "b09e659e1e16c6ccc21a7176e526b494796189e25471484763110fe3cb5aa04b",
+    "/runtimes/js-dos/source/README.md": "1d577c36a294d48f75ede759f66a67f002a813a3d48789382b1a4e625fe6b675",
+    "/runtimes/js-dos/source/browser-pack-6.1.0.tgz": "13db68f814f0b0b943de116b36eee620f23eb857fba80c342791288cf0320dd1",
+    "/runtimes/js-dos/source/core-js-3.30.0.tgz": "d7589cd792bb431696c0a6e9245ced1b5a85fa7006875ae7c616e0fe629d0cbf",
+    "/runtimes/js-dos/source/dosbox-source.tar.gz": "797efaf22246bbc5b2e6be0a6c791a58addd2bca330e0aa93232780a77e06019",
+    "/runtimes/js-dos/source/emscripten-LICENSE.txt": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+    "/runtimes/js-dos/source/emulators-LICENSE.txt": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+    "/runtimes/js-dos/source/emulators-source.zip": "de3d0f040720be8bc3e48b5332f304252618bf7891be04e39739b786427a0ab1",
+    "/runtimes/js-dos/source/emulators.js.map": "fc7b1af91c9d4af2f9a75c51bd74469b21d673c1667666c181cbca0e48efe1e8",
+    "/runtimes/js-dos/source/freecom-LICENSE.txt": "45ece956c40ccac10202a455c0841da8bf42b28412f8c992357da826bb107eae",
+    "/runtimes/js-dos/source/freecom-source.zip": "a23f3324e8186481e289f9f7dd161c7d79be99f5d813a9dda878b255e26e2fa9",
+    "/runtimes/js-dos/source/libcxx-LICENSE.txt": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+    "/runtimes/js-dos/source/manifest.json": "f321fb7fc8c741940f68b3752b22de5bfecec0f3db55a4a8efa75bb27108c2f0",
+    "/runtimes/js-dos/source/mem-LICENSE.txt": "da0eca0fb517ac939d167924c9d4b3f8750a6b7191932ef2cb145acfa624ac7e",
+    "/runtimes/js-dos/source/mem-source.zip": "dddb1de13e782afc4246c1922cddb92a0a70a9a0550d4e921b4f7a5dae3b7ca7",
+    "/runtimes/js-dos/source/musl-COPYRIGHT.txt": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+    "/runtimes/js-dos/source/npm-build.ts": "87d5f3b632a7733c0752b4fff27beddb124581465bad364c34395007adccb5c4",
+    "/runtimes/js-dos/source/process-0.11.10.tgz": "7c10569b3c9cb056152ad630d40f9f4fcc321a0013c2bb8384f036aaa674e6bb",
+    "/runtimes/js-dos/source/suppl-LICENSE.txt": "a30edd18dd7444fb631c00951e4571fc2c2832f3859b438f3f7e15ba4ef63176",
+    "/runtimes/js-dos/source/zlib-1.2.13.tar.gz": "1525952a0a567581792613a9723333d7f8cc20b87a81f920fb8bc7e3f2251428",
+    "/runtimes/js-dos/source/zlib-LICENSE.txt": "ab234c46f13c0dd02f494a713ecb48b20afd435aa6d0b3418da7686b5b7fcdfe",
+    "/runtimes/js-dos/8.5.3/emulators.js": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+    "/runtimes/js-dos/8.5.3/wdosbox.js": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+    "/runtimes/js-dos/8.5.3/wdosbox.wasm": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+    "/assets/Compatibility-CP61wa5C.js": "2e26e9b769f665b167f337ad38695416efa75951cea378d7aec309a267462a10",
+    "/assets/Home-CbtWf5qR.js": "18035263467b83c3e50ea09bcc5b32faa412af9aa22509fe7727a0877fa99a32",
+    "/assets/Inspect-BNbhF1En.js": "d08920b0548b2ed04f03b2ab5df20f0c3ffa5ba932fc6bbf32971f3be9585356",
+    "/assets/Player-BwqjPsXD.js": "7ffea70e4468dbc57433a440039570cd459e8e50dcb70d1a6b29784ff7931ef8",
+    "/assets/ProfilePanel-K2N8_aUP.js": "9bfb80335e64c1e11871d96a1aab8f1fa415398ecc2153c5ccabed48c567db6d",
+    "/assets/Workspace-Dizo_NNC.js": "2be000414674d4cb0231338f7726a745c4939a5c098fd97c3a3f2701c41f8d78",
+    "/assets/adapter-BSCZC4tF.js": "1ac8d7069292763120f22bd00a148730a01c9fb8a960f9aede203516deedd9bf",
+    "/assets/adapter-BhsAm9fj.js": "5d0d9bfd20d186fb6ee223e94e39d71bfe13a9a2ecb7c6e0ee83f57c38cab657",
+    "/assets/errors-Crjp1eWj.js": "16ab6cd1c0ba4e6ae1848112351a3205c2c20b370b41e84728c79abaf4443d7c",
+    "/assets/index-BiU1JwvE.js": "c7878bc756946d6a793b6a1913b5f696b2c19c1543ab38c984c2c4cc8de5aa4d",
+    "/assets/index-C3GbwG0A.css": "e4d7ba32aec2d35c625f66d0db182441e8b2001f21183d6383ed1658fd008072",
+    "/assets/probe-labels-DLjXlW5P.js": "74c2acdb05dcdb5f1777b738ab442eb8d10e83021add474d345b0ef271fe9208"
+  }
+}

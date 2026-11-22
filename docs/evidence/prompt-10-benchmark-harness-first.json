@@ -1,0 +1,1038 @@
+{
+  "date": "2026-11-22T03:33:36.834Z",
+  "system": {
+    "platform": "darwin",
+    "release": "25.6.0",
+    "architecture": "arm64",
+    "cpu": "Apple M1",
+    "logicalCpus": 8,
+    "totalMemoryBytes": 17179869184,
+    "node": "v24.19.0",
+    "macOS": "26.6.2"
+  },
+  "coldCount": 1,
+  "warmCount": 2,
+  "methodology": "Dedicated headless browsers, sequential samples, regular preview headers. First load ends at visible Home action. Inspect starts after picker selection. First frame is not proof of program readiness. Confirmed output includes physical-key simulation at 35 ms/key plus actual guest file export. No timing is a human usability result. RSS is a sampled process-tree sum, not unique heap or peak WASM memory.",
+  "inventory": [
+    {
+      "path": "runtimes/js-dos/host-74394f7d792ea8c3.html",
+      "bytes": 22827,
+      "gzipBytesForComparisonOnly": 7115,
+      "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318"
+    },
+    {
+      "path": "runtimes/js-dos/8.5.3/emulators.js",
+      "bytes": 91065,
+      "gzipBytesForComparisonOnly": 25795,
+      "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075"
+    },
+    {
+      "path": "runtimes/js-dos/8.5.3/wdosbox.js",
+      "bytes": 114763,
+      "gzipBytesForComparisonOnly": 30681,
+      "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e"
+    },
+    {
+      "path": "runtimes/js-dos/8.5.3/wdosbox.wasm",
+      "bytes": 1459535,
+      "gzipBytesForComparisonOnly": 505534,
+      "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c"
+    },
+    {
+      "path": "assets/Compatibility-BodQZpZm.js",
+      "bytes": 9871,
+      "gzipBytesForComparisonOnly": 3547,
+      "sha256": "4e1504eb1f31a936d161d1ee0fde6d0987ad74d7e07975676d7e2f708f8e87d4"
+    },
+    {
+      "path": "assets/Configure-COEzXdWf.js",
+      "bytes": 1774,
+      "gzipBytesForComparisonOnly": 906,
+      "sha256": "844954ec3b9de1606250b7dc3efed8781a57d7cfab107430e7eabe64af9f347e"
+    },
+    {
+      "path": "assets/Home-BIYVB0BL.js",
+      "bytes": 4216,
+      "gzipBytesForComparisonOnly": 1661,
+      "sha256": "2776aec518425769dfb744d3f706f4f90e74e86dad6acd57226cc13d50903d2d"
+    },
+    {
+      "path": "assets/Inspect-_N4gXwgz.js",
+      "bytes": 14329,
+      "gzipBytesForComparisonOnly": 4379,
+      "sha256": "433ce5e36edb47ac727ebcc4dd195bc8b0e5195ad8eb0485e44159eb80de48b8"
+    },
+    {
+      "path": "assets/Player-DU6waotH.js",
+      "bytes": 8934,
+      "gzipBytesForComparisonOnly": 3203,
+      "sha256": "97d458ecfa1377be8a43ad8bac3a0b2564cecad845b48928df6123073fca1a8e"
+    },
+    {
+      "path": "assets/ProfilePanel-cwLxy5FD.js",
+      "bytes": 7542,
+      "gzipBytesForComparisonOnly": 2504,
+      "sha256": "22c441e90d80ee5399e1d09dabf23bfa30fac77fe21c294936ba8d45e4e1c62f"
+    },
+    {
+      "path": "assets/Workspace-Bcy_-R0Y.js",
+      "bytes": 7794,
+      "gzipBytesForComparisonOnly": 2455,
+      "sha256": "21078f28539dfce655e6365a447ebdcd684dd779da318680da3c2f398dd23507"
+    },
+    {
+      "path": "assets/adapter-BEQ83A4P.js",
+      "bytes": 719,
+      "gzipBytesForComparisonOnly": 469,
+      "sha256": "8935cd60bb884454a21bab0f7e902a403753173dbec48f8863bce006c7a442c2"
+    },
+    {
+      "path": "assets/adapter-CdJNnPUz.js",
+      "bytes": 8669,
+      "gzipBytesForComparisonOnly": 3747,
+      "sha256": "68f618f78af590e381c873cdef7173b5703555fcf44906b49db557084303eeb5"
+    },
+    {
+      "path": "assets/errors-CBO-VkZs.js",
+      "bytes": 4888,
+      "gzipBytesForComparisonOnly": 2188,
+      "sha256": "186ba9d364572ac444cf603bb83263bab9ec869d874b0cdb50c613cb2625fedf"
+    },
+    {
+      "path": "assets/index-DH_BwhyJ.js",
+      "bytes": 338181,
+      "gzipBytesForComparisonOnly": 110068,
+      "sha256": "be959e9d84599511f91c0de3a0ec6c5bfcba7cea8d2da9c04a8d79148f3f3923"
+    },
+    {
+      "path": "assets/index-zeG4_nD6.css",
+      "bytes": 32735,
+      "gzipBytesForComparisonOnly": 7346,
+      "sha256": "6979392e3efd3c01e936eae0a71a43695a2fa6ae1ec8f0e5b770b8c93bc5f0a6"
+    },
+    {
+      "path": "assets/probe-labels-DLjXlW5P.js",
+      "bytes": 607,
+      "gzipBytesForComparisonOnly": 367,
+      "sha256": "74c2acdb05dcdb5f1777b738ab442eb8d10e83021add474d345b0ef271fe9208"
+    }
+  ],
+  "runs": [
+    {
+      "browser": "chrome",
+      "browserVersion": "157.0.8103.79",
+      "fixture": {
+        "file": "MEM.EXE",
+        "version": "1.12",
+        "entry": "MEM.EXE",
+        "instruction": "MEM > MEMOUT.TXT",
+        "output": "MEMOUT.TXT"
+      },
+      "fixtureSha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4",
+      "coldNetwork": "CDP 20 Mbit/s aggregate, minimum 50 ms request-to-headers latency; no CPU throttling",
+      "warmNetwork": "offline after explicit preload",
+      "cold": [],
+      "warm": [],
+      "summary": {
+        "firstLoadMedianMs": null,
+        "coldFirstFrameMedianMs": null,
+        "warmInspectP95Ms": null,
+        "warmFirstFrameP95Ms": null,
+        "warmConfirmedOutputP95Ms": null,
+        "stopP95Ms": null
+      },
+      "resources": null,
+      "errors": [],
+      "traffic": [
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/assets/Home-BIYVB0BL.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html ",
+        "GET blob:null/41c1756e-cded-47b5-afc8-fdfc2426c79f ",
+        "GET blob:null/e1feeb05-7dcb-41b2-9f2b-24a356858442 ",
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html ",
+        "GET blob:null/a4c05fdd-cb28-4db7-8d45-3d5208d17a76 ",
+        "GET blob:null/14596b9f-beb4-4d18-9108-2a74bfb80ffa "
+      ]
+    },
+    {
+      "browser": "chrome",
+      "browserVersion": "157.0.8103.79",
+      "fixture": {
+        "file": "FREECOM.ZIP",
+        "version": "0.86",
+        "entry": "APP/COMMAND.COM",
+        "instruction": "ECHO BENCH OK>RESULT.TXT",
+        "output": "RESULT.TXT"
+      },
+      "fixtureSha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e",
+      "coldNetwork": "CDP 20 Mbit/s aggregate, minimum 50 ms request-to-headers latency; no CPU throttling",
+      "warmNetwork": "offline after explicit preload",
+      "cold": [],
+      "warm": [],
+      "summary": {
+        "firstLoadMedianMs": null,
+        "coldFirstFrameMedianMs": null,
+        "warmInspectP95Ms": null,
+        "warmFirstFrameP95Ms": null,
+        "warmConfirmedOutputP95Ms": null,
+        "stopP95Ms": null
+      },
+      "resources": null,
+      "errors": [],
+      "traffic": [
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/assets/Home-BIYVB0BL.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET blob:http://127.0.0.1:53352/471e9edc-fe70-422a-8c8e-2408d1febd7a ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html ",
+        "GET blob:null/16d5d677-378e-4968-9fd4-2f3c4a244f3d ",
+        "GET blob:null/13662aa0-e161-4ead-aea6-daf29dc2f44a ",
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET blob:http://127.0.0.1:53352/20e06a80-ef80-4831-ad2e-ad36fdf9975d ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html ",
+        "GET blob:null/8e519f9d-25f5-4708-b601-52d029bf2e1e ",
+        "GET blob:null/a033b21e-f2dd-4ac5-a987-376b3411ae3d "
+      ]
+    },
+    {
+      "browser": "chrome",
+      "browserVersion": "157.0.8103.79",
+      "memory": {
+        "method": "500 ms sampled sum of dedicated browser process-tree RSS, shared pages not deduplicated",
+        "sampledPeakBytes": 1322500096,
+        "unavailable": null,
+        "samples": [
+          {
+            "elapsedMs": 16.74,
+            "rssBytes": 308707328,
+            "processes": 4
+          },
+          {
+            "elapsedMs": 541.09,
+            "rssBytes": 741818368,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 1060,
+            "rssBytes": 765739008,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 1561.52,
+            "rssBytes": 785694720,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 2065.98,
+            "rssBytes": 790233088,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 2552.83,
+            "rssBytes": 799571968,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 3062.46,
+            "rssBytes": 802095104,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 3553.88,
+            "rssBytes": 811991040,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 4053.41,
+            "rssBytes": 852066304,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 4556.66,
+            "rssBytes": 1192902656,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 5059.09,
+            "rssBytes": 1262206976,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 5560.67,
+            "rssBytes": 1292828672,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 6062.83,
+            "rssBytes": 1294336000,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 6563.98,
+            "rssBytes": 1296973824,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 7065.83,
+            "rssBytes": 1298759680,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 7569.5,
+            "rssBytes": 1291698176,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 8070.27,
+            "rssBytes": 1292730368,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 8573.25,
+            "rssBytes": 1292845056,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 9074.51,
+            "rssBytes": 1293139968,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 9577.54,
+            "rssBytes": 1293271040,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 10079.73,
+            "rssBytes": 1293615104,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 10581.88,
+            "rssBytes": 1293697024,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 11075.84,
+            "rssBytes": 794574848,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 11595.47,
+            "rssBytes": 803880960,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 12095.89,
+            "rssBytes": 806207488,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 12599.31,
+            "rssBytes": 809500672,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 13087.55,
+            "rssBytes": 1158283264,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 13590.74,
+            "rssBytes": 1229438976,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 14088.6,
+            "rssBytes": 1293926400,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 14596.43,
+            "rssBytes": 1296629760,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 15097.64,
+            "rssBytes": 1300398080,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 15599.04,
+            "rssBytes": 1304838144,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 16100.77,
+            "rssBytes": 1298677760,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 16601.7,
+            "rssBytes": 1299365888,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 17104.72,
+            "rssBytes": 1299496960,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 17607.15,
+            "rssBytes": 1299513344,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 18105.35,
+            "rssBytes": 1299415040,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 18610.99,
+            "rssBytes": 1299546112,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 19112.74,
+            "rssBytes": 1299677184,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 19615.07,
+            "rssBytes": 1304576000,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 20114.42,
+            "rssBytes": 768770048,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 20627.71,
+            "rssBytes": 790364160,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 21128.53,
+            "rssBytes": 817397760,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 21621.13,
+            "rssBytes": 818823168,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 22131.04,
+            "rssBytes": 822132736,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 22624.83,
+            "rssBytes": 831864832,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 23114.15,
+            "rssBytes": 919748608,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 23625.54,
+            "rssBytes": 1219919872,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 24126.14,
+            "rssBytes": 1287733248,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 24629.46,
+            "rssBytes": 1322500096,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 25120.95,
+            "rssBytes": 749928448,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 25645.25,
+            "rssBytes": 811597824,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 26142.62,
+            "rssBytes": 818593792,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 26647.14,
+            "rssBytes": 820330496,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 27132.85,
+            "rssBytes": 1149992960,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 27639.07,
+            "rssBytes": 1238925312,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 28141.45,
+            "rssBytes": 1308540928,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 28640.58,
+            "rssBytes": 1309900800,
+            "processes": 8
+          },
+          {
+            "elapsedMs": 28987.1,
+            "rssBytes": 453656576,
+            "processes": 7
+          },
+          {
+            "elapsedMs": 29002.28,
+            "rssBytes": 452034560,
+            "processes": 4
+          }
+        ]
+      }
+    },
+    {
+      "browser": "firefox",
+      "browserVersion": "159.0",
+      "fixture": {
+        "file": "MEM.EXE",
+        "version": "1.12",
+        "entry": "MEM.EXE",
+        "instruction": "MEM > MEMOUT.TXT",
+        "output": "MEMOUT.TXT"
+      },
+      "fixtureSha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4",
+      "coldNetwork": "unshaped loopback; not a shaped-network comparison",
+      "warmNetwork": "offline after explicit preload",
+      "cold": [],
+      "warm": [],
+      "summary": {
+        "firstLoadMedianMs": null,
+        "coldFirstFrameMedianMs": null,
+        "warmInspectP95Ms": null,
+        "warmFirstFrameP95Ms": null,
+        "warmConfirmedOutputP95Ms": null,
+        "stopP95Ms": null
+      },
+      "resources": null,
+      "errors": [],
+      "traffic": [
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/assets/Home-BIYVB0BL.js ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html ",
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html "
+      ]
+    },
+    {
+      "browser": "firefox",
+      "browserVersion": "159.0",
+      "fixture": {
+        "file": "FREECOM.ZIP",
+        "version": "0.86",
+        "entry": "APP/COMMAND.COM",
+        "instruction": "ECHO BENCH OK>RESULT.TXT",
+        "output": "RESULT.TXT"
+      },
+      "fixtureSha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e",
+      "coldNetwork": "unshaped loopback; not a shaped-network comparison",
+      "warmNetwork": "offline after explicit preload",
+      "cold": [],
+      "warm": [],
+      "summary": {
+        "firstLoadMedianMs": null,
+        "coldFirstFrameMedianMs": null,
+        "warmInspectP95Ms": null,
+        "warmFirstFrameP95Ms": null,
+        "warmConfirmedOutputP95Ms": null,
+        "stopP95Ms": null
+      },
+      "resources": null,
+      "errors": [],
+      "traffic": [
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Home-BIYVB0BL.js ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html ",
+        "GET http://127.0.0.1:53352/ ",
+        "GET http://127.0.0.1:53352/assets/index-DH_BwhyJ.js ",
+        "GET http://127.0.0.1:53352/assets/errors-CBO-VkZs.js ",
+        "GET http://127.0.0.1:53352/assets/index-zeG4_nD6.css ",
+        "GET http://127.0.0.1:53352/favicon.svg ",
+        "GET http://127.0.0.1:53352/assets/Inspect-_N4gXwgz.js ",
+        "GET http://127.0.0.1:53352/assets/probe-labels-DLjXlW5P.js ",
+        "GET http://127.0.0.1:53352/assets/Compatibility-BodQZpZm.js ",
+        "GET http://127.0.0.1:53352/assets/Configure-COEzXdWf.js ",
+        "GET http://127.0.0.1:53352/assets/ProfilePanel-cwLxy5FD.js ",
+        "GET http://127.0.0.1:53352/assets/Player-DU6waotH.js ",
+        "GET http://127.0.0.1:53352/assets/adapter-CdJNnPUz.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/emulators.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.js ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/8.5.3/wdosbox.wasm ",
+        "GET http://127.0.0.1:53352/runtimes/js-dos/host-74394f7d792ea8c3.html "
+      ]
+    },
+    {
+      "browser": "firefox",
+      "browserVersion": "159.0",
+      "memory": {
+        "method": "500 ms sampled sum of dedicated browser process-tree RSS, shared pages not deduplicated",
+        "sampledPeakBytes": 1451130880,
+        "unavailable": null,
+        "samples": [
+          {
+            "elapsedMs": 17.12,
+            "rssBytes": 334249984,
+            "processes": 2
+          },
+          {
+            "elapsedMs": 536.74,
+            "rssBytes": 919650304,
+            "processes": 5
+          },
+          {
+            "elapsedMs": 1035.31,
+            "rssBytes": 1099890688,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 1551.01,
+            "rssBytes": 1105723392,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 2056.64,
+            "rssBytes": 1112965120,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 2543.6,
+            "rssBytes": 1259159552,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 3043.09,
+            "rssBytes": 1307295744,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 3544.23,
+            "rssBytes": 1334804480,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 4047.42,
+            "rssBytes": 1358725120,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 4548.4,
+            "rssBytes": 1355792384,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 5050.84,
+            "rssBytes": 1364508672,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 5552.43,
+            "rssBytes": 1377992704,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 6054.84,
+            "rssBytes": 1387495424,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 6556.29,
+            "rssBytes": 1399177216,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 7058.68,
+            "rssBytes": 1408106496,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 7559.78,
+            "rssBytes": 1374453760,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 8062.68,
+            "rssBytes": 1382694912,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 8564.86,
+            "rssBytes": 1402257408,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 9066.49,
+            "rssBytes": 1403355136,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 9568.05,
+            "rssBytes": 1147486208,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 10088.51,
+            "rssBytes": 1153990656,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 10580.94,
+            "rssBytes": 1156366336,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 11081.97,
+            "rssBytes": 1161969664,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 11573.05,
+            "rssBytes": 1301823488,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 12075.73,
+            "rssBytes": 1352597504,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 12577.26,
+            "rssBytes": 1375879168,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 13078.46,
+            "rssBytes": 1388969984,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 13580.84,
+            "rssBytes": 1397112832,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 14082.79,
+            "rssBytes": 1409892352,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 14584.1,
+            "rssBytes": 1419739136,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 15086.47,
+            "rssBytes": 1429569536,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 15587.8,
+            "rssBytes": 1441857536,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 16089.96,
+            "rssBytes": 1451130880,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 16592.17,
+            "rssBytes": 1413840896,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 17094.24,
+            "rssBytes": 1421524992,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 17596.29,
+            "rssBytes": 1431961600,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 18098.44,
+            "rssBytes": 1434943488,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 18599.97,
+            "rssBytes": 1164623872,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 19115.17,
+            "rssBytes": 1170915328,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 19610.89,
+            "rssBytes": 1176780800,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 20105.73,
+            "rssBytes": 1306279936,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 20607.6,
+            "rssBytes": 1355759616,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 21108.86,
+            "rssBytes": 1382023168,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 21609.58,
+            "rssBytes": 1393688576,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 22113.13,
+            "rssBytes": 925188096,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 22620.69,
+            "rssBytes": 1186725888,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 23141.36,
+            "rssBytes": 1186004992,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 23643.55,
+            "rssBytes": 1188659200,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 24132.92,
+            "rssBytes": 1192722432,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 24620.95,
+            "rssBytes": 1353547776,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 25121.9,
+            "rssBytes": 1377763328,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 25624.24,
+            "rssBytes": 1402454016,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 26125.57,
+            "rssBytes": 1417871360,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 26257.09,
+            "rssBytes": 1387298816,
+            "processes": 6
+          },
+          {
+            "elapsedMs": 26272.04,
+            "rssBytes": 902512640,
+            "processes": 5
+          }
+        ]
+      }
+    }
+  ],
+  "failures": [
+    {
+      "browser": "chrome",
+      "fixture": "MEM.EXE",
+      "mode": "cold",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    },
+    {
+      "browser": "chrome",
+      "fixture": "MEM.EXE",
+      "mode": "warm-offline",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    },
+    {
+      "browser": "chrome",
+      "fixture": "FREECOM.ZIP",
+      "mode": "cold",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    },
+    {
+      "browser": "chrome",
+      "fixture": "FREECOM.ZIP",
+      "mode": "warm-offline",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    },
+    {
+      "browser": "firefox",
+      "fixture": "MEM.EXE",
+      "mode": "cold",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    },
+    {
+      "browser": "firefox",
+      "fixture": "MEM.EXE",
+      "mode": "warm-offline",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    },
+    {
+      "browser": "firefox",
+      "fixture": "FREECOM.ZIP",
+      "mode": "cold",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    },
+    {
+      "browser": "firefox",
+      "fixture": "FREECOM.ZIP",
+      "mode": "warm-offline",
+      "message": "Error: Path is not available when connecting remotely. Use saveAs() to save a local copy."
+    }
+  ],
+  "complete": false
+}

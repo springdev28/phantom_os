@@ -1,0 +1,154 @@
+[
+  {
+    "path": "playwright.config.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "scripts/runtime-assets.mjs",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/App.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/compatibility-report.test.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/app/compatibility-report.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/app/components/CompatibilityReport.tsx",
+    "kind": "added"
+  },
+  {
+    "path": "src/app/components/Icon.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/components/LaunchSteps.tsx",
+    "kind": "added"
+  },
+  {
+    "path": "src/app/components/PackageExplorer.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/components/ProfilePanel.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/demos.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/app/logger.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/routes.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screen-props.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screens/Compatibility.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screens/Configure.tsx",
+    "kind": "added"
+  },
+  {
+    "path": "src/app/screens/Home.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screens/Inspect.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screens/Player.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/use-runtime.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/use-session.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/domain/contracts.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/domain/errors.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/adapter.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/frame.html",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/host-manifest.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/host.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/styles.css",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/accessibility.spec.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/browser/boxedwine-disabled.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/dos-runtime.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/launch-journey.spec.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/browser/packages.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/planner.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/smoke.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/workspace.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/fixtures/dos-browser.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/production-smoke.ts",
+    "kind": "modified"
+  }
+]

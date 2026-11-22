@@ -1,0 +1,226 @@
+{
+  "date": "2026-11-21",
+  "provenance": "Original deterministic project data, not runnable software or OS images",
+  "fixtures": [
+    {
+      "id": "dos-mz",
+      "name": "dos-header.bin",
+      "scope": "parser-only",
+      "format": "dos-mz",
+      "validity": "valid-header",
+      "sizeBytes": 1024,
+      "sha256": "2647359b6fbcc0b41e9af190db679b9c1cae491656a059b5f040673c9c047865"
+    },
+    {
+      "id": "pe32",
+      "name": "pe32.data",
+      "scope": "parser-only",
+      "format": "pe32",
+      "validity": "valid-header",
+      "sizeBytes": 1024,
+      "sha256": "af9b1979cde3a0c383d3767eff6386d75b3f9781edf326f109e58b9893628d5e"
+    },
+    {
+      "id": "pe32plus",
+      "name": "pe64.data",
+      "scope": "parser-only",
+      "format": "pe32+",
+      "validity": "valid-header",
+      "sizeBytes": 1024,
+      "sha256": "6a3760c088920f36115b91a65eb25b0c05907ebbfa803c92c0e7ab1789fcf0de"
+    },
+    {
+      "id": "ne-windows",
+      "name": "ne-windows.bin",
+      "scope": "parser-only",
+      "format": "ne",
+      "validity": "valid-header",
+      "sizeBytes": 512,
+      "sha256": "0d70ddae9e2c4eef486ac8f8d50df307e0384ff79ed79469051c6c0ef712837f"
+    },
+    {
+      "id": "ne-os2",
+      "name": "ne-os2.exe",
+      "scope": "parser-only",
+      "format": "ne",
+      "validity": "valid-header",
+      "sizeBytes": 512,
+      "sha256": "18b99017604f8a97fc3145da02de7ca03f5420b12481826ba779f06d859aed34"
+    },
+    {
+      "id": "elf32",
+      "name": "elf-renamed.exe",
+      "scope": "parser-only",
+      "format": "elf",
+      "validity": "valid-header",
+      "sizeBytes": 256,
+      "sha256": "5f94d0d7df6f40cedc6df39e792d3881b66b100721745fe8861781f8e3ffb608"
+    },
+    {
+      "id": "elf64-big",
+      "name": "elf64-big.bin",
+      "scope": "parser-only",
+      "format": "elf",
+      "validity": "valid-header",
+      "sizeBytes": 256,
+      "sha256": "7c7df339c2d358a0d80e8d73cce31db093657b2aaedc0b98b0048b2e622dd9a9"
+    },
+    {
+      "id": "zip",
+      "name": "container.docx",
+      "scope": "parser-only",
+      "format": "zip",
+      "validity": "valid-header",
+      "sizeBytes": 143,
+      "sha256": "dfc6c139c16104f46c89d32a18fa00a53887291c7b85b3204ddec80eb18693b3"
+    },
+    {
+      "id": "iso",
+      "name": "volume.bin",
+      "scope": "parser-only",
+      "format": "iso9660",
+      "validity": "valid-header",
+      "sizeBytes": 69632,
+      "sha256": "fc4d0ebf6dd1cea27ffc81148829c98d1ddf04f77c9431b553add4a3e370fab2"
+    },
+    {
+      "id": "mbr",
+      "name": "disk.img",
+      "scope": "parser-only",
+      "format": "mbr-disk",
+      "validity": "valid-header",
+      "sizeBytes": 32768,
+      "sha256": "e59f7303525a0b75513d565a0e1d58f8ea8b1d7c7e2caa5fe85fe98775644341"
+    },
+    {
+      "id": "gpt",
+      "name": "gpt.img",
+      "scope": "parser-only",
+      "format": "gpt-disk",
+      "validity": "partial",
+      "sizeBytes": 32768,
+      "sha256": "ce8c4ea381da78a106a77063546dfd4877ca55078194bf98b6f684fbfface59f"
+    },
+    {
+      "id": "gpt-4k",
+      "name": "gpt-4k.img",
+      "scope": "parser-only",
+      "format": "gpt-disk",
+      "validity": "partial",
+      "sizeBytes": 262144,
+      "sha256": "3fd0de2766183a40f65f55ce4441b82ce20cb14867ac0c19dc09c25d526feac8"
+    },
+    {
+      "id": "boot-marker",
+      "name": "boot.img",
+      "scope": "parser-only",
+      "format": "disk-image-ambiguous",
+      "validity": "unknown",
+      "sizeBytes": 512,
+      "sha256": "b140168e270a194660d4ecb93bbd23892cfa96a2ccd38cfb9959fd0f0da91db6"
+    },
+    {
+      "id": "raw-com",
+      "name": "unproven.com",
+      "scope": "parser-only",
+      "format": "dos-com-ambiguous",
+      "validity": "unknown",
+      "sizeBytes": 5,
+      "sha256": "452accdb8ead808acb799ceaaf71c17510047bd65844783ee9975861947a6afc"
+    },
+    {
+      "id": "misleading-exe",
+      "name": "misleading.exe",
+      "scope": "parser-only",
+      "format": "unknown",
+      "validity": "unknown",
+      "sizeBytes": 41,
+      "sha256": "58fa1c2cf5afe51e00577061b86b65a1eae56276e5b0b478cc7660a094d22014"
+    },
+    {
+      "id": "truncated-mz",
+      "name": "short.exe",
+      "scope": "parser-only",
+      "format": "dos-mz",
+      "validity": "invalid",
+      "sizeBytes": 3,
+      "sha256": "0def7c7eb38d4010bcb671e24a566daec14890690bf06af36620487ed74d284c"
+    },
+    {
+      "id": "corrupt-pe-pointer",
+      "name": "bad-pointer.exe",
+      "scope": "parser-only",
+      "format": "dos-mz",
+      "validity": "invalid",
+      "sizeBytes": 1024,
+      "sha256": "549dd95d4be52057b9a219ffb0c66b4b144b7250a71a7efd2726c19144eb98a3"
+    },
+    {
+      "id": "corrupt-elf",
+      "name": "bad-elf",
+      "scope": "parser-only",
+      "format": "elf",
+      "validity": "invalid",
+      "sizeBytes": 256,
+      "sha256": "953a9d1cb128a0ffaead72942c7cd9b482b4d1a87a09ee14f0a0c102a9b8988d"
+    },
+    {
+      "id": "truncated-zip",
+      "name": "bad.zip",
+      "scope": "parser-only",
+      "format": "zip",
+      "validity": "invalid",
+      "sizeBytes": 40,
+      "sha256": "4601f28af17c67bfa061a4661ea5d1f4b71f52655d9ae1649550279b7cf25e99"
+    },
+    {
+      "id": "dos-package",
+      "name": "dos-package.zip",
+      "scope": "package-import-only",
+      "sizeBytes": 1278,
+      "sha256": "c2b217cd7c909567ea8555d5ff8a0e94450f33599a7091dcc061dfec65c9716c"
+    },
+    {
+      "id": "mixed-package",
+      "name": "mixed-package.zip",
+      "scope": "package-import-only",
+      "sizeBytes": 1646,
+      "sha256": "69db8cb31636af800a220832478f8743c4ab2f50f7ceb13aeba2149238a9d0ed"
+    },
+    {
+      "id": "empty-package",
+      "name": "empty-package.zip",
+      "scope": "package-import-only",
+      "sizeBytes": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "id": "corrupt-package",
+      "name": "corrupt-package.zip",
+      "scope": "package-import-only",
+      "sizeBytes": 1267,
+      "sha256": "4e7162bc4cdcb678563ddb5d7820bb8d10c94b94aba0834a65bc68499f8c12fc"
+    },
+    {
+      "id": "zip-slip",
+      "name": "zip-slip.zip",
+      "scope": "package-import-only",
+      "sizeBytes": 150,
+      "sha256": "3d84377010252e26641e8dfb1d5b779e5e6cdce80469c4252331e9b8e67bf634"
+    },
+    {
+      "id": "nested-package",
+      "name": "nested-package.zip",
+      "scope": "package-import-only",
+      "sizeBytes": 259,
+      "sha256": "ac35352a3b27ccdcedb4e481e5ffbeae80f82fc7f89d16aa1e7ff5c6f3fe57ff"
+    },
+    {
+      "id": "disk-package",
+      "name": "disk-package.zip",
+      "scope": "package-import-only",
+      "sizeBytes": 69746,
+      "sha256": "3321fc0353a0aa7e16cc85a3aea4a3c9d96da8c0ef772f0712e2a9d57e5bbc6e"
+    }
+  ]
+}

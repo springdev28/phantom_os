@@ -1,0 +1,12 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "scrollWidth": 1440
+  },
+  {
+    "name": "mobile",
+    "width": 393,
+    "scrollWidth": 393
+  }
+]

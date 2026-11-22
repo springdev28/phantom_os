@@ -1,0 +1,1078 @@
+{
+  "stats": {
+    "startTime": "2026-11-22T01:53:19.393Z",
+    "duration": 167802.162,
+    "expected": 82,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "tests": [
+    {
+      "file": "accessibility.spec.ts",
+      "title": "keyboard flow, readable contrast, reduced motion and 200% layout",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3248,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "accessibility.spec.ts",
+      "title": "keyboard flow, readable contrast, reduced motion and 200% layout",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3784,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "different selected bytes produce distinct reports with inspectable evidence",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2651,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "different selected bytes produce distinct reports with inspectable evidence",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2374,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "all fixture analysis remains local, without page/worker requests or persisted reports",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2354,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "all fixture analysis remains local, without page/worker requests or persisted reports",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2329,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "corrupted data leaves a readable diagnostic and supports a fresh selection",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 626,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "corrupted data leaves a readable diagnostic and supports a fresh selection",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 634,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "a File read failure exposes a fixed human-readable error without private exception text",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 545,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "analyzer.spec.ts",
+      "title": "a File read failure exposes a fixed human-readable error without private exception text",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 584,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "boxedwine-disabled.spec.ts",
+      "title": "PE32 and NE preserve reports/profiles while every Windows launch path stays disabled",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3683,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "boxedwine-disabled.spec.ts",
+      "title": "PE32 and NE preserve reports/profiles while every Windows launch path stays disabled",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 4251,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "boxedwine-disabled.spec.ts",
+      "title": "Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 10608,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "boxedwine-disabled.spec.ts",
+      "title": "Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 10505,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "real DOS worker: MEM.EXE, input, guest files, stop and relaunch",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 14854,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "real DOS worker: MEM.EXE, input, guest files, stop and relaunch",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 15981,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 15762,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 15896,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "a guest IPX connection attempt fails closed and the package can relaunch",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 7379,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "a guest IPX connection attempt fails closed and the package can relaunch",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 8134,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "offline asset error recovers, and leaving Player releases the real worker",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 5697,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "dos-runtime.spec.ts",
+      "title": "offline asset error recovers, and leaving Player releases the real worker",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 5225,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "guided first launch and export: FreeDOS MEM",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 12014,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "guided first launch and export: FreeDOS MEM",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 12091,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "guided first launch and export: FreeCOM",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 7062,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "guided first launch and export: FreeCOM",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 7802,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "unsupported architecture has a copyable report and a denied-clipboard fallback",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1706,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "unsupported architecture has a copyable report and a denied-clipboard fallback",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1189,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "file drop, folder-drop guidance, picker fallback and large-file feedback",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2226,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "file drop, folder-drop guidance, picker fallback and large-file feedback",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2236,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "runtime download progress is visible and full-screen denial preserves the real session",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 6809,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "launch-journey.spec.ts",
+      "title": "runtime download progress is visible and full-screen denial preserves the real session",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 6803,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "real ZIP picker preserves the mixed package and asks for an explicit executable",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1813,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "real ZIP picker preserves the mixed package and asks for an explicit executable",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1841,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "native folder input preserves relative paths including empty resources",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 927,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "native folder input preserves relative paths including empty resources",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1451,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 804,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 966,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "package explorer paginates and does not silently expand a nested archive",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 792,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "package explorer paginates and does not silently expand a nested archive",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 853,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "real worker preserves every file hash at the adapter package boundary",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 475,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "real worker preserves every file hash at the adapter package boundary",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 502,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "page and worker traffic carry no names or bytes; no storage or script execution occurs",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 735,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "page and worker traffic carry no names or bytes; no storage or script execution occurs",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 717,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "cancelling a real extraction terminates its worker and a fresh package still imports",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2477,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "packages.spec.ts",
+      "title": "cancelling a real extraction terminates its worker and a fresh package still imports",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2515,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "header-based candidate, keyboard override and reset never enable Run",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1495,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "header-based candidate, keyboard override and reset never enable Run",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1032,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "ambiguous ZIP asks for entrypoint, then replans for the chosen executable",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1665,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "ambiguous ZIP asks for entrypoint, then replans for the chosen executable",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1717,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "imports missing dependencies, edits limits and exports a local JSON profile without content",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1517,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "imports missing dependencies, edits limits and exports a local JSON profile without content",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1506,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3885,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 4300,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "invalid imports preserve a working profile, reject forged verification and recover on reset",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1489,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "invalid imports preserve a working profile, reject forged verification and recover on reset",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1462,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "a profile can be imported before files and reload clears its temporary state",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2695,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "a profile can be imported before files and reload clears its temporary state",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3229,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "COM confirmation remains separate from static recognition, and corrupt input remains invalid",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2566,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "planner.spec.ts",
+      "title": "COM confirmation remains separate from static recognition, and corrupt input remains invalid",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2681,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "selects a local file, checks access, explains unavailable execution and clears the workspace",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3418,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "selects a local file, checks access, explains unavailable execution and clears the workspace",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3500,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "all six screens have accessible navigation, direct links and no horizontal overflow",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3483,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "all six screens have accessible navigation, direct links and no horizontal overflow",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3513,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "keyboard selection is reachable and navigation transfers focus to the new heading",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1211,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "keyboard selection is reachable and navigation transfers focus to the new heading",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1278,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "a reload discards the temporary selection and selecting the same file again works",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 634,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "a reload discards the temporary selection and selecting the same file again works",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 749,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "an empty file shows a recoverable error instead of a compatibility result",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 828,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "an empty file shows a recoverable error instead of a compatibility result",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1340,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "loading is cancellable and an old read cannot revive a cleared selection",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1316,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "smoke.spec.ts",
+      "title": "loading is cancellable and an old read cannot revive a cleared selection",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 1264,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 14051,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 13579,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "profile-only save requires original software and is isolated by origin",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 4085,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "profile-only save requires original software and is isolated by origin",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 5037,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "quota failure keeps the saved workspace and corrupt stored bytes cannot launch",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3502,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "quota failure keeps the saved workspace and corrupt stored bytes cannot launch",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 4518,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "denied OPFS retains temporary inspection and profile export",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3461,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "denied OPFS retains temporary inspection and profile export",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3905,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "unavailable OPFS retains temporary inspection and profile export",
+      "project": "desktop-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 2966,
+          "retry": 0
+        }
+      ]
+    },
+    {
+      "file": "workspace.spec.ts",
+      "title": "unavailable OPFS retains temporary inspection and profile export",
+      "project": "mobile-chrome",
+      "status": "expected",
+      "runs": [
+        {
+          "status": "passed",
+          "durationMs": 3015,
+          "retry": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-HOST_HASH' blob: 'unsafe-eval'; worker-src blob:; connect-src 'none'; style-src 'sha256-STYLE_HASH'; img-src 'none'; media-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>DOS framebuffer</title>
+<style>*{box-sizing:border-box}html,body{margin:0;background:#080a09;color:#dce0d9;font:13px system-ui;height:100%}body{display:flex;flex-direction:column}canvas{display:block;min-height:0;width:100%;flex:1;object-fit:contain;image-rendering:pixelated;outline-offset:-3px}canvas:focus{outline:2px solid #c6e28b}nav{display:flex;gap:6px;flex-wrap:wrap;padding:8px}button{background:#262b23;color:inherit;border:1px solid #738269;padding:7px 11px;border-radius:5px;min-width:44px;min-height:44px}button:focus-visible{outline:2px solid #c6e28b}#input-status{margin:0;padding:5px 10px;color:#dce0d9;background:#151a13;font-size:12px}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}[hidden]{display:none}</style>
+<p id="input-status" role="status">Keyboard: browser</p>
+<canvas tabindex="0" aria-label="DOS program screen" aria-describedby="input-help">The program displays pixels. Its own interface may not support screen readers. Export text files to read them outside the guest.</canvas>
+<span id="input-help" hidden>Click or focus the screen to type. Control Alt Escape releases input; Tab moves to controls. Browser shortcuts remain reserved.</span>
+<nav aria-label="DOS input"><button id="release">Release input</button><button data-key="257">Enter</button><button data-key="256">Esc</button><button data-key="258">Tab</button><button data-key="265" aria-label="Up arrow">↑</button><button data-key="264" aria-label="Down arrow">↓</button><button data-key="263" aria-label="Left arrow">←</button><button data-key="262" aria-label="Right arrow">→</button><button id="audio" hidden>Enable audio</button></nav>
+<script src="host.js"></script>
+</html>

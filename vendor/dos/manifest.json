@@ -1,0 +1,143 @@
+{
+  "version": "8.5.3",
+  "commit": "e6f4e5449a5b17ae3ea0fdccfd453c8d299e9ea5",
+  "dosboxCommit": "528578d5a6f76afd4d5ef4e722b5670826f1183a",
+  "assets": {
+    "emulators.js": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+    "wdosbox.js": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+    "wdosbox.wasm": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c"
+  },
+  "retained": {
+    "tests/fixtures/dos/FREECOM.ZIP": {
+      "size": 88187,
+      "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+    },
+    "tests/fixtures/dos/MEM.EXE": {
+      "size": 15028,
+      "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+    },
+    "vendor/dos/dosbox-source.tar.gz": {
+      "size": 1244943,
+      "sha256": "797efaf22246bbc5b2e6be0a6c791a58addd2bca330e0aa93232780a77e06019"
+    },
+    "vendor/dos/emulators-LICENSE.txt": {
+      "size": 18092,
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643"
+    },
+    "vendor/dos/emulators-source.zip": {
+      "size": 980466,
+      "sha256": "38910afe4d3e51bf6507aff18f71216e05cf48284ed75b56fc40d449691f026f"
+    },
+    "vendor/dos/emulators.js.map": {
+      "size": 292415,
+      "sha256": "fc7b1af91c9d4af2f9a75c51bd74469b21d673c1667666c181cbca0e48efe1e8"
+    },
+    "vendor/dos/freecom-LICENSE.txt": {
+      "size": 18323,
+      "sha256": "45ece956c40ccac10202a455c0841da8bf42b28412f8c992357da826bb107eae"
+    },
+    "vendor/dos/freecom-source.zip": {
+      "size": 1210183,
+      "sha256": "a23f3324e8186481e289f9f7dd161c7d79be99f5d813a9dda878b255e26e2fa9"
+    },
+    "vendor/dos/mem-LICENSE.txt": {
+      "size": 18332,
+      "sha256": "da0eca0fb517ac939d167924c9d4b3f8750a6b7191932ef2cb145acfa624ac7e"
+    },
+    "vendor/dos/mem-source.zip": {
+      "size": 52437,
+      "sha256": "dddb1de13e782afc4246c1922cddb92a0a70a9a0550d4e921b4f7a5dae3b7ca7"
+    },
+    "vendor/dos/suppl-LICENSE.txt": {
+      "size": 25842,
+      "sha256": "a30edd18dd7444fb631c00951e4571fc2c2832f3859b438f3f7e15ba4ef63176"
+    },
+    "vendor/dos/NOTICE.txt": {
+      "size": 286485,
+      "sha256": "6e7212aa9a7eaa1d8c433995f0072cd22eaa8930ed63227424120d56bec5943c"
+    },
+    "vendor/dos/README.md": {
+      "size": 5221,
+      "sha256": "a802848a1c4821498f14e65748a0da67d97635529cebf540b47c43259e35207e"
+    },
+    "vendor/dos/browser-pack-6.1.0.tgz": {
+      "size": 8098,
+      "sha256": "13db68f814f0b0b943de116b36eee620f23eb857fba80c342791288cf0320dd1"
+    },
+    "vendor/dos/core-js-3.30.0.tgz": {
+      "size": 273256,
+      "sha256": "d7589cd792bb431696c0a6e9245ced1b5a85fa7006875ae7c616e0fe629d0cbf"
+    },
+    "vendor/dos/emscripten-LICENSE.txt": {
+      "size": 5093,
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86"
+    },
+    "vendor/dos/libcxx-LICENSE.txt": {
+      "size": 16703,
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b"
+    },
+    "vendor/dos/musl-COPYRIGHT.txt": {
+      "size": 6204,
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af"
+    },
+    "vendor/dos/npm-build.ts": {
+      "size": 849,
+      "sha256": "87d5f3b632a7733c0752b4fff27beddb124581465bad364c34395007adccb5c4"
+    },
+    "vendor/dos/process-0.11.10.tgz": {
+      "size": 4669,
+      "sha256": "7c10569b3c9cb056152ad630d40f9f4fcc321a0013c2bb8384f036aaa674e6bb"
+    },
+    "vendor/dos/zlib-1.2.13.tar.gz": {
+      "size": 1556687,
+      "sha256": "1525952a0a567581792613a9723333d7f8cc20b87a81f920fb8bc7e3f2251428"
+    },
+    "vendor/dos/zlib-LICENSE.txt": {
+      "size": 1329,
+      "sha256": "ab234c46f13c0dd02f494a713ecb48b20afd435aa6d0b3418da7686b5b7fcdfe"
+    }
+  },
+  "downloads": {
+    "emulators-source.tar.gz": "e4586a0e07799834ae80a0199729dce8cccd3434d041a1f28c94010491c0f940",
+    "dosbox-source.tar.gz": "797efaf22246bbc5b2e6be0a6c791a58addd2bca330e0aa93232780a77e06019",
+    "mem.zip": "ec98eb5e7afa15f587e0f85f4a748611c398cbe88bf571b17e6341532b9b746d",
+    "freecom-package.zip": "2d9079f259bd7138602279816bf0d736d85c016a62503a59f1bee15f065bfdce"
+  },
+  "urls": {
+    "mem": "https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/repositories/1.4/base/mem.zip",
+    "freecom": "https://www.ibiblio.org/pub/micro/pc-stuff/freedos/files/dos/command/0.86/command.zip",
+    "npm": "https://registry.npmjs.org/emulators/-/emulators-8.5.3.tgz",
+    "emulatorsSource": "https://github.com/caiiiycuk/emulators/tree/e6f4e5449a5b17ae3ea0fdccfd453c8d299e9ea5",
+    "dosboxSource": "https://github.com/js-dos/dosbox/tree/528578d5a6f76afd4d5ef4e722b5670826f1183a",
+    "emscriptenSdk": "https://github.com/emscripten-core/emscripten/tree/3.1.28",
+    "zlibSource": "https://github.com/madler/zlib/tree/v1.2.13",
+    "coreJs": "https://registry.npmjs.org/core-js/-/core-js-3.30.0.tgz",
+    "browserPack": "https://registry.npmjs.org/browser-pack/-/browser-pack-6.1.0.tgz",
+    "process": "https://registry.npmjs.org/process/-/process-0.11.10.tgz"
+  },
+  "npmIntegrity": "sha512-vaC1q+J6nYD9LIo357fUj6hmNrC6jqzPLFu8M1F8YH46qUZcXxU2KXQO7XdQJ0dQSWi2GHHeZnIMV4NB7IkpuA==",
+  "backendVersion": "8.5.3 (aeecd448025fcd8fc2843a780660a8f7)",
+  "fixtureMembers": {
+    "APP/COMMAND.COM": {
+      "size": 87772,
+      "sha256": "d33d3e0a3a0c02ef74d9b9e6d72a3adc7969630bacb7ec8e4e6a7cb197dcefb2"
+    },
+    "APP/INPUT.TXT": {
+      "size": 82,
+      "sha256": "76205d09719e928086715ee9028740b1c3287310a94b738d263a8fc1515cdce4"
+    },
+    "APP/BELL.TXT": {
+      "size": 3,
+      "sha256": "08ebb3ed65753a68d48ca985d3faaca535fcb66fcd594d34b3e4a448a21a3609"
+    }
+  },
+  "sourceFiltering": {
+    "date": "2026-11-22",
+    "upstreamCommit": "e6f4e5449a5b17ae3ea0fdccfd453c8d299e9ea5",
+    "excludedMembers": [
+      "native/dhry2/bin/DOS4GW.EXE",
+      "native/dhry2/bin/dhry_2.exe"
+    ],
+    "reason": "Unused compiled benchmark binaries removed; retained classic runtime source bytes are unchanged"
+  }
+}

@@ -1,0 +1,7 @@
+
+> phantom-os@0.1.0 benchmark
+> node tests/benchmark.ts
+
+{"browser":"chrome","fixture":"MEM.EXE","coldSamples":5,"warmSamples":20,"summary":{"firstLoadMedianMs":526.37,"coldFirstFrameMedianMs":1549.37,"warmInspectP95Ms":78.24,"warmFirstFrameP95Ms":1049.05,"warmConfirmedOutputP95Ms":6965.12,"stopP95Ms":57.68}}
+{"browser":"firefox","fixture":"MEM.EXE","coldSamples":5,"warmSamples":20,"summary":{"firstLoadMedianMs":95.08,"coldFirstFrameMedianMs":1085.13,"warmInspectP95Ms":86.38,"warmFirstFrameP95Ms":1119.63,"warmConfirmedOutputP95Ms":7008.92,"stopP95Ms":167.56}}
+{"runs":4,"failures":[],"targetMisses":[{"browser":"chrome","fixture":"MEM.EXE","target":"warm confirmed guest output p95 <= 5000 ms","observedMs":6965.12},{"browser":"firefox","fixture":"MEM.EXE","target":"warm confirmed guest output p95 <= 5000 ms","observedMs":7008.92}],"output":"test-results/benchmark.json"}

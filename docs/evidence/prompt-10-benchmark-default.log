@@ -1,0 +1,9 @@
+
+> phantom-os@0.1.0 benchmark
+> node tests/benchmark.ts
+
+{"browser":"chrome","fixture":"MEM.EXE","coldSamples":5,"warmSamples":20,"summary":{"firstLoadMedianMs":524.66,"coldFirstFrameMedianMs":1548.58,"warmInspectP95Ms":64.03,"warmFirstFrameP95Ms":1046.63,"warmConfirmedOutputP95Ms":6948.3,"stopP95Ms":65.23}}
+{"browser":"chrome","fixture":"FREECOM.ZIP","coldSamples":5,"warmSamples":20,"summary":{"firstLoadMedianMs":526.73,"coldFirstFrameMedianMs":1547.6,"warmInspectP95Ms":125.38,"warmFirstFrameP95Ms":1050.41,"warmConfirmedOutputP95Ms":2140.36,"stopP95Ms":71.96}}
+{"browser":"firefox","fixture":"MEM.EXE","coldSamples":5,"warmSamples":20,"summary":{"firstLoadMedianMs":93.64,"coldFirstFrameMedianMs":1092.51,"warmInspectP95Ms":87.97,"warmFirstFrameP95Ms":1122.36,"warmConfirmedOutputP95Ms":7034.99,"stopP95Ms":180.04}}
+{"browser":"firefox","fixture":"FREECOM.ZIP","coldSamples":5,"warmSamples":20,"summary":{"firstLoadMedianMs":83.5,"coldFirstFrameMedianMs":1093.31,"warmInspectP95Ms":120.12,"warmFirstFrameP95Ms":1113.37,"warmConfirmedOutputP95Ms":2165.59,"stopP95Ms":166.88}}
+{"runs":6,"failures":[],"output":"test-results/benchmark.json"}

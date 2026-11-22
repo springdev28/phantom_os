@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-22",
+  "source": "local uncommitted source snapshot; not a remote Git checkout",
+  "sourceInventory": "prompt-10-source-files.json",
+  "sourceInventorySha256": "5d15e6f89b99a8787e2615aaeed0e53e1056bb5f0e2818c3701366066497041a",
+  "matchingSourceFiles": 125,
+  "beforeInstall": {
+    "node_modulesPresent": false,
+    "distPresent": false,
+    "generatedRuntimePresent": false,
+    "generatedDemosPresent": false,
+    "previousTestOutputPresent": false
+  },
+  "preconditionMethod": "Removed only these generated directories from the task-owned temporary copy before npm ci; source and vendor bytes retained",
+  "command": "npm ci && caffeinate -dims npm run check",
+  "installCompleted": true,
+  "lockSha256": "4f9d8903abb8153603e4a6810b7ec735cad79a200e340b5937393efd971f7c74",
+  "CIHostedRun": false,
+  "checkExitCode": 0,
+  "unitTestsPassed": 275,
+  "playwrightTestsPassed": 104,
+  "productionScriptPassed": true,
+  "retries": 0,
+  "skipped": 0
+}

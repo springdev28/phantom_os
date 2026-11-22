@@ -1,0 +1,12 @@
+--- a/src/dos/dosbox/cpp/worker-protocol.cpp
++++ b/src/dos/dosbox/cpp/worker-protocol.cpp
+@@ -413,7 +413,8 @@
+           (async () => {
+             const drives = [];
+             // eslint-disable-next-line no-unused-vars
+-            for (const [_, drive] of Object.entries(Module.sockdrives)) {
++            for (const key of Object.keys(Module.sockdrives)) {
++                const drive = Module.sockdrives[key];
+                 const persist = await drive.persist();
+                 if (persist !== null) {
+                     drives.push({

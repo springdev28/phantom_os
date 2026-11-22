@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-22",
+  "beforeSha256": "de3d0f040720be8bc3e48b5332f304252618bf7891be04e39739b786427a0ab1",
+  "afterSha256": "38910afe4d3e51bf6507aff18f71216e05cf48284ed75b56fc40d449691f026f",
+  "removed": [
+    {
+      "path": "native/dhry2/bin/DOS4GW.EXE",
+      "size": 265396,
+      "sha256": "b8265123ac8a189637448618409ef3ecd2e9f3e1a47062c685a02240f688dec1",
+      "reason": "Unused benchmark executable; redistribution grant not established; excluded from source distribution"
+    },
+    {
+      "path": "native/dhry2/bin/dhry_2.exe",
+      "size": 58154,
+      "sha256": "3f3dbacc893a7045cab4447d1a77db51e949dc59fbea23f88dec9bdb24da2cd9",
+      "reason": "Unused benchmark executable; redistribution grant not established; excluded from source distribution"
+    }
+  ],
+  "runtimeBinaryAssetsUnchanged": {
+    "emulators.js": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+    "wdosbox.js": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+    "wdosbox.wasm": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c"
+  },
+  "earlierInventoryCorrection": "Previous filtered-source claim overlooked two native/dhry2/bin MZ executables. No previous public deployment was performed. Historical reports retain their old hashes and do not describe this corrected archive."
+}

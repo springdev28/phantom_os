@@ -1,0 +1,45 @@
+{
+  "sourceArchiveAudit": "passed",
+  "archives": [
+    {
+      "archive": "dosbox-source.tar.gz",
+      "entries": 346,
+      "unpackedBytes": 5586570
+    },
+    {
+      "archive": "emulators-source.zip",
+      "entries": 246,
+      "unpackedBytes": 4042560
+    },
+    {
+      "archive": "freecom-source.zip",
+      "entries": 826,
+      "unpackedBytes": 2821219
+    },
+    {
+      "archive": "mem-source.zip",
+      "entries": 29,
+      "unpackedBytes": 155897
+    },
+    {
+      "archive": "browser-pack-6.1.0.tgz",
+      "entries": 25,
+      "unpackedBytes": 29953
+    },
+    {
+      "archive": "core-js-3.30.0.tgz",
+      "entries": 3338,
+      "unpackedBytes": 1122687
+    },
+    {
+      "archive": "process-0.11.10.tgz",
+      "entries": 7,
+      "unpackedBytes": 15325
+    },
+    {
+      "archive": "zlib-1.2.13.tar.gz",
+      "entries": 284,
+      "unpackedBytes": 4190019
+    }
+  ]
+}

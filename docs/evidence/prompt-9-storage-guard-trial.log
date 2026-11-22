@@ -1,0 +1,19 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: indexedDbAbsent
+
+false !== true
+
+    at securityAcceptance (file://<workspace>/tests/fixtures/security-browser.ts:54:73)
+    at async file://<workspace>/[eval1]:8:15 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

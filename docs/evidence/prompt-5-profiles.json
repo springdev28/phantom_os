@@ -1,0 +1,139 @@
+{
+  "MEM.EXE": {
+    "production": {
+      "schemaVersion": 1,
+      "runtimeId": "js-dos",
+      "runtimeVersion": "8.5.3",
+      "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox",
+      "selectionMode": "automatic",
+      "entrypoint": "MEM.EXE",
+      "cwd": ".",
+      "mounts": [
+        {
+          "packagePath": ".",
+          "guestPath": "C:/",
+          "readOnly": false
+        }
+      ],
+      "controls": {
+        "keyboard": "us",
+        "mouse": "off",
+        "audio": false
+      },
+      "requiredFiles": [
+        {
+          "path": "MEM.EXE",
+          "kind": "package-member"
+        }
+      ],
+      "diskEnvironment": null,
+      "limits": {
+        "guestMemoryMiB": 64,
+        "maxSessionMs": 1800000
+      },
+      "dos": {
+        "cycles": 3000,
+        "core": "auto",
+        "machine": "svga_s3",
+        "xms": true,
+        "ems": true
+      }
+    }
+  },
+  "FREECOM.ZIP": {
+    "production": {
+      "schemaVersion": 1,
+      "runtimeId": "js-dos",
+      "runtimeVersion": "8.5.3",
+      "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox",
+      "selectionMode": "automatic",
+      "entrypoint": "APP/COMMAND.COM",
+      "cwd": ".",
+      "mounts": [
+        {
+          "packagePath": ".",
+          "guestPath": "C:/",
+          "readOnly": false
+        }
+      ],
+      "controls": {
+        "keyboard": "us",
+        "mouse": "off",
+        "audio": false
+      },
+      "requiredFiles": [
+        {
+          "path": "APP/BELL.TXT",
+          "kind": "package-member"
+        },
+        {
+          "path": "APP/COMMAND.COM",
+          "kind": "package-member"
+        },
+        {
+          "path": "APP/INPUT.TXT",
+          "kind": "package-member"
+        }
+      ],
+      "diskEnvironment": null,
+      "limits": {
+        "guestMemoryMiB": 64,
+        "maxSessionMs": 1800000
+      },
+      "dos": {
+        "cycles": 3000,
+        "core": "auto",
+        "machine": "svga_s3",
+        "xms": true,
+        "ems": true
+      }
+    },
+    "browserAudioMouse": {
+      "schemaVersion": 1,
+      "runtimeId": "js-dos",
+      "runtimeVersion": "8.5.3",
+      "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox",
+      "selectionMode": "automatic",
+      "entrypoint": "APP/COMMAND.COM",
+      "cwd": ".",
+      "mounts": [
+        {
+          "packagePath": ".",
+          "guestPath": "C:/",
+          "readOnly": false
+        }
+      ],
+      "controls": {
+        "keyboard": "us",
+        "mouse": "absolute",
+        "audio": true
+      },
+      "requiredFiles": [
+        {
+          "path": "APP/BELL.TXT",
+          "kind": "package-member"
+        },
+        {
+          "path": "APP/COMMAND.COM",
+          "kind": "package-member"
+        },
+        {
+          "path": "APP/INPUT.TXT",
+          "kind": "package-member"
+        }
+      ],
+      "diskEnvironment": null,
+      "limits": {
+        "guestMemoryMiB": 64,
+        "maxSessionMs": 1800000
+      },
+      "dos": {
+        "cycles": 3000,
+        "core": "auto",
+        "machine": "svga_s3",
+        "xms": true,
+        "ems": true
+      }
+    }
+  }
+}

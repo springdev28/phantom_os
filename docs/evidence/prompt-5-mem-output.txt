@@ -1,0 +1,18 @@
+
+Memory Type         Total      Used       Free
+----------------  --------   --------   --------
+Conventional          640K         6K       634K
+Upper                  64K         0K        64K
+Reserved              320K       320K         0K
+Extended (XMS)     63,488K       448K    63,040K
+----------------  --------   --------   --------
+Total memory       64,512K       774K    63,738K
+
+Total under 1 MB      704K         6K       698K
+
+Total Expanded (EMS)                   63M (66,060,288 bytes)
+Free Expanded (EMS)                    62M (64,552,960 bytes)
+
+Largest executable program size       634K (648,912 bytes)
+Largest free upper memory block        64K ( 65,536 bytes)
+MS-DOS is resident in the high memory area.

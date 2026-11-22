@@ -1,0 +1,45 @@
+{
+  "scope": "Production static import, not guest execution",
+  "browser": "157.0.8103.79",
+  "platform": "darwin/arm64",
+  "csp": "script-src 'self'; worker-src 'self' blob:; connect-src 'none'",
+  "runs": [
+    {
+      "viewport": "desktop",
+      "online": "passed",
+      "offlineAfterInspectLoad": "passed",
+      "importNetworkRequests": 0,
+      "localBlobWorkerLoads": 2,
+      "consoleErrors": 0,
+      "completedWorkers": 2,
+      "remainingWorkers": 0,
+      "filesRetained": 8,
+      "candidates": 2
+    },
+    {
+      "viewport": "mobile",
+      "online": "passed",
+      "offlineAfterInspectLoad": "passed",
+      "importNetworkRequests": 0,
+      "localBlobWorkerLoads": 2,
+      "consoleErrors": 0,
+      "completedWorkers": 2,
+      "remainingWorkers": 0,
+      "filesRetained": 8,
+      "candidates": 2
+    }
+  ],
+  "assets": {
+    "/favicon.svg": "dad32c0e4815ac493f88ec90e65a36c5b53fcf2047f0501f280ee61c5c3f5e0e",
+    "/index.html": "31c4fc3a610307f01c0d919e7c1cd8b78e9799e1841463763613e929773224ec",
+    "/third-party-notices.txt": "12170e04e84591416bf9b4806c7115a42943925f6cf33902822d71a5b64eb50e",
+    "/assets/Compatibility-N2hn2aa4.js": "2702d2b2461972d1b99856c9f4fc5e88a455b792b59b1a5cf7c5b012acb0a114",
+    "/assets/Home-ZY50UbHv.js": "358b46b6c090085c00072e27cc813daa5c361bd475723c74910be89626c9ebdb",
+    "/assets/Inspect-Q0DNB_YO.js": "12777e7d37fc8daa5c2a271e47acc9e9e4da8e395dece9ae27692983d3246c2f",
+    "/assets/Player-tmlSwot2.js": "071648782b5f44a21a67dbc297616b5b82c69a8a37f3aacd04176bffe42054a1",
+    "/assets/Workspace-DScMtY6l.js": "190510cda7c76d4ceaf85945273024c2cca2ab9752925f98eef35c498cb4ab01",
+    "/assets/index-BSNyMBCU.css": "120816bc4c3528cd970065365ccbed55f07f9b8a8cf84e2d5a2c9c75a4ec9ce1",
+    "/assets/index-xKykAQB1.js": "cea431f66565e11dcf03101959f1c1fb243d6668810435bded5a2a4303b9f51a",
+    "/assets/probe-labels-DLjXlW5P.js": "74c2acdb05dcdb5f1777b738ab442eb8d10e83021add474d345b0ef271fe9208"
+  }
+}

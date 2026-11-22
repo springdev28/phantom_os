@@ -1,0 +1,19 @@
+
+> phantom-os@0.1.0 prebuild
+> npm run runtime:assets
+
+
+> phantom-os@0.1.0 runtime:assets
+> npm run audit:sources && node scripts/runtime-assets.mjs
+
+
+> phantom-os@0.1.0 audit:sources
+> python3 scripts/audit-source-bundles.py && python3 tests/source-bundles.test.py
+
+Traceback (most recent call last):
+  File "/private/tmp/phantom-p11-clean/scripts/audit-source-bundles.py", line 92, in <module>
+    main()
+    ~~~~^^
+  File "/private/tmp/phantom-p11-clean/scripts/audit-source-bundles.py", line 85, in main
+    raise ValueError(f'Retained source/fixture pin mismatch: {name}')
+ValueError: Retained source/fixture pin mismatch: vendor/dos/README.md

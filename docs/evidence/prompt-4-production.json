@@ -1,0 +1,56 @@
+{
+  "scope": "Production package import, deterministic planning and profile round-trip; no guest execution",
+  "browser": "157.0.8103.79",
+  "platform": "darwin/arm64",
+  "csp": "script-src 'self'; worker-src 'self' blob:; connect-src 'none'",
+  "runs": [
+    {
+      "viewport": "desktop",
+      "online": "passed",
+      "offlineAfterViewsLoad": "passed",
+      "userDataRequests": 0,
+      "unexpectedRequests": 0,
+      "staticFaviconRequestsAfterLoad": 4,
+      "localBlobWorkerLoads": 2,
+      "consoleErrors": 0,
+      "completedWorkers": 2,
+      "remainingWorkers": 0,
+      "filesRetained": 8,
+      "candidates": 2,
+      "profileRoundTrips": 2,
+      "decision": "candidate",
+      "executionOffered": false
+    },
+    {
+      "viewport": "mobile",
+      "online": "passed",
+      "offlineAfterViewsLoad": "passed",
+      "userDataRequests": 0,
+      "unexpectedRequests": 0,
+      "staticFaviconRequestsAfterLoad": 4,
+      "localBlobWorkerLoads": 2,
+      "consoleErrors": 0,
+      "completedWorkers": 2,
+      "remainingWorkers": 0,
+      "filesRetained": 8,
+      "candidates": 2,
+      "profileRoundTrips": 2,
+      "decision": "candidate",
+      "executionOffered": false
+    }
+  ],
+  "assets": {
+    "/favicon.svg": "dad32c0e4815ac493f88ec90e65a36c5b53fcf2047f0501f280ee61c5c3f5e0e",
+    "/index.html": "5a6ea6c0cf6c8a0813b7f8e98d0fe2ee39456f67e2525bc09b85b49c82a8a656",
+    "/third-party-notices.txt": "12170e04e84591416bf9b4806c7115a42943925f6cf33902822d71a5b64eb50e",
+    "/assets/Compatibility-CqGel97O.js": "6d4e9172a1b97d4ef0b3aef2cefb179e23a94846aae3feb8105a4ea7ce15d678",
+    "/assets/Home-j5iJ2yh1.js": "b95997319bef97607f323a96a5a3cf7b58896ff6dbd203957db4d587c0699249",
+    "/assets/Inspect-dAMn4BhK.js": "13bd921033f1cc6838fa9c1606d0e36e673f71b6d2e7f50a7594569bfe13f4da",
+    "/assets/Player-Bl73B0-l.js": "2d30c02dcde47fea5d3ebabfefb0403871b1027fbbf64f57802e432defac2996",
+    "/assets/ProfilePanel-tFKwJEuv.js": "536584e51d3d791e5b930e28c68ec0ff4bc5f8f5cd5a93db9507a8ec722f1423",
+    "/assets/Workspace-CTIXJx2U.js": "8783663cb0706cc278b24720d525d6f0a8e9cd8924ea229f3a5a6a13ff1255a2",
+    "/assets/index-BHZwlNDy.css": "f85248cbcb5388c250c9c67ff2b8d4d03a12d7d184a6e64a7805779b97c505f4",
+    "/assets/index-CAeELzxs.js": "6b2abd510b05fea634c07c106aecaff360d6e2fa8625618b73060e4f34839492",
+    "/assets/probe-labels-DLjXlW5P.js": "74c2acdb05dcdb5f1777b738ab442eb8d10e83021add474d345b0ef271fe9208"
+  }
+}

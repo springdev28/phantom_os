@@ -1,0 +1,1168 @@
+{
+  "date": "2026-11-22",
+  "status": "passed",
+  "scope": "Current project documentation and Prompt 9 evidence; local destinations/heading anchors. Final tested code, retained vendor/fixtures and built inventory hashes. External source references were consulted during implementation, not re-fetched by this link check.",
+  "documentHashes": {
+    "AGENTS.md": "364aec3976310ff4f26cc4705c568af62629dc309b6e0f8cf1b5f6f10757f65d",
+    "README.md": "3a3e778d727cb2e28d6ed73d01b0f35f1f7630c10c2e8e8a638d69022a7b2a09",
+    "THIRD_PARTY_NOTICES.md": "f8761c39210b08fb3b1cab08fd81640d62566242171247c781abbe005826035f",
+    "docs/accessibility-audit.md": "ebd8bfa2163d3b27f0c5e9c7619d29f54bc20a57131087bf7a6b0f8d60703ac2",
+    "docs/analyzer.md": "5b7fa41822765f5fa5a320170e668c58079b188bf62fc822a0aeca144aaddcb3",
+    "docs/architecture.md": "392b8e82c9871bf5052c216dbbe321c3d17ca908d1ff4afac53f0b8000ff3417",
+    "docs/boxedwine-runtime.md": "19ce0ca15d69320181292989a49ad2783e95f4c66eb50cab3fc79580f6a2294a",
+    "docs/compatibility-matrix.md": "76e7872accf18fdab1fbb538e34bd8144f1f074226904a7ba82ea54277bc8e45",
+    "docs/compatibility-planning.md": "c9b04531929bc69685302458add3f3baaa563f6ded16bc153f303caf317b9b15",
+    "docs/dependency-licenses.md": "2e525a37152c738916a2e8d6e0a00c324f49e44af1c25493dbacacbd30632f9e",
+    "docs/dos-runtime.md": "e0fbb684a62b43313b678895a6ae196a687cb6b8aa752be367b8331ad3700c0e",
+    "docs/package-import.md": "dad722b105fef24edaef1248f082b91edcc0c61c22962655cb9f804a4675e101",
+    "docs/product-spec.md": "82da9f6f083628a2292ceef98a9f90f4fa6fce5724904aa858b51b4a94ab1c90",
+    "docs/runtime-license-audit.md": "9fa776ac7a8be2a24dc9f6aed9c651c6418ee59e47e5b45be1623edb07f52bb3",
+    "docs/security.md": "eed9d5cda9a60d23453b6d5290002253e6485d730a326b5c28724b6aaa3d5b82",
+    "docs/workspace.md": "363c3afd1feb6766e99f2564453cbb7dae2947a6df9a39ec328f8899d29077fa",
+    "docs/evidence/prompt-9.md": "37fc2ab2cc68c77f908917952f3d30cc4e8121378ce54e61cd6e72745a1209d5"
+  },
+  "localLinksChecked": 150,
+  "headingAnchorsChecked": 6,
+  "links": [
+    {
+      "document": "AGENTS.md",
+      "href": "docs/compatibility-matrix.md",
+      "exists": true
+    },
+    {
+      "document": "AGENTS.md",
+      "href": "docs/architecture.md#dependency-and-license-gate",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/boxedwine-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/security.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/dos-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "tests/fixtures/dos/README.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "AGENTS.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/product-spec.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/architecture.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/compatibility-matrix.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/compatibility-planning.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/analyzer.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/package-import.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/dependency-licenses.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/runtime-license-audit.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/workspace.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "README.md",
+      "href": "docs/accessibility-audit.md",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY_NOTICES.md",
+      "href": "public/third-party-notices.txt",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY_NOTICES.md",
+      "href": "docs/dependency-licenses.md",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY_NOTICES.md",
+      "href": "docs/runtime-license-audit.md",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY_NOTICES.md",
+      "href": "vendor/dos/NOTICE.txt",
+      "exists": true
+    },
+    {
+      "document": "THIRD_PARTY_NOTICES.md",
+      "href": "vendor/dos/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/accessibility-audit.md",
+      "href": "evidence/prompt-8.md",
+      "exists": true
+    },
+    {
+      "document": "docs/accessibility-audit.md",
+      "href": "evidence/prompt-8-accessibility.json",
+      "exists": true
+    },
+    {
+      "document": "docs/accessibility-audit.md",
+      "href": "product-spec.md#measurable-acceptance-targets",
+      "exists": true
+    },
+    {
+      "document": "docs/analyzer.md",
+      "href": "package-import.md",
+      "exists": true
+    },
+    {
+      "document": "docs/analyzer.md",
+      "href": "../src/domain/contracts.ts",
+      "exists": true
+    },
+    {
+      "document": "docs/analyzer.md",
+      "href": "../tests/fixtures/probe-fixtures.ts",
+      "exists": true
+    },
+    {
+      "document": "docs/analyzer.md",
+      "href": "evidence/prompt-2.md",
+      "exists": true
+    },
+    {
+      "document": "docs/analyzer.md",
+      "href": "compatibility-planning.md",
+      "exists": true
+    },
+    {
+      "document": "docs/analyzer.md",
+      "href": "dos-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "workspace.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "evidence/prompt-8.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "evidence/prompt-7.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "product-spec.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "compatibility-matrix.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "security.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "../src/domain/contracts.ts",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "analyzer.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "package-import.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "compatibility-planning.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "dos-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "workspace.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "dos-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "boxedwine-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "runtime-license-audit.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "boxedwine-runtime.md#why-the-adoption-gate-stays-closed",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "dependency-licenses.md",
+      "exists": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "dependency-licenses.md",
+      "exists": true
+    },
+    {
+      "document": "docs/boxedwine-runtime.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/boxedwine-runtime.md",
+      "href": "../tests/fixtures/boxedwine-artifacts.json",
+      "exists": true
+    },
+    {
+      "document": "docs/boxedwine-runtime.md",
+      "href": "runtime-license-audit.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "security.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-8.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "accessibility-audit.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-1.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-2.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "analyzer.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-3.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "package-import.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-3-fixtures.json",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-4.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "compatibility-planning.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "dos-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "boxedwine-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "workspace.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-7.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "../vendor/dos/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "../tests/fixtures/dos/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "../tests/fixtures/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "product-spec.md#measurable-acceptance-targets",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "evidence/prompt-7.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-planning.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-planning.md",
+      "href": "compatibility-matrix.md",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-planning.md",
+      "href": "../src/domain/contracts.ts",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-planning.md",
+      "href": "../src/profiles/launch-profile.ts",
+      "exists": true
+    },
+    {
+      "document": "docs/compatibility-planning.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dependency-licenses.md",
+      "href": "runtime-license-audit.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dependency-licenses.md",
+      "href": "../public/third-party-notices.txt",
+      "exists": true
+    },
+    {
+      "document": "docs/dependency-licenses.md",
+      "href": "architecture.md#dependency-and-license-gate",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "workspace.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "evidence/prompt-7.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "runtime-license-audit.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "../tests/fixtures/dos/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "../vendor/dos/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "security.md",
+      "exists": true
+    },
+    {
+      "document": "docs/dos-runtime.md",
+      "href": "evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "docs/package-import.md",
+      "href": "evidence/prompt-3.md",
+      "exists": true
+    },
+    {
+      "document": "docs/package-import.md",
+      "href": "dependency-licenses.md",
+      "exists": true
+    },
+    {
+      "document": "docs/package-import.md",
+      "href": "compatibility-planning.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-8.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "compatibility-matrix.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "security.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-3.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-4.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-7.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-8.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "security.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "architecture.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "dos-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "workspace.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "analyzer.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "package-import.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "compatibility-planning.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "boxedwine-runtime.md",
+      "exists": true
+    },
+    {
+      "document": "docs/product-spec.md",
+      "href": "accessibility-audit.md",
+      "exists": true
+    },
+    {
+      "document": "docs/runtime-license-audit.md",
+      "href": "boxedwine-runtime.md#why-the-adoption-gate-stays-closed",
+      "exists": true
+    },
+    {
+      "document": "docs/runtime-license-audit.md",
+      "href": "../vendor/dos/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/runtime-license-audit.md",
+      "href": "evidence/prompt-5.md",
+      "exists": true
+    },
+    {
+      "document": "docs/security.md",
+      "href": "evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "docs/security.md",
+      "href": "../src/security/policy.ts",
+      "exists": true
+    },
+    {
+      "document": "docs/security.md",
+      "href": "evidence/prompt-9.md",
+      "exists": true
+    },
+    {
+      "document": "docs/workspace.md",
+      "href": "evidence/prompt-7.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "../security.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "../../vendor/dos/manifest.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "../../tests/fixtures/dos/README.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-source-files.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-changed-files.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-check.log",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-browser.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-production.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-doc-check.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-6.md",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-fixtures.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-security.json",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-mem-exe-framebuffer.png",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-freecom-zip-framebuffer.png",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-wasm-eval-trial.log",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-credentialless-trial.log",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-storage-guard-trial.log",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-first-full-check.log",
+      "exists": true
+    },
+    {
+      "document": "docs/evidence/prompt-9.md",
+      "href": "prompt-9-map-audit-check.log",
+      "exists": true
+    }
+  ],
+  "anchors": [
+    {
+      "document": "AGENTS.md",
+      "href": "docs/architecture.md#dependency-and-license-gate",
+      "valid": true
+    },
+    {
+      "document": "docs/accessibility-audit.md",
+      "href": "product-spec.md#measurable-acceptance-targets",
+      "valid": true
+    },
+    {
+      "document": "docs/architecture.md",
+      "href": "boxedwine-runtime.md#why-the-adoption-gate-stays-closed",
+      "valid": true
+    },
+    {
+      "document": "docs/compatibility-matrix.md",
+      "href": "product-spec.md#measurable-acceptance-targets",
+      "valid": true
+    },
+    {
+      "document": "docs/dependency-licenses.md",
+      "href": "architecture.md#dependency-and-license-gate",
+      "valid": true
+    },
+    {
+      "document": "docs/runtime-license-audit.md",
+      "href": "boxedwine-runtime.md#why-the-adoption-gate-stays-closed",
+      "valid": true
+    }
+  ],
+  "sourceFilesChecked": 114,
+  "sourceHashMismatches": [],
+  "assetChecks": [
+    {
+      "path": "tests/fixtures/dos/FREECOM.ZIP",
+      "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e",
+      "matches": true
+    },
+    {
+      "path": "tests/fixtures/dos/MEM.EXE",
+      "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/dosbox-source.tar.gz",
+      "sha256": "797efaf22246bbc5b2e6be0a6c791a58addd2bca330e0aa93232780a77e06019",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/emulators-LICENSE.txt",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/emulators-source.zip",
+      "sha256": "de3d0f040720be8bc3e48b5332f304252618bf7891be04e39739b786427a0ab1",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/emulators.js.map",
+      "sha256": "fc7b1af91c9d4af2f9a75c51bd74469b21d673c1667666c181cbca0e48efe1e8",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/freecom-LICENSE.txt",
+      "sha256": "45ece956c40ccac10202a455c0841da8bf42b28412f8c992357da826bb107eae",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/freecom-source.zip",
+      "sha256": "a23f3324e8186481e289f9f7dd161c7d79be99f5d813a9dda878b255e26e2fa9",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/mem-LICENSE.txt",
+      "sha256": "da0eca0fb517ac939d167924c9d4b3f8750a6b7191932ef2cb145acfa624ac7e",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/mem-source.zip",
+      "sha256": "dddb1de13e782afc4246c1922cddb92a0a70a9a0550d4e921b4f7a5dae3b7ca7",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/suppl-LICENSE.txt",
+      "sha256": "a30edd18dd7444fb631c00951e4571fc2c2832f3859b438f3f7e15ba4ef63176",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/NOTICE.txt",
+      "sha256": "b09e659e1e16c6ccc21a7176e526b494796189e25471484763110fe3cb5aa04b",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/README.md",
+      "sha256": "1d577c36a294d48f75ede759f66a67f002a813a3d48789382b1a4e625fe6b675",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/browser-pack-6.1.0.tgz",
+      "sha256": "13db68f814f0b0b943de116b36eee620f23eb857fba80c342791288cf0320dd1",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/core-js-3.30.0.tgz",
+      "sha256": "d7589cd792bb431696c0a6e9245ced1b5a85fa7006875ae7c616e0fe629d0cbf",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/emscripten-LICENSE.txt",
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/libcxx-LICENSE.txt",
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/musl-COPYRIGHT.txt",
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/npm-build.ts",
+      "sha256": "87d5f3b632a7733c0752b4fff27beddb124581465bad364c34395007adccb5c4",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/process-0.11.10.tgz",
+      "sha256": "7c10569b3c9cb056152ad630d40f9f4fcc321a0013c2bb8384f036aaa674e6bb",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/zlib-1.2.13.tar.gz",
+      "sha256": "1525952a0a567581792613a9723333d7f8cc20b87a81f920fb8bc7e3f2251428",
+      "matches": true
+    },
+    {
+      "path": "vendor/dos/zlib-LICENSE.txt",
+      "sha256": "ab234c46f13c0dd02f494a713ecb48b20afd435aa6d0b3418da7686b5b7fcdfe",
+      "matches": true
+    },
+    {
+      "path": "dist/favicon.svg",
+      "sha256": "dad32c0e4815ac493f88ec90e65a36c5b53fcf2047f0501f280ee61c5c3f5e0e",
+      "matches": true
+    },
+    {
+      "path": "dist/index.html",
+      "sha256": "e0fbecc748b3412f6a2bca58835892ac4cc8a09848528089d7fa2d067ecdce34",
+      "matches": true
+    },
+    {
+      "path": "dist/third-party-notices.txt",
+      "sha256": "8578776082f4cfffb07060ebbeb1938ea53e28ebac8c37baa788e4978a854018",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/NOTICE.txt",
+      "sha256": "b09e659e1e16c6ccc21a7176e526b494796189e25471484763110fe3cb5aa04b",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/host-74394f7d792ea8c3.html",
+      "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/NOTICE.txt",
+      "sha256": "b09e659e1e16c6ccc21a7176e526b494796189e25471484763110fe3cb5aa04b",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/README.md",
+      "sha256": "1d577c36a294d48f75ede759f66a67f002a813a3d48789382b1a4e625fe6b675",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/browser-pack-6.1.0.tgz",
+      "sha256": "13db68f814f0b0b943de116b36eee620f23eb857fba80c342791288cf0320dd1",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/core-js-3.30.0.tgz",
+      "sha256": "d7589cd792bb431696c0a6e9245ced1b5a85fa7006875ae7c616e0fe629d0cbf",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/dosbox-source.tar.gz",
+      "sha256": "797efaf22246bbc5b2e6be0a6c791a58addd2bca330e0aa93232780a77e06019",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/emscripten-LICENSE.txt",
+      "sha256": "620a78084fc7ca97c0b5dea9abf891f3ffcadfdbf305276f099c9c4e12fc1d86",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/emulators-LICENSE.txt",
+      "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/emulators-source.zip",
+      "sha256": "de3d0f040720be8bc3e48b5332f304252618bf7891be04e39739b786427a0ab1",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/emulators.js.map",
+      "sha256": "fc7b1af91c9d4af2f9a75c51bd74469b21d673c1667666c181cbca0e48efe1e8",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/freecom-LICENSE.txt",
+      "sha256": "45ece956c40ccac10202a455c0841da8bf42b28412f8c992357da826bb107eae",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/freecom-source.zip",
+      "sha256": "a23f3324e8186481e289f9f7dd161c7d79be99f5d813a9dda878b255e26e2fa9",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/libcxx-LICENSE.txt",
+      "sha256": "539dd7aed86e8a4f12cbdd0e6c50c189c7d74847e4fecc64ce2c6ee3a01da38b",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/manifest.json",
+      "sha256": "f321fb7fc8c741940f68b3752b22de5bfecec0f3db55a4a8efa75bb27108c2f0",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/mem-LICENSE.txt",
+      "sha256": "da0eca0fb517ac939d167924c9d4b3f8750a6b7191932ef2cb145acfa624ac7e",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/mem-source.zip",
+      "sha256": "dddb1de13e782afc4246c1922cddb92a0a70a9a0550d4e921b4f7a5dae3b7ca7",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/musl-COPYRIGHT.txt",
+      "sha256": "f9bc4423732350eb0b3f7ed7e91d530298476f8fec0c6c427a1c04ade22655af",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/npm-build.ts",
+      "sha256": "87d5f3b632a7733c0752b4fff27beddb124581465bad364c34395007adccb5c4",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/process-0.11.10.tgz",
+      "sha256": "7c10569b3c9cb056152ad630d40f9f4fcc321a0013c2bb8384f036aaa674e6bb",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/suppl-LICENSE.txt",
+      "sha256": "a30edd18dd7444fb631c00951e4571fc2c2832f3859b438f3f7e15ba4ef63176",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/zlib-1.2.13.tar.gz",
+      "sha256": "1525952a0a567581792613a9723333d7f8cc20b87a81f920fb8bc7e3f2251428",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/source/zlib-LICENSE.txt",
+      "sha256": "ab234c46f13c0dd02f494a713ecb48b20afd435aa6d0b3418da7686b5b7fcdfe",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/8.5.3/emulators.js",
+      "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/8.5.3/wdosbox.js",
+      "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/8.5.3/wdosbox.wasm",
+      "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+      "matches": true
+    },
+    {
+      "path": "dist/demos/FREECOM.ZIP",
+      "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e",
+      "matches": true
+    },
+    {
+      "path": "dist/demos/MEM.EXE",
+      "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4",
+      "matches": true
+    },
+    {
+      "path": "dist/demos/NOTICE.txt",
+      "sha256": "555e5cc89db031c7f58c32738770cd5716aa600680b9de196930ac3dee9fc78f",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/Compatibility-BodQZpZm.js",
+      "sha256": "4e1504eb1f31a936d161d1ee0fde6d0987ad74d7e07975676d7e2f708f8e87d4",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/Configure-COEzXdWf.js",
+      "sha256": "844954ec3b9de1606250b7dc3efed8781a57d7cfab107430e7eabe64af9f347e",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/Home-BIYVB0BL.js",
+      "sha256": "2776aec518425769dfb744d3f706f4f90e74e86dad6acd57226cc13d50903d2d",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/Inspect-_N4gXwgz.js",
+      "sha256": "433ce5e36edb47ac727ebcc4dd195bc8b0e5195ad8eb0485e44159eb80de48b8",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/Player-DU6waotH.js",
+      "sha256": "97d458ecfa1377be8a43ad8bac3a0b2564cecad845b48928df6123073fca1a8e",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/ProfilePanel-cwLxy5FD.js",
+      "sha256": "22c441e90d80ee5399e1d09dabf23bfa30fac77fe21c294936ba8d45e4e1c62f",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/Workspace-Bcy_-R0Y.js",
+      "sha256": "21078f28539dfce655e6365a447ebdcd684dd779da318680da3c2f398dd23507",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/adapter-BEQ83A4P.js",
+      "sha256": "8935cd60bb884454a21bab0f7e902a403753173dbec48f8863bce006c7a442c2",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/adapter-CdJNnPUz.js",
+      "sha256": "68f618f78af590e381c873cdef7173b5703555fcf44906b49db557084303eeb5",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/errors-CBO-VkZs.js",
+      "sha256": "186ba9d364572ac444cf603bb83263bab9ec869d874b0cdb50c613cb2625fedf",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/index-DH_BwhyJ.js",
+      "sha256": "be959e9d84599511f91c0de3a0ec6c5bfcba7cea8d2da9c04a8d79148f3f3923",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/index-zeG4_nD6.css",
+      "sha256": "6979392e3efd3c01e936eae0a71a43695a2fa6ae1ec8f0e5b770b8c93bc5f0a6",
+      "matches": true
+    },
+    {
+      "path": "dist/assets/probe-labels-DLjXlW5P.js",
+      "sha256": "74c2acdb05dcdb5f1777b738ab442eb8d10e83021add474d345b0ef271fe9208",
+      "matches": true
+    },
+    {
+      "path": "public/runtimes/js-dos/host-74394f7d792ea8c3.html",
+      "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+      "matches": true
+    },
+    {
+      "path": "dist/runtimes/js-dos/host-74394f7d792ea8c3.html",
+      "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+      "matches": true
+    }
+  ],
+  "shippedSourceMaps": [
+    {
+      "path": "/runtimes/js-dos/source/emulators.js.map",
+      "sha256": "fc7b1af91c9d4af2f9a75c51bd74469b21d673c1667666c181cbca0e48efe1e8",
+      "purpose": "Retained public upstream source; not an application source map"
+    }
+  ],
+  "trailingWhitespaceInCode": [],
+  "failures": []
+}

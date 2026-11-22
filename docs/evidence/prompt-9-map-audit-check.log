@@ -1,0 +1,192 @@
+
+> phantom-os@0.1.0 check
+> npm run typecheck && npm run lint && npm test && npm run build && npm run test:browser && npm run test:production
+
+
+> phantom-os@0.1.0 typecheck
+> tsc --noEmit
+
+
+> phantom-os@0.1.0 lint
+> eslint . --max-warnings 0
+
+
+> phantom-os@0.1.0 test
+> vitest run
+
+
+ RUN  v5.1.1 <workspace>
+
+
+ Test Files  15 passed (15)
+      Tests  261 passed (261)
+   Start at  05:38:48
+   Duration  559ms (transform 44%, tests 37%, import 17%, worker 2%)
+
+
+> phantom-os@0.1.0 prebuild
+> npm run runtime:assets
+
+
+> phantom-os@0.1.0 runtime:assets
+> node scripts/runtime-assets.mjs
+
+
+> phantom-os@0.1.0 build
+> npm run typecheck && vite build
+
+
+> phantom-os@0.1.0 typecheck
+> tsc --noEmit
+
+vite v8.3.8 building client environment for production...
+transforming...
+✓ 74 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                          1.07 kB │ gzip:   0.55 kB
+dist/assets/index-zeG4_nD6.css          32.73 kB │ gzip:   7.41 kB
+dist/assets/probe-labels-DLjXlW5P.js     0.60 kB │ gzip:   0.37 kB
+dist/assets/adapter-CkZnYrW_.js          0.71 kB │ gzip:   0.46 kB
+dist/assets/Configure-CFu8DTdX.js        1.77 kB │ gzip:   0.90 kB
+dist/assets/Home-Dd3nArE1.js             4.21 kB │ gzip:   1.66 kB
+dist/assets/errors-CBO-VkZs.js           4.88 kB │ gzip:   2.19 kB
+dist/assets/ProfilePanel-xw6vDXL-.js     7.54 kB │ gzip:   2.51 kB
+dist/assets/Workspace-D9UZw4qm.js        7.79 kB │ gzip:   2.46 kB
+dist/assets/adapter-C-XezzZN.js          8.65 kB │ gzip:   3.75 kB
+dist/assets/Player-CypWhnk7.js           8.93 kB │ gzip:   3.20 kB
+dist/assets/Compatibility-BlQW3XZ4.js    9.87 kB │ gzip:   3.56 kB
+dist/assets/Inspect-J2Dol1U_.js         14.32 kB │ gzip:   4.38 kB
+dist/assets/index-CsJdI5Eu.js          338.18 kB │ gzip: 111.27 kB
+
+✓ built in 125ms
+
+> phantom-os@0.1.0 test:browser
+> playwright test
+
+[WebServer] (node:72975) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+
+Running 92 tests using 2 workers
+
+(node:72987) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+(node:72986) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   2 [desktop-chrome] › tests/browser/analyzer.spec.ts:20:1 › different selected bytes produce distinct reports with inspectable evidence (2.1s)
+  ✓   1 [desktop-chrome] › tests/browser/accessibility.spec.ts:31:1 › keyboard flow, readable contrast, reduced motion and 200% layout (3.7s)
+  ✓   4 [desktop-chrome] › tests/browser/analyzer.spec.ts:83:1 › corrupted data leaves a readable diagnostic and supports a fresh selection (612ms)
+  ✓   3 [desktop-chrome] › tests/browser/analyzer.spec.ts:53:1 › all fixture analysis remains local, without page/worker requests or persisted reports (2.4s)
+  ✓   5 [desktop-chrome] › tests/browser/analyzer.spec.ts:96:1 › a File read failure exposes a fixed human-readable error without private exception text (588ms)
+  ✓   6 [desktop-chrome] › tests/browser/boxedwine-disabled.spec.ts:17:1 › PE32 and NE preserve reports/profiles while every Windows launch path stays disabled (4.3s)
+  ✓   7 [desktop-chrome] › tests/browser/boxedwine-disabled.spec.ts:74:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest (10.1s)
+  ✓   8 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (15.4s)
+  ✓   9 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch (15.3s)
+  ✓  10 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch (8.3s)
+  ✓  11 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker (5.3s)
+  ✓  13 [desktop-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeCOM (7.5s)
+  ✓  12 [desktop-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeDOS MEM (12.0s)
+  ✓  14 [desktop-chrome] › tests/browser/launch-journey.spec.ts:74:1 › unsupported architecture has a copyable report and a denied-clipboard fallback (1.8s)
+  ✓  15 [desktop-chrome] › tests/browser/launch-journey.spec.ts:104:1 › file drop, folder-drop guidance, picker fallback and large-file feedback (2.3s)
+  ✓  17 [desktop-chrome] › tests/browser/packages.spec.ts:20:1 › real ZIP picker preserves the mixed package and asks for an explicit executable (1.8s)
+  ✓  18 [desktop-chrome] › tests/browser/packages.spec.ts:46:1 › native folder input preserves relative paths including empty resources (1.5s)
+  ✓  19 [desktop-chrome] › tests/browser/packages.spec.ts:68:1 › empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem (990ms)
+  ✓  16 [desktop-chrome] › tests/browser/launch-journey.spec.ts:133:1 › runtime download progress is visible and full-screen denial preserves the real session (6.8s)
+  ✓  20 [desktop-chrome] › tests/browser/packages.spec.ts:83:1 › package explorer paginates and does not silently expand a nested archive (843ms)
+  ✓  21 [desktop-chrome] › tests/browser/packages.spec.ts:100:1 › real worker preserves every file hash at the adapter package boundary (498ms)
+  ✓  22 [desktop-chrome] › tests/browser/packages.spec.ts:125:1 › page and worker traffic carry no names or bytes; no storage or script execution occurs (660ms)
+  ✓  24 [desktop-chrome] › tests/browser/planner.spec.ts:27:1 › header-based candidate, keyboard override and reset never enable Run (1.5s)
+  ✓  23 [desktop-chrome] › tests/browser/packages.spec.ts:153:1 › cancelling a real extraction terminates its worker and a fresh package still imports (2.4s)
+  ✓  25 [desktop-chrome] › tests/browser/planner.spec.ts:44:1 › ambiguous ZIP asks for entrypoint, then replans for the chosen executable (1.7s)
+  ✓  26 [desktop-chrome] › tests/browser/planner.spec.ts:62:1 › imports missing dependencies, edits limits and exports a local JSON profile without content (1.6s)
+  ✓  28 [desktop-chrome] › tests/browser/planner.spec.ts:134:1 › invalid imports preserve a working profile, reject forged verification and recover on reset (1.5s)
+  ✓  27 [desktop-chrome] › tests/browser/planner.spec.ts:101:1 › unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export (3.9s)
+  ✓  29 [desktop-chrome] › tests/browser/planner.spec.ts:154:1 › a profile can be imported before files and reload clears its temporary state (2.7s)
+  ✓  31 [desktop-chrome] › tests/browser/security.spec.ts:8:1 › hostile PE, disk and ZIP inputs stay inert and recover without leaking metadata (1.4s)
+  ✓  30 [desktop-chrome] › tests/browser/planner.spec.ts:167:1 › COM confirmation remains separate from static recognition, and corrupt input remains invalid (2.6s)
+  ✓  32 [desktop-chrome] › tests/browser/security.spec.ts:40:1 › refresh during actual DOS execution destroys the worker and does not restore temporary files (8.8s)
+  ✓  33 [desktop-chrome] › tests/browser/security.spec.ts:58:1 › silent real-worker termination is detected and a fresh session recovers (12.3s)
+  ✓  34 [desktop-chrome] › tests/browser/security.spec.ts:73:1 › storage denial preserves a temporary real session and explicit export without host permissions (6.3s)
+  ✓  36 [desktop-chrome] › tests/browser/smoke.spec.ts:17:1 › selects a local file, checks access, explains unavailable execution and clears the workspace (3.4s)
+  ✓  37 [desktop-chrome] › tests/browser/smoke.spec.ts:53:1 › all six screens have accessible navigation, direct links and no horizontal overflow (4.5s)
+  ✓  38 [desktop-chrome] › tests/browser/smoke.spec.ts:72:1 › keyboard selection is reachable and navigation transfers focus to the new heading (1.2s)
+  ✓  39 [desktop-chrome] › tests/browser/smoke.spec.ts:87:1 › a reload discards the temporary selection and selecting the same file again works (711ms)
+  ✓  40 [desktop-chrome] › tests/browser/smoke.spec.ts:100:1 › an empty file shows a recoverable error instead of a compatibility result (1.2s)
+  ✓  41 [desktop-chrome] › tests/browser/smoke.spec.ts:110:1 › loading is cancellable and an old read cannot revive a cleared selection (1.3s)
+  ✓  42 [desktop-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete (13.9s)
+  ✓  43 [desktop-chrome] › tests/browser/workspace.spec.ts:85:1 › profile-only save requires original software and is isolated by origin (5.0s)
+  ✓  44 [desktop-chrome] › tests/browser/workspace.spec.ts:107:1 › quota failure keeps the saved workspace and corrupt stored bytes cannot launch (4.3s)
+  ✓  45 [desktop-chrome] › tests/browser/workspace.spec.ts:132:59 › denied OPFS retains temporary inspection and profile export (3.9s)
+  ✓  46 [desktop-chrome] › tests/browser/workspace.spec.ts:132:59 › unavailable OPFS retains temporary inspection and profile export (3.9s)
+(node:73346) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  47 [mobile-chrome] › tests/browser/accessibility.spec.ts:31:1 › keyboard flow, readable contrast, reduced motion and 200% layout (4.0s)
+  ✓  48 [mobile-chrome] › tests/browser/analyzer.spec.ts:20:1 › different selected bytes produce distinct reports with inspectable evidence (2.4s)
+  ✓  49 [mobile-chrome] › tests/browser/analyzer.spec.ts:53:1 › all fixture analysis remains local, without page/worker requests or persisted reports (2.4s)
+  ✓  50 [mobile-chrome] › tests/browser/analyzer.spec.ts:83:1 › corrupted data leaves a readable diagnostic and supports a fresh selection (684ms)
+  ✓  51 [mobile-chrome] › tests/browser/analyzer.spec.ts:96:1 › a File read failure exposes a fixed human-readable error without private exception text (561ms)
+  ✓  52 [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:17:1 › PE32 and NE preserve reports/profiles while every Windows launch path stays disabled (4.2s)
+  ✓  35 [desktop-chrome] › tests/browser/security.spec.ts:97:1 › the one-minute configured deadline stops a real guest, with no implicit save (1.1m)
+(node:73382) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  53 [mobile-chrome] › tests/browser/boxedwine-disabled.spec.ts:74:1 › Windows ZIP and folder use the same intake; selecting DOS afterwards still launches the real guest (10.6s)
+  ✓  54 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (15.7s)
+  ✓  55 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: FREECOM.ZIP, input, guest files, stop and relaunch (15.9s)
+  ✓  56 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:76:1 › a guest IPX connection attempt fails closed and the package can relaunch (8.3s)
+  ✓  57 [mobile-chrome] › tests/browser/dos-runtime.spec.ts:96:1 › offline asset error recovers, and leaving Player releases the real worker (5.3s)
+  ✓  58 [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeDOS MEM (12.2s)
+  ✓  59 [mobile-chrome] › tests/browser/launch-journey.spec.ts:11:4 › guided first launch and export: FreeCOM (8.0s)
+  ✓  60 [mobile-chrome] › tests/browser/launch-journey.spec.ts:74:1 › unsupported architecture has a copyable report and a denied-clipboard fallback (1.2s)
+  ✓  61 [mobile-chrome] › tests/browser/launch-journey.spec.ts:104:1 › file drop, folder-drop guidance, picker fallback and large-file feedback (2.5s)
+  ✓  63 [mobile-chrome] › tests/browser/packages.spec.ts:20:1 › real ZIP picker preserves the mixed package and asks for an explicit executable (1.9s)
+  ✓  64 [mobile-chrome] › tests/browser/packages.spec.ts:46:1 › native folder input preserves relative paths including empty resources (1.5s)
+  ✓  65 [mobile-chrome] › tests/browser/packages.spec.ts:68:1 › empty, corrupt and ZIP-slip inputs fail cleanly with no partial filesystem (1.0s)
+  ✓  66 [mobile-chrome] › tests/browser/packages.spec.ts:83:1 › package explorer paginates and does not silently expand a nested archive (831ms)
+  ✓  62 [mobile-chrome] › tests/browser/launch-journey.spec.ts:133:1 › runtime download progress is visible and full-screen denial preserves the real session (6.8s)
+  ✓  67 [mobile-chrome] › tests/browser/packages.spec.ts:100:1 › real worker preserves every file hash at the adapter package boundary (543ms)
+  ✓  68 [mobile-chrome] › tests/browser/packages.spec.ts:125:1 › page and worker traffic carry no names or bytes; no storage or script execution occurs (738ms)
+  ✓  70 [mobile-chrome] › tests/browser/planner.spec.ts:27:1 › header-based candidate, keyboard override and reset never enable Run (1.5s)
+  ✓  69 [mobile-chrome] › tests/browser/packages.spec.ts:153:1 › cancelling a real extraction terminates its worker and a fresh package still imports (2.6s)
+  ✓  71 [mobile-chrome] › tests/browser/planner.spec.ts:44:1 › ambiguous ZIP asks for entrypoint, then replans for the chosen executable (1.7s)
+  ✓  72 [mobile-chrome] › tests/browser/planner.spec.ts:62:1 › imports missing dependencies, edits limits and exports a local JSON profile without content (1.5s)
+  ✓  74 [mobile-chrome] › tests/browser/planner.spec.ts:134:1 › invalid imports preserve a working profile, reject forged verification and recover on reset (1.6s)
+  ✓  73 [mobile-chrome] › tests/browser/planner.spec.ts:101:1 › unsupported EXE, MSI, ELF, Mac, ISO and 64-bit Windows retain inspection and profile export (3.8s)
+  ✓  75 [mobile-chrome] › tests/browser/planner.spec.ts:154:1 › a profile can be imported before files and reload clears its temporary state (3.2s)
+  ✓  76 [mobile-chrome] › tests/browser/planner.spec.ts:167:1 › COM confirmation remains separate from static recognition, and corrupt input remains invalid (2.2s)
+  ✓  77 [mobile-chrome] › tests/browser/security.spec.ts:8:1 › hostile PE, disk and ZIP inputs stay inert and recover without leaking metadata (1.6s)
+  ✓  78 [mobile-chrome] › tests/browser/security.spec.ts:40:1 › refresh during actual DOS execution destroys the worker and does not restore temporary files (8.6s)
+  ✓  79 [mobile-chrome] › tests/browser/security.spec.ts:58:1 › silent real-worker termination is detected and a fresh session recovers (12.5s)
+  ✓  80 [mobile-chrome] › tests/browser/security.spec.ts:73:1 › storage denial preserves a temporary real session and explicit export without host permissions (6.0s)
+  ✓  82 [mobile-chrome] › tests/browser/smoke.spec.ts:17:1 › selects a local file, checks access, explains unavailable execution and clears the workspace (3.4s)
+  ✓  83 [mobile-chrome] › tests/browser/smoke.spec.ts:53:1 › all six screens have accessible navigation, direct links and no horizontal overflow (4.5s)
+  ✓  84 [mobile-chrome] › tests/browser/smoke.spec.ts:72:1 › keyboard selection is reachable and navigation transfers focus to the new heading (1.3s)
+  ✓  85 [mobile-chrome] › tests/browser/smoke.spec.ts:87:1 › a reload discards the temporary selection and selecting the same file again works (759ms)
+  ✓  86 [mobile-chrome] › tests/browser/smoke.spec.ts:100:1 › an empty file shows a recoverable error instead of a compatibility result (1.3s)
+  ✓  87 [mobile-chrome] › tests/browser/smoke.spec.ts:110:1 › loading is cancellable and an old read cannot revive a cleared selection (1.3s)
+  ✓  88 [mobile-chrome] › tests/browser/workspace.spec.ts:16:1 › real DOS live import, guest edit/export, opt-in OPFS save, reload, restore, backup and delete (14.4s)
+  ✓  89 [mobile-chrome] › tests/browser/workspace.spec.ts:85:1 › profile-only save requires original software and is isolated by origin (5.5s)
+  ✓  90 [mobile-chrome] › tests/browser/workspace.spec.ts:107:1 › quota failure keeps the saved workspace and corrupt stored bytes cannot launch (4.0s)
+  ✓  91 [mobile-chrome] › tests/browser/workspace.spec.ts:132:59 › denied OPFS retains temporary inspection and profile export (4.0s)
+  ✓  92 [mobile-chrome] › tests/browser/workspace.spec.ts:132:59 › unavailable OPFS retains temporary inspection and profile export (3.5s)
+  ✓  81 [mobile-chrome] › tests/browser/security.spec.ts:97:1 › the one-minute configured deadline stops a real guest, with no implicit save (1.1m)
+
+  92 passed (4.5m)
+
+> phantom-os@0.1.0 test:production
+> node tests/production-smoke.ts
+
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Production must not ship source map files
+    at file://<workspace>/tests/production-smoke.ts:251:3 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

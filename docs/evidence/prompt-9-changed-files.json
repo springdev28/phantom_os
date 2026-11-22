@@ -1,0 +1,62 @@
+[
+  {
+    "path": "src/app/use-runtime.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/adapter.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/host-manifest.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/host.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/protocol.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/security/boundaries.test.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/security/bounded-response.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/security/policy.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/browser/launch-journey.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/security.spec.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/fixtures/dos-browser.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/fixtures/security-browser.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/fixtures/security-fixtures.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/production-smoke.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "vite.config.ts",
+    "kind": "modified"
+  }
+]

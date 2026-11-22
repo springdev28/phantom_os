@@ -1,0 +1,98 @@
+[
+  {
+    "path": "src/app/App.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/download.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/app/logger.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screen-props.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screens/Player.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/screens/Workspace.tsx",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/use-runtime.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/use-session.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/app/use-workspace.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/domain/contracts.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/domain/errors.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/adapter.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/descriptor.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/host-manifest.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/host.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "src/runtime/dos/transfers.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/styles.css",
+    "kind": "modified"
+  },
+  {
+    "path": "src/workspace/launch.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/workspace/manifest.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/workspace/opfs-workspace.test.ts",
+    "kind": "added"
+  },
+  {
+    "path": "src/workspace/opfs-workspace.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/browser/smoke.spec.ts",
+    "kind": "modified"
+  },
+  {
+    "path": "tests/browser/workspace.spec.ts",
+    "kind": "added"
+  },
+  {
+    "path": "tests/production-smoke.ts",
+    "kind": "modified"
+  }
+]

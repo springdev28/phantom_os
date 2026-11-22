@@ -1,0 +1,130 @@
+[
+  {
+    "browser": "157.0.8103.79",
+    "project": "desktop-chrome",
+    "home": {
+      "textCount": 56,
+      "minTextRatio": 5.136201154594169,
+      "textFailures": [],
+      "fields": []
+    },
+    "compatibility": {
+      "textCount": 81,
+      "minTextRatio": 4.891060221837678,
+      "textFailures": [],
+      "fields": []
+    },
+    "configure": {
+      "textCount": 84,
+      "minTextRatio": 4.891060221837678,
+      "textFailures": [],
+      "fields": [
+        {
+          "label": "Mouse modeOffAbsoluteCaptured",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Guest memory (MiB)",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Session limit (minutes)",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Working directory",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "CPU cycles",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "CPU coreAutoNormalSimple",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Video machineSVGA S3VGAEGA",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Package path 1",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Guest path 1",
+          "ratio": 4.502093568964475
+        }
+      ]
+    },
+    "keyboard": "passed",
+    "reducedMotion": "passed",
+    "cssZoom200": "passed",
+    "reflow320": "passed",
+    "screenReaderSpeech": "not tested; DOM roles/focus tested only"
+  },
+  {
+    "browser": "157.0.8103.79",
+    "project": "mobile-chrome",
+    "home": {
+      "textCount": 43,
+      "minTextRatio": 5.3277274889221955,
+      "textFailures": [],
+      "fields": []
+    },
+    "compatibility": {
+      "textCount": 66,
+      "minTextRatio": 4.891060221837678,
+      "textFailures": [],
+      "fields": []
+    },
+    "configure": {
+      "textCount": 71,
+      "minTextRatio": 4.891060221837678,
+      "textFailures": [],
+      "fields": [
+        {
+          "label": "Mouse modeOffAbsoluteCaptured",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Guest memory (MiB)",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Session limit (minutes)",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Working directory",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "CPU cycles",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "CPU coreAutoNormalSimple",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Video machineSVGA S3VGAEGA",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Package path 1",
+          "ratio": 4.502093568964475
+        },
+        {
+          "label": "Guest path 1",
+          "ratio": 4.502093568964475
+        }
+      ]
+    },
+    "keyboard": "passed",
+    "reducedMotion": "passed",
+    "cssZoom200": "passed",
+    "reflow320": "passed",
+    "screenReaderSpeech": "not tested; DOM roles/focus tested only"
+  }
+]

@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-22",
+  "packageLockSha256": "4f9d8903abb8153603e4a6810b7ec735cad79a200e340b5937393efd971f7c74",
+  "reviewedBrowserPackages": [
+    {
+      "package": "emulators",
+      "version": "8.5.3",
+      "declaredLicense": "GPL-2.0",
+      "licenseFiles": [
+        {
+          "path": "emulators/LICENSE",
+          "sha256": "8177f97513213526df2cf6184d8ff986c675afb514d4e68a404010521b880643",
+          "bytes": 18092
+        }
+      ],
+      "scope": "browser runtime"
+    },
+    {
+      "package": "react",
+      "version": "19.3.1",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "path": "react/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        }
+      ],
+      "scope": "browser runtime"
+    },
+    {
+      "package": "react-dom",
+      "version": "19.3.1",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "path": "react-dom/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        }
+      ],
+      "scope": "browser runtime"
+    },
+    {
+      "package": "scheduler",
+      "version": "0.28.0",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "path": "scheduler/LICENSE",
+          "sha256": "da6d3703ed11cbe42bd212c725957c98da23cbff1998c05fa4b3d976d1a58e93",
+          "bytes": 1088
+        }
+      ],
+      "scope": "browser runtime"
+    },
+    {
+      "package": "fflate",
+      "version": "0.8.3",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "path": "fflate/LICENSE",
+          "sha256": "0a1df3a083d0c010560aa342e87959c8c1070e6fd54545741f083f22d0c8b551",
+          "bytes": 1069
+        }
+      ],
+      "scope": "browser runtime"
+    },
+    {
+      "package": "vite",
+      "version": "8.3.8",
+      "declaredLicense": "MIT",
+      "licenseFiles": [
+        {
+          "path": "vite/LICENSE.md",
+          "sha256": "a22152baa1aef74402443008e767e7c689a524c0909d19b0431d97f5ab066a13",
+          "bytes": 98196
+        }
+      ],
+      "scope": "build-generated helper only"
+    }
+  ],
+  "transitiveLockLicenses": {
+    "MIT": 160,
+    "Apache-2.0": 19,
+    "BlueOak-1.0.0": 2,
+    "ISC": 10,
+    "CC-BY-4.0": 1,
+    "GPL-2.0": 1,
+    "BSD-2-Clause": 6,
+    "BSD-3-Clause": 2,
+    "MPL-2.0": 12,
+    "0BSD": 1
+  },
+  "licensedPackageLockSha256": "261ddadf838c677a9d0f1c0e60122728a9d5a2d4710bf7c75d4b712ce5db93d8",
+  "note": "Original lock hash records the pre-license audit; licensed lock changes only the root project grant, not dependency versions/integrities."
+}

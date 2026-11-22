@@ -1,0 +1,17 @@
+node_modules/
+.playwright-mcp/
+dist/
+public/runtimes/
+public/demos/
+coverage/
+test-results/
+playwright-report/
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+*.tsbuildinfo
+
+__pycache__/
+# Kiro steering/specs are intentionally versioned.

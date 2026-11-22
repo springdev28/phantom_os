@@ -1,0 +1,60 @@
+[WebServer] (node:66463) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+[WebServer] (Use `node --trace-warnings ...` to show where the warning was created)
+[WebServer] (!) Your Vite config uses features that are unsupported by `configLoader: 'native'`, which is planned to become the default in a future major version of Vite:
+[WebServer]   - import "./src/security/policy" without a file extension (vite.config.ts:4:71). Add the file extension
+[WebServer]   - import "./src/runtime/dos/host-manifest" without a file extension (vite.config.ts:5:31). Add the file extension
+[WebServer] Set `VITE_CONFIG_NATIVE_IGNORE_WARNING=true` to suppress this warning.
+
+Running 1 test using 1 worker
+
+(node:66470) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✘  1 [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch (37.9s)
+
+
+  1) [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch 
+
+    Error: expect(locator).toHaveAttribute(expected) failed
+
+    Locator:  locator('[data-session-state]')
+    Expected: "running"
+    Received: "error"
+    Timeout:  35000ms
+
+    Call log:
+      - Expect "toHaveAttribute" locator('[data-session-state]') with timeout 35000ms
+      - waiting for locator('[data-session-state]')
+        2 × locator resolved to <div class="app-shell" data-session-state="preparing">…</div>
+          - unexpected value "preparing"
+        71 × locator resolved to <div class="app-shell" data-session-state="error">…</div>
+           - unexpected value "error"
+
+
+       at ../fixtures/dos-browser.ts:21
+
+      19 | export async function start(page: Page) {
+      20 |   await page.getByRole('button', { name: /^(Start|Relaunch) DOS program$/ }).click();
+    > 21 |   await expect(page.locator('[data-session-state]')).toHaveAttribute('data-session-state', 'running', { timeout: 35_000 });
+         |                                                      ^
+      22 |   await expect.poll(async () => Number(await page.getByTestId('runtime-metrics').getAttribute('data-frames'))).toBeGreaterThan(0);
+      23 |   const canvas = page.frameLocator('iframe[title="DOS program framebuffer"]').getByLabel('DOS program screen');
+      24 |   await expect(canvas).toBeVisible();
+        at start (<workspace>/tests/fixtures/dos-browser.ts:21:54)
+        at <workspace>/tests/browser/dos-runtime.spec.ts:24:29
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-desktop-chrome/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-desktop-chrome/error-context.md
+
+    attachment #3: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-desktop-chrome/trace.zip
+    Usage:
+
+        npx playwright show-trace test-results/dos-runtime-real-DOS-worke-0ad96-est-files-stop-and-relaunch-desktop-chrome/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  1 failed
+    [desktop-chrome] › tests/browser/dos-runtime.spec.ts:7:57 › real DOS worker: MEM.EXE, input, guest files, stop and relaunch 

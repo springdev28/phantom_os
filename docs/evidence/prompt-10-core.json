@@ -1,0 +1,3532 @@
+[
+  {
+    "test": "ELF and PE64 stay unsupported; PE32 and NE keep Windows disabled",
+    "project": "production-chrome",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:09:45.478Z",
+    "browser": {
+      "name": "chromium",
+      "version": "157.0.8103.79",
+      "headless": true,
+      "channel": "chrome"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "cases": [
+        {
+          "label": "ELF",
+          "fixtureSha256": "c6c9fef0488ed623325a562689a61108e375901c49447e164959868f259a1afa",
+          "recognitionOnly": true,
+          "decision": "unsupported",
+          "executionOffered": false
+        },
+        {
+          "label": "PE64",
+          "fixtureSha256": "6a3760c088920f36115b91a65eb25b0c05907ebbfa803c92c0e7ab1789fcf0de",
+          "recognitionOnly": true,
+          "decision": "unsupported",
+          "executionOffered": false
+        },
+        {
+          "label": "PE32",
+          "fixtureSha256": "af9b1979cde3a0c383d3767eff6386d75b3f9781edf326f109e58b9893628d5e",
+          "recognitionOnly": true,
+          "decision": "experimental",
+          "executionOffered": false
+        },
+        {
+          "label": "NE",
+          "fixtureSha256": "0d70ddae9e2c4eef486ac8f8d50df307e0384ff79ed79469051c6c0ef712837f",
+          "recognitionOnly": true,
+          "decision": "experimental",
+          "executionOffered": false
+        }
+      ]
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-ELF-and-PE64-stay-uns-010ce-nd-NE-keep-Windows-disabled-production-chrome"
+  },
+  {
+    "test": "ELF and PE64 stay unsupported; PE32 and NE keep Windows disabled",
+    "project": "production-firefox",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:10:35.461Z",
+    "browser": {
+      "name": "firefox",
+      "version": "159.0",
+      "headless": true,
+      "channel": "Playwright pinned Firefox"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "cases": [
+        {
+          "label": "ELF",
+          "fixtureSha256": "c6c9fef0488ed623325a562689a61108e375901c49447e164959868f259a1afa",
+          "recognitionOnly": true,
+          "decision": "unsupported",
+          "executionOffered": false
+        },
+        {
+          "label": "PE64",
+          "fixtureSha256": "6a3760c088920f36115b91a65eb25b0c05907ebbfa803c92c0e7ab1789fcf0de",
+          "recognitionOnly": true,
+          "decision": "unsupported",
+          "executionOffered": false
+        },
+        {
+          "label": "PE32",
+          "fixtureSha256": "af9b1979cde3a0c383d3767eff6386d75b3f9781edf326f109e58b9893628d5e",
+          "recognitionOnly": true,
+          "decision": "experimental",
+          "executionOffered": false
+        },
+        {
+          "label": "NE",
+          "fixtureSha256": "0d70ddae9e2c4eef486ac8f8d50df307e0384ff79ed79469051c6c0ef712837f",
+          "recognitionOnly": true,
+          "decision": "experimental",
+          "executionOffered": false
+        }
+      ]
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-ELF-and-PE64-stay-uns-010ce-nd-NE-keep-Windows-disabled-production-firefox"
+  },
+  {
+    "test": "FreeCOM: selected bytes, explicit entrypoint, three real launches, input and export",
+    "project": "production-chrome",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:09:31.330Z",
+    "browser": {
+      "name": "chromium",
+      "version": "157.0.8103.79",
+      "headless": true,
+      "channel": "chrome"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "profile": {
+        "schemaVersion": 1,
+        "runtimeId": "js-dos",
+        "runtimeVersion": "8.5.3",
+        "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+        "selectionMode": "automatic",
+        "entrypoint": "APP/COMMAND.COM",
+        "cwd": ".",
+        "mounts": [
+          {
+            "packagePath": ".",
+            "guestPath": "C:/",
+            "readOnly": false
+          }
+        ],
+        "controls": {
+          "keyboard": "us",
+          "mouse": "absolute",
+          "audio": true
+        },
+        "requiredFiles": [
+          {
+            "path": "APP/BELL.TXT",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/COMMAND.COM",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/INPUT.TXT",
+            "kind": "package-member"
+          }
+        ],
+        "diskEnvironment": null,
+        "limits": {
+          "guestMemoryMiB": 64,
+          "maxSessionMs": 1800000
+        },
+        "dos": {
+          "cycles": 3000,
+          "core": "auto",
+          "machine": "svga_s3",
+          "xms": true,
+          "ems": true
+        }
+      },
+      "demo": {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM"
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "launchMs": 1059.2058749999997,
+          "stopMs": 50.283707999999024,
+          "outputBytes": 21,
+          "outputSha256": "27f9ac512f6a791103c5be9f270fe156b1300095dc5567d018540182176d3640",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "130",
+            "audioSamples": "264192",
+            "audioPeak": "0.152587890625",
+            "keyEvents": "306",
+            "mouseEvents": "1"
+          }
+        },
+        {
+          "cycle": 1,
+          "launchMs": 932.6090000000004,
+          "stopMs": 68.98058400000082,
+          "outputBytes": 21,
+          "outputSha256": "27f9ac512f6a791103c5be9f270fe156b1300095dc5567d018540182176d3640",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "126",
+            "audioSamples": "246272",
+            "audioPeak": "0.152587890625",
+            "keyEvents": "306",
+            "mouseEvents": "1"
+          }
+        },
+        {
+          "cycle": 2,
+          "launchMs": 1037.7330419999998,
+          "stopMs": 52.71058400000038,
+          "outputBytes": 21,
+          "outputSha256": "27f9ac512f6a791103c5be9f270fe156b1300095dc5567d018540182176d3640",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "130",
+            "audioSamples": "246784",
+            "audioPeak": "0.152587890625",
+            "keyEvents": "306",
+            "mouseEvents": "1"
+          }
+        }
+      ],
+      "keyboard": "guest command results verified",
+      "mouse": "absolute input reaches engine; shell has no mouse UI",
+      "audio": "nonzero bell samples; not human listening"
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:http://127.0.0.1:4175/51bfc637-87fe-44a3-8955-c99586c2b3f5",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/e85f8a5c-39e2-42ee-aab0-a684d49b9909",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/eda13758-99e9-41ef-a679-67b91d1377da",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/041abb32-b868-4b7c-a6e1-05b4437d9c05",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/002f0cd9-e320-4ea2-8027-428f5970b214",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/ad3d4288-e34c-40b9-ba0e-24dfe14e55d0",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/67424da1-5e7b-442e-9a47-8eeafb4e6578",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-FreeCOM-selected-byte-6b935-l-launches-input-and-export-production-chrome"
+  },
+  {
+    "test": "FreeCOM: selected bytes, explicit entrypoint, three real launches, input and export",
+    "project": "production-firefox",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:10:22.962Z",
+    "browser": {
+      "name": "firefox",
+      "version": "159.0",
+      "headless": true,
+      "channel": "Playwright pinned Firefox"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "profile": {
+        "schemaVersion": 1,
+        "runtimeId": "js-dos",
+        "runtimeVersion": "8.5.3",
+        "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+        "selectionMode": "automatic",
+        "entrypoint": "APP/COMMAND.COM",
+        "cwd": ".",
+        "mounts": [
+          {
+            "packagePath": ".",
+            "guestPath": "C:/",
+            "readOnly": false
+          }
+        ],
+        "controls": {
+          "keyboard": "us",
+          "mouse": "absolute",
+          "audio": true
+        },
+        "requiredFiles": [
+          {
+            "path": "APP/BELL.TXT",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/COMMAND.COM",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/INPUT.TXT",
+            "kind": "package-member"
+          }
+        ],
+        "diskEnvironment": null,
+        "limits": {
+          "guestMemoryMiB": 64,
+          "maxSessionMs": 1800000
+        },
+        "dos": {
+          "cycles": 3000,
+          "core": "auto",
+          "machine": "svga_s3",
+          "xms": true,
+          "ems": true
+        }
+      },
+      "demo": {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM"
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "launchMs": 1107.615667,
+          "stopMs": 147.75095800000054,
+          "outputBytes": 21,
+          "outputSha256": "27f9ac512f6a791103c5be9f270fe156b1300095dc5567d018540182176d3640",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "128",
+            "audioSamples": "268800",
+            "audioPeak": "0.152587890625",
+            "keyEvents": "306",
+            "mouseEvents": "1"
+          }
+        },
+        {
+          "cycle": 1,
+          "launchMs": 1117.1146660000013,
+          "stopMs": 63.967875000002095,
+          "outputBytes": 21,
+          "outputSha256": "27f9ac512f6a791103c5be9f270fe156b1300095dc5567d018540182176d3640",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "138",
+            "audioSamples": "271360",
+            "audioPeak": "0.152587890625",
+            "keyEvents": "306",
+            "mouseEvents": "1"
+          }
+        },
+        {
+          "cycle": 2,
+          "launchMs": 1101.6508749999994,
+          "stopMs": 160.38620900000024,
+          "outputBytes": 21,
+          "outputSha256": "27f9ac512f6a791103c5be9f270fe156b1300095dc5567d018540182176d3640",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "130",
+            "audioSamples": "271360",
+            "audioPeak": "0.152587890625",
+            "keyEvents": "306",
+            "mouseEvents": "1"
+          }
+        }
+      ],
+      "keyboard": "guest command results verified",
+      "mouse": "absolute input reaches engine; shell has no mouse UI",
+      "audio": "nonzero bell samples; not human listening"
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-FreeCOM-selected-byte-6b935-l-launches-input-and-export-production-firefox"
+  },
+  {
+    "test": "FreeDOS MEM: selected bytes, explicit entrypoint, three real launches, input and export",
+    "project": "production-chrome",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:09:11.824Z",
+    "browser": {
+      "name": "chromium",
+      "version": "157.0.8103.79",
+      "headless": true,
+      "channel": "chrome"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "profile": {
+        "schemaVersion": 1,
+        "runtimeId": "js-dos",
+        "runtimeVersion": "8.5.3",
+        "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+        "selectionMode": "automatic",
+        "entrypoint": "MEM.EXE",
+        "cwd": ".",
+        "mounts": [
+          {
+            "packagePath": ".",
+            "guestPath": "C:/",
+            "readOnly": false
+          }
+        ],
+        "controls": {
+          "keyboard": "us",
+          "mouse": "off",
+          "audio": false
+        },
+        "requiredFiles": [
+          {
+            "path": "MEM.EXE",
+            "kind": "package-member"
+          }
+        ],
+        "diskEnvironment": null,
+        "limits": {
+          "guestMemoryMiB": 64,
+          "maxSessionMs": 1800000
+        },
+        "dos": {
+          "cycles": 3000,
+          "core": "auto",
+          "machine": "svga_s3",
+          "xms": true,
+          "ems": true
+        }
+      },
+      "demo": {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE"
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "launchMs": 1078.0545419999999,
+          "stopMs": 63.65766699999949,
+          "outputBytes": 747,
+          "outputSha256": "a89b9c2e1869c81b57d603ff9eeac228982a335d1235beb2a78bb13e55bedbfb",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "31",
+            "audioSamples": "74752",
+            "audioPeak": "0",
+            "keyEvents": "56",
+            "mouseEvents": "0"
+          }
+        },
+        {
+          "cycle": 1,
+          "launchMs": 934.9425000000001,
+          "stopMs": 60.18549999999959,
+          "outputBytes": 747,
+          "outputSha256": "a89b9c2e1869c81b57d603ff9eeac228982a335d1235beb2a78bb13e55bedbfb",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "32",
+            "audioSamples": "74240",
+            "audioPeak": "0",
+            "keyEvents": "60",
+            "mouseEvents": "0"
+          }
+        },
+        {
+          "cycle": 2,
+          "launchMs": 945.192332999999,
+          "stopMs": 56.632166999999754,
+          "outputBytes": 747,
+          "outputSha256": "a89b9c2e1869c81b57d603ff9eeac228982a335d1235beb2a78bb13e55bedbfb",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "32",
+            "audioSamples": "74240",
+            "audioPeak": "0",
+            "keyEvents": "60",
+            "mouseEvents": "0"
+          }
+        }
+      ],
+      "keyboard": "guest command results verified",
+      "mouse": "not exercised",
+      "audio": "disabled"
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/683f18d2-3fea-4a6a-86fe-8a333413b429",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/ee919818-76a9-47d4-b3df-14470b8c188a",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/178c6fbd-2b53-448b-bf75-4001d5eff181",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/1327c88c-9a1b-422f-a97d-693c02369011",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/59ab2414-41bd-49cd-85be-0b5c367c2a9f",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/748dfacd-68c2-42db-a665-1400450ef343",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-FreeDOS-MEM-selected--025ed-l-launches-input-and-export-production-chrome"
+  },
+  {
+    "test": "FreeDOS MEM: selected bytes, explicit entrypoint, three real launches, input and export",
+    "project": "production-firefox",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:10:03.136Z",
+    "browser": {
+      "name": "firefox",
+      "version": "159.0",
+      "headless": true,
+      "channel": "Playwright pinned Firefox"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "profile": {
+        "schemaVersion": 1,
+        "runtimeId": "js-dos",
+        "runtimeVersion": "8.5.3",
+        "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+        "selectionMode": "automatic",
+        "entrypoint": "MEM.EXE",
+        "cwd": ".",
+        "mounts": [
+          {
+            "packagePath": ".",
+            "guestPath": "C:/",
+            "readOnly": false
+          }
+        ],
+        "controls": {
+          "keyboard": "us",
+          "mouse": "off",
+          "audio": false
+        },
+        "requiredFiles": [
+          {
+            "path": "MEM.EXE",
+            "kind": "package-member"
+          }
+        ],
+        "diskEnvironment": null,
+        "limits": {
+          "guestMemoryMiB": 64,
+          "maxSessionMs": 1800000
+        },
+        "dos": {
+          "cycles": 3000,
+          "core": "auto",
+          "machine": "svga_s3",
+          "xms": true,
+          "ems": true
+        }
+      },
+      "demo": {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE"
+      },
+      "cycles": [
+        {
+          "cycle": 0,
+          "launchMs": 1107.2886250000001,
+          "stopMs": 174.20295800000076,
+          "outputBytes": 747,
+          "outputSha256": "a89b9c2e1869c81b57d603ff9eeac228982a335d1235beb2a78bb13e55bedbfb",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "28",
+            "audioSamples": "74240",
+            "audioPeak": "0",
+            "keyEvents": "56",
+            "mouseEvents": "0"
+          }
+        },
+        {
+          "cycle": 1,
+          "launchMs": 1099.499917,
+          "stopMs": 157.09645799999998,
+          "outputBytes": 747,
+          "outputSha256": "a89b9c2e1869c81b57d603ff9eeac228982a335d1235beb2a78bb13e55bedbfb",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "30",
+            "audioSamples": "74240",
+            "audioPeak": "0",
+            "keyEvents": "52",
+            "mouseEvents": "0"
+          }
+        },
+        {
+          "cycle": 2,
+          "launchMs": 1110.1375420000004,
+          "stopMs": 165.963584000001,
+          "outputBytes": 747,
+          "outputSha256": "a89b9c2e1869c81b57d603ff9eeac228982a335d1235beb2a78bb13e55bedbfb",
+          "metrics": {
+            "testid": "runtime-metrics",
+            "frames": "30",
+            "audioSamples": "74752",
+            "audioPeak": "0",
+            "keyEvents": "52",
+            "mouseEvents": "0"
+          }
+        }
+      ],
+      "keyboard": "guest command results verified",
+      "mouse": "not exercised",
+      "audio": "disabled"
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-FreeDOS-MEM-selected--025ed-l-launches-input-and-export-production-firefox"
+  },
+  {
+    "test": "ambiguous ZIP requires entrypoint choice and invalid input recovers",
+    "project": "production-chrome",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:09:46.025Z",
+    "browser": {
+      "name": "chromium",
+      "version": "157.0.8103.79",
+      "headless": true,
+      "channel": "chrome"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "commonErrors": [
+        "corrupt archive: fixed message, fresh selection recovers",
+        "ambiguous package: no automatic executable"
+      ],
+      "feedbackMs": {
+        "invalidFeedbackMs": 127.44037499999831,
+        "entrypointFeedbackMs": 110.72825000000012,
+        "scope": "one sample; not a user error frequency study"
+      }
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:http://127.0.0.1:4175/1a49fae0-5708-4f55-99dd-f075a61678d7",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:http://127.0.0.1:4175/97711668-53d5-46f0-ae23-c14b69ea5211",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-ambiguous-ZIP-require-12692--and-invalid-input-recovers-production-chrome"
+  },
+  {
+    "test": "ambiguous ZIP requires entrypoint choice and invalid input recovers",
+    "project": "production-firefox",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:10:36.021Z",
+    "browser": {
+      "name": "firefox",
+      "version": "159.0",
+      "headless": true,
+      "channel": "Playwright pinned Firefox"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "commonErrors": [
+        "corrupt archive: fixed message, fresh selection recovers",
+        "ambiguous package: no automatic executable"
+      ],
+      "feedbackMs": {
+        "invalidFeedbackMs": 112.71266599999944,
+        "entrypointFeedbackMs": 92.11037500000384,
+        "scope": "one sample; not a user error frequency study"
+      }
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-ambiguous-ZIP-require-12692--and-invalid-input-recovers-production-firefox"
+  },
+  {
+    "test": "live document edit/export and explicit local save restore backup delete",
+    "project": "production-chrome",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:09:42.451Z",
+    "browser": {
+      "name": "chromium",
+      "version": "157.0.8103.79",
+      "headless": true,
+      "channel": "chrome"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "profile": {
+        "schemaVersion": 1,
+        "runtimeId": "js-dos",
+        "runtimeVersion": "8.5.3",
+        "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+        "selectionMode": "automatic",
+        "entrypoint": "APP/COMMAND.COM",
+        "cwd": ".",
+        "mounts": [
+          {
+            "packagePath": ".",
+            "guestPath": "C:/",
+            "readOnly": false
+          }
+        ],
+        "controls": {
+          "keyboard": "us",
+          "mouse": "off",
+          "audio": false
+        },
+        "requiredFiles": [
+          {
+            "path": "APP/BELL.TXT",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/COMMAND.COM",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/INPUT.TXT",
+            "kind": "package-member"
+          }
+        ],
+        "diskEnvironment": null,
+        "limits": {
+          "guestMemoryMiB": 64,
+          "maxSessionMs": 1800000
+        },
+        "dos": {
+          "cycles": 3000,
+          "core": "auto",
+          "machine": "svga_s3",
+          "xms": true,
+          "ems": true
+        }
+      },
+      "fileIo": {
+        "expected": "LOCAL COMPATIBILITY\r\nEDITED IN DOS\r\n",
+        "sha256": "284f9e0284ea24647c6fd1928827ba093f5b970ff50b4096a70131446464e2e0",
+        "liveExport": true,
+        "backup": true,
+        "reloadRestore": true,
+        "deletion": true
+      }
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:http://127.0.0.1:4175/8e11eec9-177a-45b8-99c0-5db7af4f28c7",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/69caef34-7f78-4b94-8a2e-87ed3031da74",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/8e2ddb8c-3866-4faf-903a-42e8953b6b88",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/3847a628-8610-428b-a1f8-96e03c417e00",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/6f2af3f6-755e-4f1f-8a34-02eed9c399d0",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-live-document-edit-ex-98d7c--save-restore-backup-delete-production-chrome"
+  },
+  {
+    "test": "live document edit/export and explicit local save restore backup delete",
+    "project": "production-firefox",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:10:33.229Z",
+    "browser": {
+      "name": "firefox",
+      "version": "159.0",
+      "headless": true,
+      "channel": "Playwright pinned Firefox"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "profile": {
+        "schemaVersion": 1,
+        "runtimeId": "js-dos",
+        "runtimeVersion": "8.5.3",
+        "runtimeBuildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+        "selectionMode": "automatic",
+        "entrypoint": "APP/COMMAND.COM",
+        "cwd": ".",
+        "mounts": [
+          {
+            "packagePath": ".",
+            "guestPath": "C:/",
+            "readOnly": false
+          }
+        ],
+        "controls": {
+          "keyboard": "us",
+          "mouse": "off",
+          "audio": false
+        },
+        "requiredFiles": [
+          {
+            "path": "APP/BELL.TXT",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/COMMAND.COM",
+            "kind": "package-member"
+          },
+          {
+            "path": "APP/INPUT.TXT",
+            "kind": "package-member"
+          }
+        ],
+        "diskEnvironment": null,
+        "limits": {
+          "guestMemoryMiB": 64,
+          "maxSessionMs": 1800000
+        },
+        "dos": {
+          "cycles": 3000,
+          "core": "auto",
+          "machine": "svga_s3",
+          "xms": true,
+          "ems": true
+        }
+      },
+      "fileIo": {
+        "expected": "LOCAL COMPATIBILITY\r\nEDITED IN DOS\r\n",
+        "sha256": "284f9e0284ea24647c6fd1928827ba093f5b970ff50b4096a70131446464e2e0",
+        "liveExport": true,
+        "backup": true,
+        "reloadRestore": true,
+        "deletion": true
+      }
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-live-document-edit-ex-98d7c--save-restore-backup-delete-production-firefox"
+  },
+  {
+    "test": "missing storage and fullscreen retain temporary launch and export",
+    "project": "production-chrome",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:09:52.108Z",
+    "browser": {
+      "name": "chromium",
+      "version": "157.0.8103.79",
+      "headless": true,
+      "channel": "chrome"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "fallback": {
+        "temporaryLaunch": true,
+        "guestExport": true,
+        "refreshCleanup": true,
+        "storage": "deliberately absent",
+        "fullscreen": "deliberately absent"
+      }
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/c1bd5b63-dd59-4b97-b8bd-839978ec96f4",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "blob:null/a1a013a2-23cb-4e74-83d3-83b989686153",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-missing-storage-and-f-2bc46-temporary-launch-and-export-production-chrome"
+  },
+  {
+    "test": "missing storage and fullscreen retain temporary launch and export",
+    "project": "production-firefox",
+    "status": "passed",
+    "expectedStatus": "passed",
+    "date": "2026-11-22T04:10:40.446Z",
+    "browser": {
+      "name": "firefox",
+      "version": "159.0",
+      "headless": true,
+      "channel": "Playwright pinned Firefox"
+    },
+    "machine": {
+      "platform": "darwin",
+      "release": "25.6.0",
+      "architecture": "arm64",
+      "cpu": "Apple M1",
+      "logicalCpus": 8,
+      "totalMemoryBytes": 17179869184,
+      "node": "v24.19.0"
+    },
+    "runtime": {
+      "id": "js-dos",
+      "name": "js-dos / DOSBox",
+      "version": "8.5.3",
+      "buildId": "emulators-8.5.3-e6f4e544-dosbox-74394f7d792e",
+      "maturity": "experimental",
+      "available": true,
+      "formats": [
+        "dos-mz",
+        "dos-com-ambiguous"
+      ],
+      "assets": [
+        {
+          "id": "emulators.js",
+          "sha256": "52598b412977a892fa81c5613c653ed233e06732972c02897d8eac115b941075",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.js",
+          "sha256": "a0806cc99e0c66bc594e7efd78eb22d675af7ebb0a4de543697cbe5cd7440a2e",
+          "installed": true
+        },
+        {
+          "id": "wdosbox.wasm",
+          "sha256": "b33afba80de1a420c123086e5952d135de041f9e85d4444170e29d9249ec049c",
+          "installed": true
+        },
+        {
+          "id": "host-74394f7d792ea8c3.html",
+          "sha256": "74394f7d792ea8c330217231b6b6d4f223c006b4d4935fb19ee87c51b57e7318",
+          "installed": true
+        }
+      ],
+      "diskEnvironments": [],
+      "maxGuestMemoryMiB": 64,
+      "capabilities": {
+        "keyboard": true,
+        "mouse": true,
+        "audio": true,
+        "fileImport": "live",
+        "fileExport": "live",
+        "guestNetworking": "disabled"
+      },
+      "requirements": [
+        "A DOS program with its original companion files. Windows, disk booting and networking are unavailable.",
+        "DOS 8.3 paths, at most 32 MiB of package data, and one writable temporary C:/ mount. Originals are never changed."
+      ],
+      "rules": [
+        {
+          "id": "dos-mz",
+          "format": "dos-mz",
+          "maturity": "experimental",
+          "justification": "A DOS MZ image can be tried in the installed DOSBox worker. A stub or DOS extender may still fail.",
+          "requirements": [
+            "Any required DOS extender and application data must be in the selected package."
+          ]
+        },
+        {
+          "id": "dos-com",
+          "format": "dos-com-ambiguous",
+          "maturity": "experimental",
+          "justification": "The installed DOSBox worker accepts DOS COM programs after you confirm their intended platform.",
+          "requirements": [
+            "Confirm DOS intent from the program documentation."
+          ]
+        }
+      ]
+    },
+    "fixtures": [
+      {
+        "file": "MEM.EXE",
+        "program": "FreeDOS MEM",
+        "version": "1.12",
+        "input": "single MZ executable",
+        "entrypoint": "MEM.EXE",
+        "sha256": "6f850921e0fdd40ad172099ec126831c17397e250963402fb03f4eb7c79dc9f4"
+      },
+      {
+        "file": "FREECOM.ZIP",
+        "program": "FreeCOM",
+        "version": "0.86",
+        "input": "ZIP; contained COMMAND.COM is MZ",
+        "entrypoint": "APP/COMMAND.COM",
+        "sha256": "fc598be15e3deaa559f65dee5911e89a9060791030d50cf127f3791248b7744e"
+      }
+    ],
+    "details": {
+      "fallback": {
+        "temporaryLaunch": true,
+        "guestExport": true,
+        "refreshCleanup": true,
+        "storage": "deliberately absent",
+        "fullscreen": "deliberately absent"
+      }
+    },
+    "audit": {
+      "consoleClean": true,
+      "socketsAbsent": true,
+      "serviceWorkersAbsent": true,
+      "requestsLocal": true,
+      "noSelectedData": true
+    },
+    "requests": [
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-zeG4_nD6.css",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Inspect-_N4gXwgz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/probe-labels-DLjXlW5P.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Compatibility-BodQZpZm.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Configure-COEzXdWf.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/adapter-CdJNnPUz.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/emulators.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/8.5.3/wdosbox.wasm",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/runtimes/js-dos/host-74394f7d792ea8c3.html",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/index-DH_BwhyJ.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/errors-CBO-VkZs.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/favicon.svg",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Player-DU6waotH.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/Workspace-Bcy_-R0Y.js",
+        "body": ""
+      },
+      {
+        "method": "GET",
+        "url": "http://127.0.0.1:4175/assets/ProfilePanel-cwLxy5FD.js",
+        "body": ""
+      }
+    ],
+    "errors": [],
+    "sockets": [],
+    "remainingWorkers": 0,
+    "serviceWorkers": 0,
+    "artifactDirectory": "compatibility/core-missing-storage-and-f-2bc46-temporary-launch-and-export-production-firefox"
+  }
+]

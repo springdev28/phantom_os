@@ -1,0 +1,122 @@
+{
+  "scope": "Original synthetic import/parser fixtures; not executable acceptance evidence",
+  "date": "2026-11-21",
+  "archives": [
+    {
+      "id": "dos-package",
+      "name": "dos-package.zip",
+      "size": 1278,
+      "sha256": "c2b217cd7c909567ea8555d5ff8a0e94450f33599a7091dcc061dfec65c9716c"
+    },
+    {
+      "id": "mixed-package",
+      "name": "mixed-package.zip",
+      "size": 1646,
+      "sha256": "69db8cb31636af800a220832478f8743c4ab2f50f7ceb13aeba2149238a9d0ed"
+    },
+    {
+      "id": "empty-package",
+      "name": "empty-package.zip",
+      "size": 22,
+      "sha256": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+    },
+    {
+      "id": "corrupt-package",
+      "name": "corrupt-package.zip",
+      "size": 1267,
+      "sha256": "4e7162bc4cdcb678563ddb5d7820bb8d10c94b94aba0834a65bc68499f8c12fc"
+    },
+    {
+      "id": "zip-slip",
+      "name": "zip-slip.zip",
+      "size": 150,
+      "sha256": "3d84377010252e26641e8dfb1d5b779e5e6cdce80469c4252331e9b8e67bf634"
+    },
+    {
+      "id": "nested-package",
+      "name": "nested-package.zip",
+      "size": 259,
+      "sha256": "ac35352a3b27ccdcedb4e481e5ffbeae80f82fc7f89d16aa1e7ff5c6f3fe57ff"
+    },
+    {
+      "id": "disk-package",
+      "name": "disk-package.zip",
+      "size": 69746,
+      "sha256": "3321fc0353a0aa7e16cc85a3aea4a3c9d96da8c0ef772f0712e2a9d57e5bbc6e"
+    }
+  ],
+  "dosPackageFiles": [
+    {
+      "path": "APP/MAIN.EXE",
+      "size": 1024,
+      "sha256": "2647359b6fbcc0b41e9af190db679b9c1cae491656a059b5f040673c9c047865"
+    },
+    {
+      "path": "APP/DATA/LEVEL.DAT",
+      "size": 1024,
+      "sha256": "2bce1ba628720664be4b9fdd77aae0678e5f0f3f02fc6ff641ec879094f6a404"
+    },
+    {
+      "path": "APP/APP.INI",
+      "size": 26,
+      "sha256": "43b5dc24067ce237c5f7ba08e7df806d29c755dd74f2b1a08ba8f00d49c6f1dd"
+    },
+    {
+      "path": "APP/README.TXT",
+      "size": 60,
+      "sha256": "d4ad419f5c7ae8005c0b54fec92d111b940186d40ad26d64bd8c2342a54442d6"
+    },
+    {
+      "path": "APP/EMPTY.DAT",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "APP/AUTORUN.BAT",
+      "size": 53,
+      "sha256": "65513cbb921d7971f8cd8ab315f6f5ca381e8bd3b989f4c7177a8ad1c8b50108"
+    }
+  ],
+  "mixedPackageFiles": [
+    {
+      "path": "APP/MAIN.EXE",
+      "size": 1024,
+      "sha256": "2647359b6fbcc0b41e9af190db679b9c1cae491656a059b5f040673c9c047865"
+    },
+    {
+      "path": "APP/DATA/LEVEL.DAT",
+      "size": 1024,
+      "sha256": "2bce1ba628720664be4b9fdd77aae0678e5f0f3f02fc6ff641ec879094f6a404"
+    },
+    {
+      "path": "APP/APP.INI",
+      "size": 26,
+      "sha256": "43b5dc24067ce237c5f7ba08e7df806d29c755dd74f2b1a08ba8f00d49c6f1dd"
+    },
+    {
+      "path": "APP/README.TXT",
+      "size": 60,
+      "sha256": "d4ad419f5c7ae8005c0b54fec92d111b940186d40ad26d64bd8c2342a54442d6"
+    },
+    {
+      "path": "APP/EMPTY.DAT",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "APP/AUTORUN.BAT",
+      "size": 53,
+      "sha256": "65513cbb921d7971f8cd8ab315f6f5ca381e8bd3b989f4c7177a8ad1c8b50108"
+    },
+    {
+      "path": "APP/TOOLS/SETUP.EXE",
+      "size": 1024,
+      "sha256": "af9b1979cde3a0c383d3767eff6386d75b3f9781edf326f109e58b9893628d5e"
+    },
+    {
+      "path": "APP/REQUIRED.DLL",
+      "size": 1024,
+      "sha256": "af9b1979cde3a0c383d3767eff6386d75b3f9781edf326f109e58b9893628d5e"
+    }
+  ]
+}

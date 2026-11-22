@@ -1,0 +1,27 @@
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -7,7 +7,7 @@
+ 
+ if (${EMSCRIPTEN})
+ 	set(X86_64 false)
+-	set(GL4ES true)
++	set(GL4ES false)
+ 	set(DOSBOX_DEBUG_DEFAULT OFF)
+ else ()
+ 	set(USE_HUMBLENET false)
+@@ -141,15 +141,3 @@
+ # tier 1
+ include("${TARGETS_DIR}/zip.cmake")
+ include("${TARGETS_DIR}/dosbox.cmake")
+-include("${TARGETS_DIR}/dhry2.cmake")
+-include("${TARGETS_DIR}/sokol.cmake")
+-
+-# tier 2
+-include("${TARGETS_DIR}/dosbox-sdl.cmake")
+-include("${TARGETS_DIR}/dosbox-x-sdl2.cmake")
+-
+-add_custom_target(sokol-shaders
+-		COMMAND "${CMAKE_CURRENT_LIST_DIR}/native/sokol-tools-bin/bin/linux/sokol-shdc"
+-		--input "${CMAKE_CURRENT_LIST_DIR}/native/sokol/shaders.glsl"
+-		--output "${CMAKE_CURRENT_LIST_DIR}/native/sokol/shaders.h"
+-		--slang glsl330)

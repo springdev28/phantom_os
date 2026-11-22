@@ -1,0 +1,10 @@
+version = 1
+
+[[annotations]]
+path = ["src/**", "scripts/**", "tests/browser/**", "tests/compatibility/**", "tests/recording/**", "tests/*.ts", "tests/*.py", "tests/fixtures/*.ts", ".kiro/**", ".github/**", "*.json", "*.ts", "*.js", "index.html", "README.md", "AGENTS.md", "docs/*.md"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2026 PHANTOM OS contributors"
+SPDX-License-Identifier = "GPL-2.0-only"
+
+# vendor/, retained third-party notices, genuine output captures and DOS binaries
+# keep their separately recorded upstream grants; this is not a vendor relicensing.

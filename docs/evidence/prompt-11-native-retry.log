@@ -1,0 +1,431 @@
+[1/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_set_default_password.c.o
+cache:INFO: generating port: sysroot/lib/wasm32-emscripten/libz.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/libz.a" for subsequent builds)
+system_libs:INFO: compiled 15 inputs
+cache:INFO:  - ok
+[2/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_add_entry.c.o
+[3/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_dir_add.c.o
+[4/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_new.c.o
+[5/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_set_file_comment.c.o
+[6/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_extra_field_api.c.o
+[7/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_strerror.c.o
+[8/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_layered.c.o
+[9/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_rename.c.o
+[10/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_set_name.c.o
+[11/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_set_external_attributes.c.o
+[12/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_replace.c.o
+[13/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_err_str.c.o
+[14/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_algorithm_deflate.c.o
+[15/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_begin_write.c.o
+[16/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_error_get.c.o
+[17/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_get_num_files.c.o
+[18/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_hash.c.o
+[19/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_add.c.o
+[20/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_fseek.c.o
+[21/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_zip.c.o
+[22/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_random_unix.c.o
+[23/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_zip_new.c.o
+[24/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_extra_field.c.o
+[25/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_get_compression_flags.c.o
+[26/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_entry.c.o
+[27/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_set_file_compression.c.o
+[28/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_unchange.c.o
+[29/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_rename.c.o
+[30/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_fopen_index_encrypted.c.o
+[31/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_error_get_sys_type.c.o
+[32/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_free.c.o
+[33/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_get_external_attributes.c.o
+[34/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_libzip_version.c.o
+[35/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_commit_write.c.o
+[36/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_close.c.o
+[37/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_utf-8.c.o
+[38/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_delete.c.o
+[39/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_write.c.o
+[40/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_function.c.o
+[41/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_unchange_archive.c.o
+[42/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_fdopen.c.o
+[43/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/mkstemp.c.o
+[44/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_error_get.c.o
+[45/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_set_comment.c.o
+[46/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_get_offset.c.o
+[47/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_get_file_comment.c.o
+[48/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_is_deleted.c.o
+[49/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_memdup.c.o
+[50/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_set_archive_comment.c.o
+[51/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_discard.c.o
+[52/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_get_archive_flag.c.o
+[53/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_error_clear.c.o
+[54/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_io_util.c.o
+[55/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_rollback_write.c.o
+[56/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_error_to_str.c.o
+[57/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_begin_write_cloning.c.o
+[58/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_seek_write.c.o
+[59/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_error_clear.c.o
+[60/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_fclose.c.o
+[61/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_ftell.c.o
+[62/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_crc.c.o
+[63/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_seek.c.o
+[64/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_filep.c.o
+[65/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_get_name.c.o
+[66/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_strerror.c.o
+[67/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_fopen_index.c.o
+[68/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_pkware.c.o
+[69/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_tell_write.c.o
+[70/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_call.c.o
+[71/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_buffer.c.o
+[72/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_add_dir.c.o
+[73/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_set_archive_flag.c.o
+[74/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_filerange_crc.c.o
+[75/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_get_num_entries.c.o
+[76/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_compress.c.o
+[77/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_add.c.o
+[78/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_stat.c.o
+[79/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_get_comment.c.o
+[80/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_buffer.c.o
+[81/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_error.c.o
+[82/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_name_locate.c.o
+[83/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_unchange_all.c.o
+[84/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_fread.c.o
+[85/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_file_set_mtime.c.o
+[86/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_error.c.o
+[87/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_replace.c.o
+[88/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_fopen.c.o
+[89/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_get_encryption_implementation.c.o
+[90/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_remove.c.o
+[91/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_close.c.o
+[92/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_progress.c.o
+[93/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_unchange_data.c.o
+[94/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_stat.c.o
+[95/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_supports.c.o
+[96/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_string.c.o
+[97/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_get_archive_comment.c.o
+[98/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_stat_index.c.o
+[99/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_open.c.o
+[100/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_dirent.c.o
+[101/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_read.c.o
+[102/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_error_strerror.c.o
+[103/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_open.c.o
+[104/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_window.c.o
+[105/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_tell.c.o
+[106/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_stat_init.c.o
+[107/238] Building C object CMakeFiles/libzip.dir/native/libzip/libzip-1.5/lib/zip_source_file.c.o
+[108/238] Building C object CMakeFiles/libzip.dir/native/libzip/jsdos-libzip.c.o
+[109/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/jsdos/jsdos-log.cpp.o
+[110/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/jsdos/jsdos-timer.cpp.o
+[111/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/jsdos/jsdos-support.cpp.o
+[112/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/jsdos/jsdos-asyncify.cpp.o
+[113/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/jsdos/jsdos-events.cpp.o
+[114/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dosbox.cpp.o
+[115/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_files.cpp.o
+[116/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/pic.cpp.o
+[117/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/cdrom_image.cpp.o
+[118/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/core_dyn_x86.cpp.o
+[119/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/paging.cpp.o
+[120/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/core_dynrec.cpp.o
+[121/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/core_full.cpp.o
+[122/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/cpu.cpp.o
+[123/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/core_simple.cpp.o
+[124/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/callback.cpp.o
+[125/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/modrm.cpp.o
+[126/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/flags.cpp.o
+[127/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_pal.cpp.o
+[128/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/fpu/fpu.cpp.o
+[129/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/ems.cpp.o
+[130/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/xms.cpp.o
+[131/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_put_pixel.cpp.o
+[132/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/bios_disk.cpp.o
+[133/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/bios.cpp.o
+[134/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_misc.cpp.o
+[135/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_char.cpp.o
+[136/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_video_state.cpp.o
+[137/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/core_prefetch.cpp.o
+[138/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10.cpp.o
+[139/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_memory.cpp.o
+[140/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_vptable.cpp.o
+[141/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_modes.cpp.o
+[142/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/bios_keyboard.cpp.o
+[143/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/ints/int10_vesa.cpp.o
+[144/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/cpu/core_normal.cpp.o
+[145/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/drive_local.cpp.o
+[146/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/drive_cache.cpp.o
+[147/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_keyboard_layout.cpp.o
+[148/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/cdrom_ioctl_win32.cpp.o
+[149/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/cdrom.cpp.o
+[150/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/cdrom_aspi_win32.cpp.o
+[151/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/cdrom_ioctl_linux.cpp.o
+[152/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/cdrom_ioctl_os2.cpp.o
+[153/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_tables.cpp.o
+[154/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_devices.cpp.o
+[155/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/drive_overlay.cpp.o
+[156/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_execute.cpp.o
+[157/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_mscdex.cpp.o
+[158/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos.cpp.o
+[159/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_programs.cpp.o
+[160/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/drive_virtual.cpp.o
+[161/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/drives.cpp.o
+[162/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_ioctl.cpp.o
+[163/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_memory.cpp.o
+[164/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_classes.cpp.o
+[165/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/dos_misc.cpp.o
+[166/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/drive_fat.cpp.o
+[167/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/dos/drive_iso.cpp.o
+[168/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/shell/shell.cpp.o
+[169/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/shell/shell_batch.cpp.o
+[170/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/gui/sdl_gui.cpp.o
+[171/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/shell/shell_cmds.cpp.o
+[172/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/shell/shell_misc.cpp.o
+[173/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/gui/midi.cpp.o
+[174/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/gui/render_scalers.cpp.o
+[175/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/pcspeaker.cpp.o
+[176/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/gui/render.cpp.o
+[177/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_attr.cpp.o
+[178/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/sblaster.cpp.o
+[179/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_paradise.cpp.o
+[180/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_xga.cpp.o
+[181/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/gus.cpp.o
+[182/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/dma.cpp.o
+[183/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_dac.cpp.o
+[184/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_s3.cpp.o
+[185/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/timer.cpp.o
+[186/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_crtc.cpp.o
+[187/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/cmos.cpp.o
+[188/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_memory.cpp.o
+[189/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga.cpp.o
+[190/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/dbopl.cpp.o
+[191/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_draw.cpp.o
+[192/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/hardware.cpp.o
+[193/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_seq.cpp.o
+[194/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/iohandler.cpp.o
+[195/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/joystick.cpp.o
+[196/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/adlib.cpp.o
+[197/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/keyboard.cpp.o
+[198/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/pci_bus.cpp.o
+[199/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_misc.cpp.o
+[200/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/mpu401.cpp.o
+[201/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_gfx.cpp.o
+[202/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_other.cpp.o
+[203/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/tandy_sound.cpp.o
+[204/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/vga_tseng.cpp.o
+[205/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/serialport/directserial.cpp.o
+[206/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/gameblaster.cpp.o
+[207/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/serialport/nullmodem.cpp.o
+[208/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/disney.cpp.o
+[209/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/memory.cpp.o
+[210/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/serialport/libserial.cpp.o
+[211/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/serialport/serialdummy.cpp.o
+[212/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/serialport/softmodem.cpp.o
+[213/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/serialport/misc_util.cpp.o
+[214/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/mame/saa1099.cpp.o
+[215/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/mame/fmopl.cpp.o
+[216/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/serialport/serialport.cpp.o
+[217/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/mame/sn76496.cpp.o
+[218/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/mame/ymdeltat.cpp.o
+[219/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/hardware/mame/ymf262.cpp.o
+[220/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/misc/cross.cpp.o
+[221/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/misc/support.cpp.o
+[222/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/misc/programs.cpp.o
+[223/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/misc/setup.cpp.o
+[224/238] Building CXX object CMakeFiles/libdosbox-core.dir/native/dosbox/src/misc/messages.cpp.o
+[225/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/dosbox/jsdos-main.cpp.o
+[226/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/jsdos-mapper-noop.cpp.o
+[227/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/dosbox/jsdos-mixer.cpp.o
+[228/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/jsdos-noop.cpp.o
+[229/238] Building C object CMakeFiles/libdosbox.dir/native/sdl2net/SDLnet.c.o
+[230/238] Building C object CMakeFiles/libdosbox.dir/native/sdl2net/SDLnetTCP.c.o
+[231/238] Building C object CMakeFiles/libdosbox.dir/native/sdl2net/SDLnetselect.c.o
+[232/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/jsdos-ipxserver.cpp.o
+[233/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/jsdos-mouse.cpp.o
+[234/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/jsdos-ipx.cpp.o
+[235/238] Building CXX object CMakeFiles/libdosbox.dir/native/jsdos/jsdos-net.cpp.o
+[236/238] Building CXX object CMakeFiles/wdosbox.dir/src/dos/dosbox/cpp/direct-debugger.cpp.o
+[237/238] Building CXX object CMakeFiles/wdosbox.dir/src/dos/dosbox/cpp/worker-protocol.cpp.o
+[238/238] Linking CXX executable wdosbox.js
+FAILED: wdosbox.js 
+[Generated command/JavaScript line omitted; error and exact reproduction retained.]
+cache:INFO: generating port: sysroot/lib/wasm32-emscripten/thinlto/libz.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libz.a" for subsequent builds)
+system_libs:INFO: compiled 15 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libGL.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libGL.a" for subsequent builds)
+system_libs:INFO: compiled 3 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libal.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libal.a" for subsequent builds)
+system_libs:INFO: compiled 1 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libhtml5.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libhtml5.a" for subsequent builds)
+system_libs:INFO: compiled 2 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libc_optz.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libc_optz.a" for subsequent builds)
+system_libs:INFO: compiled 7 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libstubs.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libstubs.a" for subsequent builds)
+system_libs:INFO: compiled 2 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libc.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libc.a" for subsequent builds)
+system_libs:INFO: compiled 1000 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libemmalloc.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libemmalloc.a" for subsequent builds)
+system_libs:INFO: compiled 2 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libcompiler_rt.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libcompiler_rt.a" for subsequent builds)
+system_libs:INFO: compiled 175 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libc++-noexcept.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libc++-noexcept.a" for subsequent builds)
+system_libs:INFO: compiled 48 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libc++abi-noexcept.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libc++abi-noexcept.a" for subsequent builds)
+system_libs:INFO: compiled 16 inputs
+cache:INFO:  - ok
+cache:INFO: generating system library: sysroot/lib/wasm32-emscripten/thinlto/libsockets.a... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/sysroot/lib/wasm32-emscripten/thinlto/libsockets.a" for subsequent builds)
+system_libs:INFO: compiled 21 inputs
+cache:INFO:  - ok
+cache:INFO: generating system asset: symbol_lists/eadf8349e455316003491f1040580c672ce4eb3f.txt... (this will be cached in "/private/tmp/phantom-p11-emsdk/upstream/emscripten/cache/symbol_lists/eadf8349e455316003491f1040580c672ce4eb3f.txt" for subsequent builds)
+cache:INFO:  - ok
+warning: Asyncify onlylist contained a non-existing function name: BIOS::cb_bios_boot__func (BIOS::cb_bios_boot__func)
+warning: Asyncify onlylist contained a non-existing function name: BIOS::cb_bios_startup_screen__func (BIOS::cb_bios_startup_screen__func)
+warning: Asyncify onlylist contained a non-existing function name: BIOS_Int10RightJustifiedPrint (BIOS_Int10RightJustifiedPrint)
+warning: Asyncify onlylist contained a non-existing function name: BatchFile::ReadLine (BatchFile::ReadLine)
+warning: Asyncify onlylist contained a non-existing function name: CALLBACK_RunRealFar (CALLBACK_RunRealFar)
+warning: Asyncify onlylist contained a non-existing function name: CALLBACK_RunRealInt (CALLBACK_RunRealInt)
+warning: Asyncify onlylist contained a non-existing function name: Config::Init (Config::Init)
+warning: Asyncify onlylist contained a non-existing function name: Config::StartUp (Config::StartUp)
+warning: Asyncify onlylist contained a non-existing function name: ConnectToServer (ConnectToServer)
+warning: Asyncify onlylist contained a non-existing function name: DOSBOX_RunMachine (DOSBOX_RunMachine)
+warning: Asyncify onlylist contained a non-existing function name: DOS_21Handler (DOS_21Handler)
+warning: Asyncify onlylist contained a non-existing function name: DOS_CloseFile (DOS_CloseFile)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Device::GetInformation (DOS_Device::GetInformation)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Device::Read (DOS_Device::Read)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Device::Write (DOS_Device::Write)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Execute (DOS_Execute)
+warning: Asyncify onlylist contained a non-existing function name: DOS_KeyboardLayout::DOS_KeyboardLayout (DOS_KeyboardLayout::DOS_KeyboardLayout)
+warning: Asyncify onlylist contained a non-existing function name: DOS_KeyboardLayout_Init (DOS_KeyboardLayout_Init)
+warning: Asyncify onlylist contained a non-existing function name: DOS_LoadKeyboardLayout (DOS_LoadKeyboardLayout)
+warning: Asyncify onlylist contained a non-existing function name: DOS_OpenFile (DOS_OpenFile)
+warning: Asyncify onlylist contained a non-existing function name: DOS_ReadFile (DOS_ReadFile)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::CMD_CHOICE (DOS_Shell::CMD_CHOICE)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::CMD_CLS (DOS_Shell::CMD_CLS)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::CMD_DIR (DOS_Shell::CMD_DIR)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::CMD_PAUSE (DOS_Shell::CMD_PAUSE)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::CMD_TYPE (DOS_Shell::CMD_TYPE)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::CMD_VOL (DOS_Shell::CMD_VOL)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::DoCommand (DOS_Shell::DoCommand)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::Execute (DOS_Shell::Execute)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::InputCommand (DOS_Shell::InputCommand)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::ParseLine (DOS_Shell::ParseLine)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::Run (DOS_Shell::Run)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::RunInternal (DOS_Shell::RunInternal)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::ShowPrompt (DOS_Shell::ShowPrompt)
+warning: Asyncify onlylist contained a non-existing function name: DOS_Shell::execute_shell_cmd (DOS_Shell::execute_shell_cmd)
+warning: Asyncify onlylist contained a non-existing function name: DOS_WriteFile (DOS_WriteFile)
+warning: Asyncify onlylist contained a non-existing function name: DosBox_Pause (DosBox_Pause)
+warning: Asyncify onlylist contained a non-existing function name: FinishSetMode (FinishSetMode)
+warning: Asyncify onlylist contained a non-existing function name: INT10_Handler (INT10_Handler)
+warning: Asyncify onlylist contained a non-existing function name: INT10_LoadFont (INT10_LoadFont)
+warning: Asyncify onlylist contained a non-existing function name: INT10_ReloadFont (INT10_ReloadFont)
+warning: Asyncify onlylist contained a non-existing function name: INT10_SetCursorPos (INT10_SetCursorPos)
+warning: Asyncify onlylist contained a non-existing function name: INT10_SetCursorShape (INT10_SetCursorShape)
+warning: Asyncify onlylist contained a non-existing function name: INT10_SetVideoMode (INT10_SetVideoMode)
+warning: Asyncify onlylist contained a non-existing function name: INT10_TeletypeOutput (INT10_TeletypeOutput)
+warning: Asyncify onlylist contained a non-existing function name: INT10_TeletypeOutputAttr (INT10_TeletypeOutputAttr)
+warning: Asyncify onlylist contained a non-existing function name: INT15_Handler (INT15_Handler)
+warning: Asyncify onlylist contained a non-existing function name: INT2E_Handler (INT2E_Handler)
+warning: Asyncify onlylist contained a non-existing function name: IO_ReadB (IO_ReadB)
+warning: Asyncify onlylist contained a non-existing function name: IO_WriteB (IO_WriteB)
+warning: Asyncify onlylist contained a non-existing function name: IPXNET::Run (IPXNET::Run)
+warning: Asyncify onlylist contained a non-existing function name: IPX_ClientLoop (IPX_ClientLoop)
+warning: Asyncify onlylist contained a non-existing function name: IPX_ESRHandler (IPX_ESRHandler)
+warning: Asyncify onlylist contained a non-existing function name: InitPageHandler::InitPage (InitPageHandler::InitPage)
+warning: Asyncify onlylist contained a non-existing function name: InitPageHandler::readb (InitPageHandler::readb)
+warning: Asyncify onlylist contained a non-existing function name: InitPageHandler::writeb (InitPageHandler::writeb)
+warning: Asyncify onlylist contained a non-existing function name: InitPageHandler::writew (InitPageHandler::writew)
+warning: Asyncify onlylist contained a non-existing function name: KEYB::Run (KEYB::Run)
+warning: Asyncify onlylist contained a non-existing function name: MEM_BlockCopy (MEM_BlockCopy)
+warning: Asyncify onlylist contained a non-existing function name: MEM_BlockRead (MEM_BlockRead)
+warning: Asyncify onlylist contained a non-existing function name: MOUNT::Run (MOUNT::Run)
+warning: Asyncify onlylist contained a non-existing function name: Normal_Loop (Normal_Loop)
+warning: Asyncify onlylist contained a non-existing function name: PAGING_PageFault (PAGING_PageFault)
+warning: Asyncify onlylist contained a non-existing function name: PROGRAMS_Handler (PROGRAMS_Handler)
+warning: Asyncify onlylist contained a non-existing function name: Program::WriteOut (Program::WriteOut)
+warning: Asyncify onlylist contained a non-existing function name: Program::WriteOut_NoParsing (Program::WriteOut_NoParsing)
+warning: Asyncify onlylist contained a non-existing function name: SDLNet_TCP_Send (SDLNet_TCP_Send)
+warning: Asyncify onlylist contained a non-existing function name: SHELL_Init (SHELL_Init)
+warning: Asyncify onlylist contained a non-existing function name: Section::ExecuteInit (Section::ExecuteInit)
+warning: Asyncify onlylist contained a non-existing function name: TIMER_AddTick (TIMER_AddTick)
+warning: Asyncify onlylist contained a non-existing function name: VGA_ROM_BIOS_ENTRY_callback_func (VGA_ROM_BIOS_ENTRY_callback_func)
+warning: Asyncify onlylist contained a non-existing function name: _ConnectToServer (_ConnectToServer)
+warning: Asyncify onlylist contained a non-existing function name: device_CON::GetInformation (device_CON::GetInformation)
+warning: Asyncify onlylist contained a non-existing function name: device_CON::Output (device_CON::Output)
+warning: Asyncify onlylist contained a non-existing function name: device_CON::Read (device_CON::Read)
+warning: Asyncify onlylist contained a non-existing function name: device_CON::Real_INT10_SetCursorPos (device_CON::Real_INT10_SetCursorPos)
+warning: Asyncify onlylist contained a non-existing function name: device_CON::Real_INT10_TeletypeOutput (device_CON::Real_INT10_TeletypeOutput)
+warning: Asyncify onlylist contained a non-existing function name: device_CON::Real_INT10_TeletypeOutputAttr (device_CON::Real_INT10_TeletypeOutputAttr)
+warning: Asyncify onlylist contained a non-existing function name: device_CON::Write (device_CON::Write)
+warning: Asyncify onlylist contained a non-existing function name: diskio_delay (diskio_delay)
+warning: Asyncify onlylist contained a non-existing function name: initcodepagefont (initcodepagefont)
+warning: Asyncify onlylist contained a non-existing function name: jsdos_main (jsdos_main)
+warning: Asyncify onlylist contained a non-existing function name: keyboard_layout::read_codepage_file (keyboard_layout::read_codepage_file)
+warning: Asyncify onlylist contained a non-existing function name: localFile::Close (localFile::Close)
+warning: Asyncify onlylist contained a non-existing function name: localFile::Read (localFile::Read)
+warning: Asyncify onlylist contained a non-existing function name: localFile::UpdateLocalDateTime (localFile::UpdateLocalDateTime)
+warning: Asyncify onlylist contained a non-existing function name: mem_memcpy (mem_memcpy)
+warning: Asyncify onlylist contained a non-existing function name: mem_writew (mem_writew)
+warning: Asyncify onlylist contained a non-existing function name: readNextIPXHeader (readNextIPXHeader)
+warning: Asyncify onlylist contained a non-existing function name: server_network_connect (server_network_connect)
+warning: Asyncify onlylist contained a non-existing function name: server_run (server_run)
+warning: Asyncify onlylist contained a non-existing function name: showWelcome (showWelcome)
+warning: Asyncify onlylist contained a non-existing function name: workerTickHandler (workerTickHandler)
+warning: Asyncify onlylist contained a non-matching pattern: BIOS::cb_bios_boot__func(*)* (BIOS::cb_bios_boot__func\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: BIOS::cb_bios_startup_screen__func(*)* (BIOS::cb_bios_startup_screen__func\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: BIOS_Int10RightJustifiedPrint(*)* (BIOS_Int10RightJustifiedPrint\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: CALLBACK_Idle(*)* (CALLBACK_Idle\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: Config::Init(*)* (Config::Init\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: Config::StartUp(*)* (Config::StartUp\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: DOS_Execute(*)* (DOS_Execute\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: DOS_KeyboardLayout::DOS_KeyboardLayout(*)* (DOS_KeyboardLayout::DOS_KeyboardLayout\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: DOS_LoadKeyboardLayout(*)* (DOS_LoadKeyboardLayout\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: DOS_Shell::CMD_VOL(*)* (DOS_Shell::CMD_VOL\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: DOS_Shell::execute_shell_cmd(*)* (DOS_Shell::execute_shell_cmd\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: SDLNet_TCP_Send(*)* (SDLNet_TCP_Send\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: TIMER_AddTick(*)* (TIMER_AddTick\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: VGA_ROM_BIOS_ENTRY_callback_func(*)* (VGA_ROM_BIOS_ENTRY_callback_func\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: _ConnectToServer(*)* (_ConnectToServer\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: asyncify_sleep(*)* (asyncify_sleep\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: device_CON::Real_INT10_SetCursorPos(*)* (device_CON::Real_INT10_SetCursorPos\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: device_CON::Real_INT10_TeletypeOutputAttr(*)* (device_CON::Real_INT10_TeletypeOutputAttr\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: device_CON::Real_INT10_TeletypeOutput(*)* (device_CON::Real_INT10_TeletypeOutput\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: diskio_delay(*)* (diskio_delay\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: initcodepagefont(*)* (initcodepagefont\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: jsdos_main(*)* (jsdos_main\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: localFile::UpdateLocalDateTime(*)* (localFile::UpdateLocalDateTime\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: main(*)* (main\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: networkConnect(*)* (networkConnect\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: runRuntime(*)* (runRuntime\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: server_net_connect(*)* (server_net_connect\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: server_net_recv(*)* (server_net_recv\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: server_network_connect(*)* (server_network_connect\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: server_run(*)* (server_run\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: showWelcome(*)* (showWelcome\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: workerTickHandler(*)* (workerTickHandler\28*\29*)
+warning: Asyncify onlylist contained a non-matching pattern: wsOpen(*)* (wsOpen\28*\29*)
+/private/tmp/phantom-p11-emsdk/upstream/emscripten/tools/acorn-optimizer.js:1957
+  throw err;
+  ^
+
+SyntaxError: Unexpected token (1:22720)
+[Generated command/JavaScript line omitted; error and exact reproduction retained.]
+[Generated command/JavaScript line omitted; error and exact reproduction retained.]
+
+    at Parser.pp$4.raise (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:3462:15)
+    at Parser.pp$9.unexpected (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:756:10)
+    at Parser.pp$9.expect (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:750:28)
+    at Parser.pp$8.parseFor (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:1249:10)
+    at Parser.pp$8.parseForStatement (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:1013:19)
+    at Parser.pp$8.parseStatement (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:893:36)
+    at Parser.pp$8.parseBlock (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:1232:23)
+    at Parser.pp$5.parseFunctionBody (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:3288:24)
+    at Parser.pp$5.parseArrowExpression (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:3249:10)
+    at Parser.pp$5.parseSubscript (/private/tmp/phantom-p11-emsdk/upstream/emscripten/node_modules/acorn/dist/acorn.js:2700:21) {
+  pos: 22720,
+  loc: Position { line: 1, column: 22720 },
+  raisedAt: 22726
+}
+em++: error: '/private/tmp/phantom-p11-emsdk/node/14.18.2_64bit/bin/node /private/tmp/phantom-p11-emsdk/upstream/emscripten/tools/acorn-optimizer.js /var/folders/z2/_10dxp_d2q1bb_0vqw2q8klw0000gn/T/emcc_acorn_info_8usffepx.js emitDCEGraph noPrint' failed (returned 1)
+ninja: build stopped: subcommand failed.
