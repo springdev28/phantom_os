@@ -1,7 +1,8 @@
 import { describe, expect, it, vi } from 'vitest';
 import { boundedResponse } from './bounded-response';
 import { guestFileList, parseHostMessage } from '../runtime/dos/protocol';
-import { applicationPolicy } from './policy';
+import { applicationPolicy, productionHeaders } from './policy';
+import { DOS_HOST_PATH } from '../runtime/dos/host-manifest';
 
 describe('untrusted runtime and download boundaries', () => {
   it('stops a lengthless response at the actual byte limit and cancels its stream', async () => {
@@ -20,7 +21,8 @@ describe('untrusted runtime and download boundaries', () => {
   });
   it.each([null, [], 'running', { type: ['running'] }, { type: new String('running') },
     { type: 'running', url: 'https://invalid.example' }, { type: 'eval', source: 'private' },
-    { type: 'reply', id: Infinity, value: [] }, { type: 'input', focused: 'yes' },
+    { type: 'reply', id: Infinity, value: [] }, { type: 'reply', id: 0, value: [] },
+    { type: 'input', focused: 'yes' },
     { type: 'metrics', frames: 1, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: NaN }].map(value => ({ value })))('rejects malformed guest protocol data: %j', ({ value }) => {
     expect(() => parseHostMessage(value)).toThrow('The DOS worker stopped after a failure');
   });
@@ -37,5 +39,22 @@ describe('untrusted runtime and download boundaries', () => {
   it('refuses a configurable URL or inline policy injected through hosting configuration', () => {
     expect(() => applicationPolicy("https://example.test; script-src *", 'runtimes/js-dos/host-0123456789abcdef.html')).toThrow();
     expect(() => applicationPolicy('https://example.test', 'https://evil.invalid/frame')).toThrow();
+    expect(() => applicationPolicy('https://example.test/', DOS_HOST_PATH)).toThrow();
+    expect(() => productionHeaders('javascript:alert(1)', DOS_HOST_PATH)).toThrow();
+  });
+  it('denies framing on the app shell and withholds COOP from the hashed DOS host', () => {
+    const origin = 'https://example.test';
+    const page = productionHeaders(origin, DOS_HOST_PATH);
+    expect(page['X-Frame-Options']).toBe('DENY');
+    expect(page['Cross-Origin-Opener-Policy']).toBe('same-origin');
+    expect(page['Content-Security-Policy']).toContain(`frame-src ${origin}/${DOS_HOST_PATH}`);
+    expect(page['Content-Security-Policy']).toContain("frame-ancestors 'none'");
+    expect(page['Content-Security-Policy']).toContain(`${origin}/demos/MEM.EXE`);
+    expect(page['Content-Security-Policy']).not.toContain('*');
+    const frame = productionHeaders(origin, DOS_HOST_PATH, "default-src 'none'; script-src 'self'");
+    expect(frame['X-Frame-Options']).toBe('SAMEORIGIN');
+    expect(frame['Cross-Origin-Opener-Policy']).toBeUndefined();
+    expect(frame['Content-Security-Policy']).toBe("default-src 'none'; script-src 'self'; frame-ancestors 'self'");
+    expect(frame['Permissions-Policy']).toBe(page['Permissions-Policy']);
   });
 });

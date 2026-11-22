@@ -49,4 +49,15 @@ describe('ZIP worker lifecycle (unit doubles only)', () => {
     expect(TestWorker.latest.terminate).toHaveBeenCalledOnce();
     expect(event.preventDefault).toHaveBeenCalledOnce();
   });
+  it('maps clone failures to ZIP_INVALID and forwards a sanitized worker error code', async () => {
+    vi.stubGlobal('Worker', TestWorker);
+    const clone = importZipInWorker(new Blob(), new AbortController().signal, vi.fn());
+    TestWorker.latest.onmessageerror?.();
+    await expect(clone).rejects.toMatchObject({ code: 'ZIP_INVALID' });
+    expect(TestWorker.latest.terminate).toHaveBeenCalledOnce();
+    const coded = importZipInWorker(new Blob(), new AbortController().signal, vi.fn());
+    TestWorker.latest.onmessage?.({ data: { type: 'error', code: 'ZIP_UNSUPPORTED' } } as MessageEvent);
+    await expect(coded).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED', message: expect.not.stringMatching(/PRIVATE/) });
+    expect(TestWorker.latest.terminate).toHaveBeenCalledOnce();
+  });
 });

@@ -74,4 +74,16 @@ describe('session lifecycle', () => {
     expect(revised.status).toBe('unsupported');
     expect(sessionReducer(revised, { type: 'PREPARE' })).toBe(revised);
   });
+  it('keeps inspection on a runtime failure and ignores empty STARTED ids', () => {
+    const eligible = { ...unsupported, decision: 'candidate' as const, canLaunch: true, engineInstalled: true, issues: [], runtimeId: 'js-dos' as const, runtimeBuildId: 'unit-test', entrypoint: 'chosen.exe' };
+    const ready = sessionReducer(inspecting(), { type: 'INSPECTED', jobId: 'job-1', inspection, plan: eligible });
+    const preparing = sessionReducer(ready, { type: 'PREPARE' });
+    expect(sessionReducer(preparing, { type: 'STARTED', sessionId: '' })).toBe(preparing);
+    const failed = sessionReducer(preparing, { type: 'RUNTIME_FAIL', code: 'RUNTIME_FAILED' });
+    expect(failed).toMatchObject({ status: 'error', code: 'RUNTIME_FAILED', pkg, plan: eligible });
+    if ('inspection' in failed) expect(failed.inspection).toBe(inspection);
+    expect(sessionReducer(ready, { type: 'RUNTIME_FAIL', code: 'RUNTIME_FAILED' })).toBe(ready);
+    expect(sessionReducer(inspecting(), { type: 'RUNTIME_FAIL', code: 'RUNTIME_FAILED' })).toEqual(inspecting());
+    expect(sessionReducer(preparing, { type: 'STOP' }).status).toBe('stopped');
+  });
 });
