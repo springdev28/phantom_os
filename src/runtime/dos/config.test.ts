@@ -29,6 +29,11 @@ describe('bounded DOS launch configuration (no guest execution)', () => {
     expect(dosConfigurationIssue(pkg, profile)).toContain('8.3');
     expect(() => createDosConfiguration(pkg, profile)).toThrow();
   });
+  it('rejects an entrypoint or working directory that is not in the staged package', async () => {
+    const { pkg, profile } = await input();
+    expect(() => createDosConfiguration(pkg, { ...profile, entrypoint: 'MISSING.EXE' })).toThrow();
+    expect(() => createDosConfiguration(pkg, { ...profile, cwd: 'OTHER' })).toThrow();
+  });
   it('rejects unsupported mounts, read-only promises and oversized guest packages before launch', async () => {
     const { pkg, profile } = await input();
     expect(dosConfigurationIssue(pkg, { ...profile, mounts: [{ packagePath: '.', guestPath: 'C:/', readOnly: true }] })).toContain('temporary');

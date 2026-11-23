@@ -145,6 +145,9 @@ describe('stored metadata is untrusted and never execution verification', () => 
     const m = createWorkspaceManifest(await input()); expect(() => verifyWorkspaceRuntime(m, [dosDescriptor])).not.toThrow();
     expect(() => verifyWorkspaceRuntime({ ...m, runtimeAssets: [] }, [dosDescriptor])).toThrow();
     expect(() => verifyWorkspaceRuntime({ ...m, profile: { ...m.profile, runtimeBuildId: 'old' } }, [dosDescriptor])).toThrow();
+    const unnamed = { ...m.profile, runtimeId: null, runtimeVersion: null, runtimeBuildId: null };
+    expect(() => verifyWorkspaceRuntime({ ...m, profile: unnamed }, [dosDescriptor])).toThrow();
+    expect(() => verifyWorkspaceRuntime({ ...m, profile: unnamed, runtimeAssets: [] }, [dosDescriptor])).not.toThrow();
   });
   it('working snapshots overlay only launch copies and cannot replace the executable or collide with directories', async () => {
     const source = await input(), pkg = source.application!;
@@ -159,5 +162,8 @@ describe('stored metadata is untrusted and never execution verification', () => 
     expect(() => validateDocumentImport([f, f], [])).toThrow();
     for (const path of ['../RESULT.TXT', 'APP/RESULT.TXT', 'longname123.txt', 'FILE;A.TXT']) expect(() => validateDocumentImport([{ ...f, path }], [])).toThrow();
     expect(() => validateDocumentImport([{ ...f, size: 8 * CHUNK_SIZE + 1 }], [])).toThrow();
+    expect(() => validateDocumentImport([{ ...f, size: 1.5 }], [])).toThrow();
+    expect(() => validateDocumentImport([f], [{ path: 'OTHER.TXT', size: 32 * CHUNK_SIZE }])).toThrow();
+    expect(() => validateDocumentImport([f], Array.from({ length: 2048 }, (_, i) => ({ path: `F${i}.TXT`, size: 0 })))).toThrow();
   });
 });

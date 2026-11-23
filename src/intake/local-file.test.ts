@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { MAX_FILE_BYTES, selectLocalFile } from './local-file';
+import { MAX_FILE_BYTES, selectLocalFile, selectLocalFiles } from './local-file';
 import { selectionInspector } from '../inspection/selection-inspector';
 
 describe('local selection', () => {
@@ -22,6 +22,15 @@ describe('local selection', () => {
   });
   it.each(['../secret', 'C:\\secret', '..', 'a\u0000b'])('rejects a non-local basename: %s', name => {
     expect(() => selectLocalFile([new File(['a'], name)])).toThrow('name');
+  });
+  it('rejects mixed folder roots and a multi-file ZIP picker before any package is published', () => {
+    const a = new File(['1'], 'a.dat'); Object.defineProperty(a, 'webkitRelativePath', { value: 'RootA/a.dat' });
+    const b = new File(['2'], 'b.dat'); Object.defineProperty(b, 'webkitRelativePath', { value: 'RootB/b.dat' });
+    expect(() => selectLocalFiles([a, b], 'folder')).toThrow('unsafe');
+    expect(() => selectLocalFiles([new File(['a'], 'a.zip'), new File(['b'], 'b.zip')], 'zip')).toThrow('one file');
+    const zip = new File(['not-empty'], 'game.zip');
+    Object.defineProperty(zip, 'webkitRelativePath', { value: 'Ignored/game.zip' });
+    expect(selectLocalFiles([zip], 'zip').files.map(file => file.path)).toEqual(['game.zip']);
   });
   it('bounds all reads and honors cancellation', async () => {
     const file = selectLocalFile([new File(['hello'], 'test')]).files[0]!;

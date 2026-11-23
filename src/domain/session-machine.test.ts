@@ -74,6 +74,21 @@ describe('session lifecycle', () => {
     expect(revised.status).toBe('unsupported');
     expect(sessionReducer(revised, { type: 'PREPARE' })).toBe(revised);
   });
+  it('treats an entrypoint choice as metadata, not launch authorization', () => {
+    const withCandidates = { ...pkg, candidates: [
+      { path: 'chosen.exe', format: 'dos-mz' as const, reason: 'unit', caution: 'unit' },
+      { path: 'other.exe', format: 'dos-mz' as const, reason: 'unit', caution: 'unit' },
+    ] };
+    const eligible = { ...unsupported, decision: 'candidate' as const, canLaunch: true, engineInstalled: true, issues: [], runtimeId: 'js-dos' as const, runtimeBuildId: 'unit-test', entrypoint: 'chosen.exe' };
+    const ready = sessionReducer(sessionReducer(sessionReducer(initialSession, { type: 'SELECT', pkg: withCandidates }), { type: 'INSPECT', jobId: 'job-1' }),
+      { type: 'INSPECTED', jobId: 'job-1', inspection, plan: eligible });
+    expect(ready.status).toBe('ready');
+    expect(sessionReducer(ready, { type: 'CHOOSE_ENTRYPOINT', path: 'invented.exe' })).toBe(ready);
+    const chosen = sessionReducer(ready, { type: 'CHOOSE_ENTRYPOINT', path: 'other.exe' });
+    expect(chosen).toMatchObject({ status: 'unsupported', pkg: { entrypoint: 'other.exe' }, plan: { canLaunch: false, entrypoint: 'other.exe' } });
+    expect(sessionReducer(chosen, { type: 'PREPARE' })).toBe(chosen);
+    expect(sessionReducer(chosen, { type: 'REPLAN', packageId: pkg.id, plan: { ...eligible, entrypoint: 'other.exe' } }).status).toBe('ready');
+  });
   it('keeps inspection on a runtime failure and ignores empty STARTED ids', () => {
     const eligible = { ...unsupported, decision: 'candidate' as const, canLaunch: true, engineInstalled: true, issues: [], runtimeId: 'js-dos' as const, runtimeBuildId: 'unit-test', entrypoint: 'chosen.exe' };
     const ready = sessionReducer(inspecting(), { type: 'INSPECTED', jobId: 'job-1', inspection, plan: eligible });

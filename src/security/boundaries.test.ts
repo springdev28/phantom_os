@@ -33,8 +33,15 @@ describe('untrusted runtime and download boundaries', () => {
   });
   it.each([[null], [{ path: '../ESCAPE.TXT', size: 1 }], [{ path: 'NOTE.TXT', size: -1 }],
     [{ path: '<img onerror=alert(1)>', size: 1 }], [{ path: 'a.txt', size: 1 }, { path: 'A.TXT', size: 1 }],
-    [{ path: 'a', size: 33554433 }]].map(value => ({ value })))('rejects unsafe guest file lists before display/export: %j', ({ value }) => {
+    [{ path: 'a', size: 33554433 }], [{ path: 'DATA/NOTE.TXT', size: 42, extra: true }],
+    [{ path: 'A.DAT', size: 32 * 1024 * 1024 }, { path: 'B.DAT', size: 32 * 1024 * 1024 + 1 }]].map(value => ({ value })))('rejects unsafe guest file lists before display/export: %j', ({ value }) => {
     expect(() => guestFileList(value)).toThrow();
+  });
+  it('rejects an over-budget guest listing and a reply that smuggles extra fields', () => {
+    expect(() => guestFileList(Array.from({ length: 2049 }, (_, i) => ({ path: `F${i}.DAT`, size: 0 })))).toThrow();
+    expect(() => parseHostMessage({ type: 'reply', id: 1, value: [], extra: true })).toThrow();
+    expect(() => parseHostMessage({ type: 'reply', id: 1, error: false, value: [] })).toThrow();
+    expect(() => parseHostMessage({ type: 'metrics', frames: 1, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: -1 })).toThrow();
   });
   it('refuses a configurable URL or inline policy injected through hosting configuration', () => {
     expect(() => applicationPolicy("https://example.test; script-src *", 'runtimes/js-dos/host-0123456789abcdef.html')).toThrow();
