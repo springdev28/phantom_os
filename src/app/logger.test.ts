@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { createLogger } from './logger';
-import { safeError } from '../domain/errors';
+import { AppError, safeError } from '../domain/errors';
 
 describe('private diagnostics', () => {
   it('retains only bounded allowlisted events, not arbitrary payloads', () => {
@@ -18,5 +18,11 @@ describe('private diagnostics', () => {
   });
   it('replaces an arbitrary thrown message with a fixed safe explanation', () => {
     expect(safeError(new Error('private-file.exe: SECRET CONTENT')).message).not.toMatch(/private|SECRET/);
+    expect(safeError('PRIVATE PATH')).toMatchObject({ code: 'UNEXPECTED', message: expect.not.stringMatching(/PRIVATE/) });
+    const original = new AppError('ZIP_INVALID');
+    const wrapped = safeError(original);
+    expect(wrapped).toMatchObject({ code: 'ZIP_INVALID' });
+    expect(wrapped).not.toBe(original);
+    expect(wrapped.message).not.toMatch(/private|SECRET|PRIVATE/);
   });
 });

@@ -60,4 +60,11 @@ describe('ZIP worker lifecycle (unit doubles only)', () => {
     await expect(coded).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED', message: expect.not.stringMatching(/PRIVATE/) });
     expect(TestWorker.latest.terminate).toHaveBeenCalledOnce();
   });
+  it('never copies extra worker payload text into the parent error', async () => {
+    vi.stubGlobal('Worker', TestWorker);
+    const task = importZipInWorker(new Blob(), new AbortController().signal, vi.fn());
+    TestWorker.latest.onmessage?.({ data: { type: 'error', code: 'ZIP_INVALID', detail: 'PRIVATE_FILE_DATA', path: 'secret.exe' } } as MessageEvent);
+    await expect(task).rejects.toMatchObject({ code: 'ZIP_INVALID', message: expect.not.stringMatching(/PRIVATE|secret/) });
+    expect(TestWorker.latest.terminate).toHaveBeenCalledOnce();
+  });
 });

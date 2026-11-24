@@ -101,4 +101,20 @@ describe('session lifecycle', () => {
     expect(sessionReducer(inspecting(), { type: 'RUNTIME_FAIL', code: 'RUNTIME_FAILED' })).toEqual(inspecting());
     expect(sessionReducer(preparing, { type: 'STOP' }).status).toBe('stopped');
   });
+  it('allows a still-eligible runtime failure to retry and ignores replan while preparing', () => {
+    const eligible = { ...unsupported, decision: 'candidate' as const, canLaunch: true, engineInstalled: true, issues: [], runtimeId: 'js-dos' as const, runtimeBuildId: 'unit-test', entrypoint: 'chosen.exe' };
+    const ready = sessionReducer(inspecting(), { type: 'INSPECTED', jobId: 'job-1', inspection, plan: eligible });
+    const preparing = sessionReducer(ready, { type: 'PREPARE' });
+    expect(sessionReducer(preparing, { type: 'REPLAN', packageId: pkg.id, plan: eligible })).toBe(preparing);
+    const failed = sessionReducer(preparing, { type: 'RUNTIME_FAIL', code: 'RUNTIME_TIMEOUT' });
+    expect(sessionReducer(failed, { type: 'PREPARE' }).status).toBe('preparing');
+    const blocked = sessionReducer(failed, { type: 'REPLAN', packageId: pkg.id, plan: { ...eligible, canLaunch: false } });
+    expect(sessionReducer(blocked, { type: 'PREPARE' })).toBe(blocked);
+    expect(sessionReducer(sessionReducer(preparing, { type: 'STARTED', sessionId: 'live' }), { type: 'STARTED', sessionId: 'second' }))
+      .toMatchObject({ status: 'running', sessionId: 'live' });
+  });
+  it('records a selection-time FAIL without a job and ignores a job-scoped FAIL while idle', () => {
+    expect(sessionReducer(initialSession, { type: 'FAIL', code: 'INVALID_PATH' })).toEqual({ status: 'error', code: 'INVALID_PATH' });
+    expect(sessionReducer(initialSession, { type: 'FAIL', jobId: 'job-1', code: 'INVALID_PATH' })).toBe(initialSession);
+  });
 });

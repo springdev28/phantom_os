@@ -12,6 +12,19 @@ import { mzFixture, zipFixture } from '../../tests/fixtures/probe-fixtures';
 const signal = () => new AbortController().signal;
 const unpack = (bytes: Uint8Array<ArrayBuffer>) => extractZip(new Blob([bytes]), signal());
 const entry = (path: string) => ({ path, bytes: textBytes('retained') });
+function unicodePathExtra(zipName: string, unicodeName: string, crcXor = 0): Uint8Array {
+  const name = textBytes(zipName), utf8 = textBytes(unicodeName);
+  let crc = 0xffffffff;
+  for (const byte of name) {
+    crc ^= byte;
+    for (let bit = 0; bit < 8; bit++) crc = crc & 1 ? (crc >>> 1) ^ 0xedb88320 : crc >>> 1;
+  }
+  crc = ((crc ^ 0xffffffff) ^ crcXor) >>> 0;
+  const extra = new Uint8Array(9 + utf8.length), view = new DataView(extra.buffer);
+  view.setUint16(0, 0x7075, true); view.setUint16(2, 5 + utf8.length, true);
+  extra[4] = 1; view.setUint32(5, crc, true); extra.set(utf8, 9);
+  return extra;
+}
 async function imported(bytes: Uint8Array<ArrayBuffer>) {
   const pkg = virtualPackage(await unpack(bytes), 'zip', 'test.zip');
   return describePackage(pkg, await selectionInspector.inspect(pkg, signal()));
@@ -183,5 +196,22 @@ describe('ZIP-slip and path collisions', () => {
     expect(() => safePath('a/'.repeat(33) + 'b')).toThrow('unsafe');
     const paths = new PathIndex(); expect(paths.add('__proto__/constructor')).toBe('__proto__/constructor');
     expect(paths.directories()).toEqual(['__proto__']);
+  });
+  it.each(['file：stream', 'foo／bar', 'COM¹.TXT', 'a\u202eexe'])(
+    'rejects a compatibility-normalized or bidi path that NFC would miss: %s', path => {
+      expect(() => safePath(path)).toThrow('unsafe');
+    },
+  );
+  it('rejects an Info-ZIP Unicode Path extra that disagrees with the ZIP name', async () => {
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra: unicodePathExtra('SAFE.TXT', '../ESCAPE.TXT') }])))
+      .rejects.toMatchObject({ code: 'ZIP_ENCODING' });
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra: unicodePathExtra('SAFE.TXT', 'SAFE.TXT', 1) }])))
+      .rejects.toMatchObject({ code: 'ZIP_ENCODING' });
+  });
+  it('accepts a matching Unicode Path extra and still rejects AES extra fields', async () => {
+    expect((await unpack(packageZip([{ ...entry('SAFE.TXT'), extra: unicodePathExtra('SAFE.TXT', 'SAFE.TXT') }]))).files.map(file => file.path))
+      .toEqual(['SAFE.TXT']);
+    const aes = new Uint8Array([0x01, 0x99, 0, 0]);
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra: aes }]))).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
   });
 });

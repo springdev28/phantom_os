@@ -140,6 +140,9 @@ describe('stored metadata is untrusted and never execution verification', () => 
       { documents: [{ ...m.documents[0], size: 2 ** 40 }] }, { documents: [{ ...m.documents[0], chunks: [] }] },
       { documents: [{ ...m.documents[0], path: m.profile.entrypoint }] }]) expect(() => validateWorkspaceManifest({ ...m, ...patch })).toThrow();
     const invalid = await input(); expect(() => createWorkspaceManifest({ ...invalid, documents: [{ ...document(), size: 2 ** 40 }] })).toThrow();
+    expect(() => validateWorkspaceManifest({ ...m, extra: true })).toThrow();
+    expect(() => validateWorkspaceManifest({ ...m, runtimeAssets: [...m.runtimeAssets, m.runtimeAssets[0]!] })).toThrow();
+    expect(() => validateWorkspaceManifest({ ...m, documents: [{ ...m.documents[0]!, lastModified: 9_000_000_000_000_000 }] })).toThrow();
   });
   it('changed runtime build or asset pins require explicit profile review, never silent migration', async () => {
     const m = createWorkspaceManifest(await input()); expect(() => verifyWorkspaceRuntime(m, [dosDescriptor])).not.toThrow();
@@ -148,6 +151,9 @@ describe('stored metadata is untrusted and never execution verification', () => 
     const unnamed = { ...m.profile, runtimeId: null, runtimeVersion: null, runtimeBuildId: null };
     expect(() => verifyWorkspaceRuntime({ ...m, profile: unnamed }, [dosDescriptor])).toThrow();
     expect(() => verifyWorkspaceRuntime({ ...m, profile: unnamed, runtimeAssets: [] }, [dosDescriptor])).not.toThrow();
+    expect(() => verifyWorkspaceRuntime({ ...m, runtimeAssets: m.runtimeAssets.map((asset, index) => index ? asset : { ...asset, sha256: 'b'.repeat(64) }) }, [dosDescriptor])).toThrow();
+    expect(() => verifyWorkspaceRuntime({ ...m, runtimeAssets: [...m.runtimeAssets, { id: 'extra-pin', sha256: 'a'.repeat(64) }] }, [dosDescriptor])).toThrow();
+    expect(() => verifyWorkspaceRuntime({ ...m, profile: { ...m.profile, runtimeId: 'boxedwine' } }, [dosDescriptor])).toThrow();
   });
   it('working snapshots overlay only launch copies and cannot replace the executable or collide with directories', async () => {
     const source = await input(), pkg = source.application!;
@@ -155,6 +161,7 @@ describe('stored metadata is untrusted and never execution verification', () => 
     expect(next.files.length).toBe(pkg.files.length + 1); expect(pkg.files).toHaveLength(1);
     expect(() => withWorkingFiles(pkg, [{ ...document(), path: source.profile.entrypoint! }], source.profile.entrypoint)).toThrow();
     expect(() => withWorkingFiles({ ...pkg, directories: ['RESULT.TXT'] }, source.documents, source.profile.entrypoint)).toThrow();
+    expect(() => withWorkingFiles(pkg, [{ ...document(), size: 32 * 1024 * 1024 + 1 }], source.profile.entrypoint)).toThrow();
   });
   it('live imports reject collisions, traversal, long names, excessive sizes and multiple documents before byte reads', () => {
     const f = document(); expect(validateDocumentImport([f], [])).toBe(f);
