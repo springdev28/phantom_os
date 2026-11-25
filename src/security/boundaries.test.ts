@@ -31,6 +31,19 @@ describe('untrusted runtime and download boundaries', () => {
     await expect(boundedResponse(new Response(null), 32, new AbortController().signal)).rejects.toThrow('Static asset limit');
     await expect(boundedResponse(new Response(new Uint8Array([1])), 0, new AbortController().signal)).rejects.toThrow('Static asset limit');
   });
+  it('aborts a partially read stream without treating the cancel as a completed download', async () => {
+    const cancel = vi.fn();
+    const controller = new AbortController();
+    const response = new Response(new ReadableStream({
+      pull(stream) {
+        stream.enqueue(new Uint8Array([1, 2, 3]));
+        controller.abort();
+      },
+      cancel,
+    }));
+    await expect(boundedResponse(response, 1024, controller.signal)).rejects.toThrow();
+    expect(cancel).toHaveBeenCalledOnce();
+  });
   it.each([null, [], 'running', { type: ['running'] }, { type: new String('running') },
     { type: 'running', url: 'https://invalid.example' }, { type: 'eval', source: 'private' },
     { type: 'reply', id: Infinity, value: [] }, { type: 'reply', id: 0, value: [] },

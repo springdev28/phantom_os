@@ -214,4 +214,31 @@ describe('ZIP-slip and path collisions', () => {
     const aes = new Uint8Array([0x01, 0x99, 0, 0]);
     await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra: aes }]))).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
   });
+  it.each([['000c', 0x000c], ['000d', 0x000d], ['756e', 0x756e]] as const)(
+    'rejects Unix/OS extra field 0x%s before any payload is published',
+    async (_label, id) => {
+      const extra = new Uint8Array(4);
+      new DataView(extra.buffer).setUint16(0, id, true);
+      await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra }]))).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+    },
+  );
+  it('rejects a truncated extra field and a Unicode Path extra that is not version 1', async () => {
+    const truncated = new Uint8Array([0x75, 0x70, 10, 0]);
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra: truncated }]))).rejects.toMatchObject({ code: 'ZIP_INVALID' });
+    const version = unicodePathExtra('SAFE.TXT', 'SAFE.TXT');
+    version[4] = 2;
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra: version }]))).rejects.toMatchObject({ code: 'ZIP_INVALID' });
+  });
+  it('accepts a data descriptor without the optional signature and rejects a directory bit on a file', async () => {
+    expect((await unpack(packageZip([{ ...entry('SAFE.TXT'), descriptor: true, descriptorSignature: false }]))).files.map(file => file.path))
+      .toEqual(['SAFE.TXT']);
+    await expect(unpack(packageZip([{ ...entry('FILE.TXT'), attributes: 0x10 }]))).rejects.toMatchObject({ code: 'ZIP_INVALID' });
+    await expect(unpack(packageZip([{ path: 'DIR/', bytes: new Uint8Array(), method: 0, attributes: 0x81a40000 }])))
+      .rejects.toMatchObject({ code: 'ZIP_INVALID' });
+  });
+  it('keeps percent-encoded names literal and never treats them as traversal', async () => {
+    expect(safePath('%2e%2e/outside')).toBe('%2e%2e/outside');
+    expect(safePath('%2fetc%2fpasswd')).toBe('%2fetc%2fpasswd');
+    expect((await unpack(packageZip([entry('%2e%2e/outside')]))).files.map(file => file.path)).toEqual(['%2e%2e/outside']);
+  });
 });

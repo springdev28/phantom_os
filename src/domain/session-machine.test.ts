@@ -117,4 +117,16 @@ describe('session lifecycle', () => {
     expect(sessionReducer(initialSession, { type: 'FAIL', code: 'INVALID_PATH' })).toEqual({ status: 'error', code: 'INVALID_PATH' });
     expect(sessionReducer(initialSession, { type: 'FAIL', jobId: 'job-1', code: 'INVALID_PATH' })).toBe(initialSession);
   });
+  it('isolates a live session from inspection leftovers and profile edits', () => {
+    const eligible = { ...unsupported, decision: 'candidate' as const, canLaunch: true, engineInstalled: true, issues: [], runtimeId: 'js-dos' as const, runtimeBuildId: 'unit-test', entrypoint: 'chosen.exe' };
+    const ready = sessionReducer(inspecting(), { type: 'INSPECTED', jobId: 'job-1', inspection, plan: eligible });
+    const running = sessionReducer(sessionReducer(ready, { type: 'PREPARE' }), { type: 'STARTED', sessionId: 'live' });
+    expect(sessionReducer(running, { type: 'REPLAN', packageId: pkg.id, plan: { ...eligible, canLaunch: false } })).toBe(running);
+    expect(sessionReducer(running, { type: 'CHOOSE_ENTRYPOINT', path: 'chosen.exe' })).toBe(running);
+    expect(sessionReducer(running, { type: 'INSPECT', jobId: 'job-2' })).toBe(running);
+    expect(sessionReducer(running, { type: 'INSPECTED', jobId: 'job-1', inspection, plan: { ...eligible, canLaunch: false } })).toBe(running);
+    expect(sessionReducer(running, { type: 'PREPARE' })).toBe(running);
+    expect(sessionReducer(running, { type: 'FAIL', jobId: 'job-1', code: 'READ_FAILED' })).toBe(running);
+    expect(sessionReducer(running, { type: 'FAIL', code: 'UNEXPECTED' })).toEqual({ status: 'error', code: 'UNEXPECTED', pkg });
+  });
 });

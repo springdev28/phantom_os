@@ -4,6 +4,7 @@ import { mzFixture, peFixture, zipFixture, isoFixture } from './probe-fixtures.t
 export interface ZipFixtureEntry {
   path: string; bytes: Uint8Array; method?: number; flags?: number; attributes?: number;
   declaredSize?: number; crc?: number; localPath?: string; extra?: Uint8Array; descriptor?: boolean;
+  descriptorSignature?: boolean;
 }
 export const textBytes = (text: string) => new TextEncoder().encode(text);
 function crc32(bytes: Uint8Array): number {
@@ -31,9 +32,14 @@ export function packageZip(entries: ZipFixtureEntry[]): Uint8Array<ArrayBuffer> 
     l.setUint32(0, 0x04034b50, true); l.setUint16(4, 20, true); l.setUint16(6, flags, true); l.setUint16(8, method, true);
     if (!entry.descriptor) { l.setUint32(14, crc, true); l.setUint32(18, compressed.length, true); l.setUint32(22, size, true); }
     l.setUint16(26, localName.length, true); l.setUint16(28, extra.length, true); local.set(localName, 30); local.set(extra, 30 + localName.length);
-    const descriptor = new Uint8Array(entry.descriptor ? 16 : 0);
+    const descriptor = new Uint8Array(entry.descriptor ? (entry.descriptorSignature === false ? 12 : 16) : 0);
     if (entry.descriptor) {
-      const d = new DataView(descriptor.buffer); d.setUint32(0, 0x08074b50, true); d.setUint32(4, crc, true); d.setUint32(8, compressed.length, true); d.setUint32(12, size, true);
+      const d = new DataView(descriptor.buffer);
+      const signed = entry.descriptorSignature !== false;
+      if (signed) d.setUint32(0, 0x08074b50, true);
+      d.setUint32(signed ? 4 : 0, crc, true);
+      d.setUint32(signed ? 8 : 4, compressed.length, true);
+      d.setUint32(signed ? 12 : 8, size, true);
     }
     const record = new Uint8Array(46 + name.length + extra.length), c = new DataView(record.buffer);
     c.setUint32(0, 0x02014b50, true); c.setUint16(4, 0x314, true); c.setUint16(6, 20, true); c.setUint16(8, flags, true); c.setUint16(10, method, true);

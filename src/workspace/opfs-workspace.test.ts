@@ -162,10 +162,26 @@ describe('stored metadata is untrusted and never execution verification', () => 
     expect(() => withWorkingFiles(pkg, [{ ...document(), path: source.profile.entrypoint! }], source.profile.entrypoint)).toThrow();
     expect(() => withWorkingFiles({ ...pkg, directories: ['RESULT.TXT'] }, source.documents, source.profile.entrypoint)).toThrow();
     expect(() => withWorkingFiles(pkg, [{ ...document(), size: 32 * 1024 * 1024 + 1 }], source.profile.entrypoint)).toThrow();
+    const companion = { ...pkg.files[0]!, path: 'DATA.DAT' };
+    const overlaid = withWorkingFiles({ ...pkg, files: [...pkg.files, companion] }, [{ ...document(), path: 'data.dat' }], source.profile.entrypoint);
+    expect(overlaid.files.find(file => file.path.toLowerCase() === 'data.dat')?.path).toBe('DATA.DAT');
+    expect(pkg.files.find(file => file.path === 'DATA.DAT')).toBeUndefined();
+  });
+  it('rejects forged stored hashes on unsaved files and an unknown application origin', async () => {
+    const m = createWorkspaceManifest({ ...await input(), saveSoftware: false });
+    expect(m.application?.files[0]?.chunks).toBeNull();
+    expect(() => validateWorkspaceManifest({
+      ...m,
+      application: { ...m.application!, files: [{ ...m.application!.files[0]!, chunks: ['a'.repeat(64)] }] },
+    })).toThrow();
+    expect(() => validateWorkspaceManifest({ ...m, application: { ...m.application!, origin: 'http' } } as unknown)).toThrow();
   });
   it('live imports reject collisions, traversal, long names, excessive sizes and multiple documents before byte reads', () => {
     const f = document(); expect(validateDocumentImport([f], [])).toBe(f);
     expect(() => validateDocumentImport([f], [{ path: 'result.txt', size: 0 }])).toThrow();
+    expect(() => validateDocumentImport([{ ...f, path: 'DATA' }], [{ path: 'DATA/NOTE.TXT', size: 1 }])).toThrow();
+    expect(() => validateDocumentImport([], [])).toThrow();
+    expect(() => validateDocumentImport([{ ...f, size: -1 }], [])).toThrow();
     expect(() => validateDocumentImport([f, f], [])).toThrow();
     for (const path of ['../RESULT.TXT', 'APP/RESULT.TXT', 'longname123.txt', 'FILE;A.TXT']) expect(() => validateDocumentImport([{ ...f, path }], [])).toThrow();
     expect(() => validateDocumentImport([{ ...f, size: 8 * CHUNK_SIZE + 1 }], [])).toThrow();
