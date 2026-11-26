@@ -4,7 +4,7 @@ import { mzFixture, peFixture, zipFixture, isoFixture } from './probe-fixtures.t
 export interface ZipFixtureEntry {
   path: string; bytes: Uint8Array; method?: number; flags?: number; attributes?: number;
   declaredSize?: number; crc?: number; localPath?: string; extra?: Uint8Array; descriptor?: boolean;
-  descriptorSignature?: boolean;
+  descriptorSignature?: boolean; version?: number; localExtra?: Uint8Array; centralExtra?: Uint8Array;
 }
 export const textBytes = (text: string) => new TextEncoder().encode(text);
 function crc32(bytes: Uint8Array): number {
@@ -24,14 +24,16 @@ export function packageZip(entries: ZipFixtureEntry[]): Uint8Array<ArrayBuffer> 
   const locals: Uint8Array[] = [], central: Uint8Array[] = [];
   let localOffset = 0;
   for (const entry of entries) {
-    const name = textBytes(entry.path), localName = textBytes(entry.localPath ?? entry.path), extra = entry.extra ?? new Uint8Array();
+    const name = textBytes(entry.path), localName = textBytes(entry.localPath ?? entry.path);
+    const extra = entry.extra ?? new Uint8Array();
+    const localExtra = entry.localExtra ?? extra, centralExtra = entry.centralExtra ?? extra;
     const method = entry.method ?? 8, compressed = method === 8 ? deflateRawSync(entry.bytes) : entry.bytes;
     const crc = entry.crc ?? crc32(entry.bytes), size = entry.declaredSize ?? entry.bytes.length;
-    const flags = (entry.flags ?? 0x800) | (entry.descriptor ? 8 : 0);
-    const local = new Uint8Array(30 + localName.length + extra.length), l = new DataView(local.buffer);
-    l.setUint32(0, 0x04034b50, true); l.setUint16(4, 20, true); l.setUint16(6, flags, true); l.setUint16(8, method, true);
+    const flags = (entry.flags ?? 0x800) | (entry.descriptor ? 8 : 0), version = entry.version ?? 20;
+    const local = new Uint8Array(30 + localName.length + localExtra.length), l = new DataView(local.buffer);
+    l.setUint32(0, 0x04034b50, true); l.setUint16(4, version, true); l.setUint16(6, flags, true); l.setUint16(8, method, true);
     if (!entry.descriptor) { l.setUint32(14, crc, true); l.setUint32(18, compressed.length, true); l.setUint32(22, size, true); }
-    l.setUint16(26, localName.length, true); l.setUint16(28, extra.length, true); local.set(localName, 30); local.set(extra, 30 + localName.length);
+    l.setUint16(26, localName.length, true); l.setUint16(28, localExtra.length, true); local.set(localName, 30); local.set(localExtra, 30 + localName.length);
     const descriptor = new Uint8Array(entry.descriptor ? (entry.descriptorSignature === false ? 12 : 16) : 0);
     if (entry.descriptor) {
       const d = new DataView(descriptor.buffer);
@@ -41,12 +43,12 @@ export function packageZip(entries: ZipFixtureEntry[]): Uint8Array<ArrayBuffer> 
       d.setUint32(signed ? 8 : 4, compressed.length, true);
       d.setUint32(signed ? 12 : 8, size, true);
     }
-    const record = new Uint8Array(46 + name.length + extra.length), c = new DataView(record.buffer);
-    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 0x314, true); c.setUint16(6, 20, true); c.setUint16(8, flags, true); c.setUint16(10, method, true);
+    const record = new Uint8Array(46 + name.length + centralExtra.length), c = new DataView(record.buffer);
+    c.setUint32(0, 0x02014b50, true); c.setUint16(4, 0x314, true); c.setUint16(6, version, true); c.setUint16(8, flags, true); c.setUint16(10, method, true);
     c.setUint32(16, crc, true); c.setUint32(20, compressed.length, true); c.setUint32(24, size, true);
-    c.setUint16(28, name.length, true); c.setUint16(30, extra.length, true);
+    c.setUint16(28, name.length, true); c.setUint16(30, centralExtra.length, true);
     c.setUint32(38, entry.attributes ?? (entry.path.endsWith('/') ? 0x41ed0010 : 0x81a40000), true);
-    c.setUint32(42, localOffset, true); record.set(name, 46); record.set(extra, 46 + name.length);
+    c.setUint32(42, localOffset, true); record.set(name, 46); record.set(centralExtra, 46 + name.length);
     locals.push(local, compressed, descriptor); central.push(record); localOffset += local.length + compressed.length + descriptor.length;
   }
   const directory = concat(central), end = new Uint8Array(22), e = new DataView(end.buffer);

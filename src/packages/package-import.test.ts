@@ -45,6 +45,8 @@ describe('normalized ZIP and folder packages', () => {
     expect(chosen.directories).toBe(pkg.directories);
     expect(chosen.files.find(file => file.path.endsWith('AUTORUN.BAT'))).toBeDefined();
     expect(chosen.resources.find(file => file.kind === 'configuration')?.path).toBe('APP/APP.INI');
+    expect(() => chooseEntrypoint(pkg, 'APP/APP.INI')).toThrow('unsafe');
+    expect(() => chooseEntrypoint(pkg, 'APP/AUTORUN.BAT')).toThrow('unsafe');
   });
   it('requires explicit choice for mixed candidates and does not choose a DLL or first EXE', async () => {
     const pkg = await imported(packageZip([...mixedPackageFiles].reverse()));
@@ -197,8 +199,8 @@ describe('ZIP-slip and path collisions', () => {
     const paths = new PathIndex(); expect(paths.add('__proto__/constructor')).toBe('__proto__/constructor');
     expect(paths.directories()).toEqual(['__proto__']);
   });
-  it.each(['file：stream', 'foo／bar', 'COM¹.TXT', 'a\u202eexe'])(
-    'rejects a compatibility-normalized or bidi path that NFC would miss: %s', path => {
+  it.each(['file：stream', 'foo／bar', 'COM¹.TXT', 'a\u202eexe', 'LPT1', 'AUX.DAT', 'PRN'])(
+    'rejects a compatibility-normalized, reserved or bidi path that NFC would miss: %s', path => {
       expect(() => safePath(path)).toThrow('unsafe');
     },
   );
@@ -240,5 +242,33 @@ describe('ZIP-slip and path collisions', () => {
     expect(safePath('%2e%2e/outside')).toBe('%2e%2e/outside');
     expect(safePath('%2fetc%2fpasswd')).toBe('%2fetc%2fpasswd');
     expect((await unpack(packageZip([entry('%2e%2e/outside')]))).files.map(file => file.path)).toEqual(['%2e%2e/outside']);
+  });
+  it('rejects extract version 21, strong encryption, a split-disk start and an oversize extra field', async () => {
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), version: 21 }]))).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), flags: 0x840 }]))).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+    const split = packageZip([entry('SAFE.TXT')]);
+    const start = new DataView(split.buffer).getUint32(split.length - 6, true);
+    new DataView(split.buffer).setUint16(start + 34, 1, true);
+    await expect(unpack(split)).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), extra: new Uint8Array(PACKAGE_LIMITS.zipExtraBytes + 1) }])))
+      .rejects.toMatchObject({ code: 'PACKAGE_LIMIT' });
+  });
+  it('rejects AES extra on the local header only and invalid UTF-8 names with the language-encoding flag', async () => {
+    const aes = new Uint8Array([0x01, 0x99, 0, 0]);
+    await expect(unpack(packageZip([{ ...entry('SAFE.TXT'), localExtra: aes, centralExtra: new Uint8Array() }])))
+      .rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+    const bytes = packageZip([entry('SAFE.TXT')]);
+    bytes[30] = 0xff;
+    const central = new DataView(bytes.buffer).getUint32(bytes.length - 6, true);
+    bytes[central + 46] = 0xff;
+    await expect(unpack(bytes)).rejects.toMatchObject({ code: 'ZIP_ENCODING' });
+  });
+  it('extracts a ZIP whose comment contains an end-record signature and does not treat the comment as a second archive', async () => {
+    const original = packageZip([entry('SAFE.TXT')]);
+    const commented = new Uint8Array(original.length + 4);
+    commented.set(original);
+    commented.set([0x50, 0x4b, 5, 6], original.length);
+    new DataView(commented.buffer).setUint16(original.length - 2, 4, true);
+    expect((await unpack(commented)).files.map(file => file.path)).toEqual(['SAFE.TXT']);
   });
 });

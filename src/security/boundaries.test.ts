@@ -19,6 +19,12 @@ describe('untrusted runtime and download boundaries', () => {
     const abort = new AbortController(); abort.abort();
     await expect(boundedResponse(new Response('private'), 32, abort.signal)).rejects.toThrow();
   });
+  it('rejects a redirect status without following it or reading payload bytes', async () => {
+    const cancel = vi.fn();
+    const redirected = new Response(new ReadableStream({ pull(controller) { controller.enqueue(new TextEncoder().encode('PRIVATE')); }, cancel }), { status: 301, headers: { location: 'https://invalid.example' } });
+    await expect(boundedResponse(redirected, 1024, new AbortController().signal)).rejects.toThrow('Static asset limit');
+    expect(cancel).toHaveBeenCalledOnce();
+  });
   it('rejects HTTP errors, a missing body and an advertised oversize length without reading payload bytes', async () => {
     const cancel = vi.fn();
     const forbidden = new Response(new ReadableStream({ pull(controller) { controller.enqueue(new TextEncoder().encode('PRIVATE')); }, cancel }), { status: 403 });
@@ -48,11 +54,13 @@ describe('untrusted runtime and download boundaries', () => {
     { type: 'running', url: 'https://invalid.example' }, { type: 'eval', source: 'private' },
     { type: 'reply', id: Infinity, value: [] }, { type: 'reply', id: 0, value: [] },
     { type: 'input', focused: 'yes' }, { type: 'input', focused: true, extra: true },
-    { type: 'connected', extra: true }, { type: 'reply', id: 1, error: true, value: [] },
+    { type: 'connected', extra: true }, { type: 'stopped', extra: true }, { type: 'error', extra: true },
+    { type: 'reply', id: 1, error: true, value: [] }, { type: 'reply', id: '1', value: [] },
     { type: 'metrics', frames: 1, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: NaN },
     { type: 'metrics', frames: 1.5, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: 0 },
     { type: 'metrics', frames: -1, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: 0 },
     { type: 'metrics', frames: 1, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: Infinity },
+    { type: 'metrics', frames: Number.MAX_SAFE_INTEGER + 1, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: 0 },
     { type: 'metrics', frames: 1, audioSamples: 0, keyEvents: 0, mouseEvents: 0, audioPeak: 0, extra: true }].map(value => ({ value })))('rejects malformed guest protocol data: %j', ({ value }) => {
     expect(() => parseHostMessage(value)).toThrow('The DOS worker stopped after a failure');
   });
@@ -71,6 +79,9 @@ describe('untrusted runtime and download boundaries', () => {
   it('accepts an empty guest listing and rejects a reserved-device name before export', () => {
     expect(guestFileList([])).toEqual([]);
     expect(() => guestFileList([{ path: 'NUL', size: 0 }])).toThrow();
+    expect(() => guestFileList([{ path: 'COM1', size: 0 }])).toThrow();
+    expect(() => guestFileList([{ path: 'LPT1.TXT', size: 1 }])).toThrow();
+    expect(() => guestFileList([{ path: 'PRN', size: 0 }])).toThrow();
   });
   it('rejects an over-budget guest listing and a reply that smuggles extra fields', () => {
     expect(() => guestFileList(Array.from({ length: 2049 }, (_, i) => ({ path: `F${i}.DAT`, size: 0 })))).toThrow();
@@ -88,6 +99,7 @@ describe('untrusted runtime and download boundaries', () => {
     expect(() => applicationPolicy('https://example.test:443', DOS_HOST_PATH)).toThrow();
     expect(() => applicationPolicy('https://example.test', 'runtimes/js-dos/host-0123456789ABCDEF.html')).toThrow();
     expect(() => applicationPolicy('https://example.test', `${DOS_HOST_PATH}/extra`)).toThrow();
+    expect(() => applicationPolicy('https://user:pass@example.test', DOS_HOST_PATH)).toThrow();
   });
   it('denies framing on the app shell and withholds COOP from the hashed DOS host', () => {
     const origin = 'https://example.test';

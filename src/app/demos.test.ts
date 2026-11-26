@@ -66,4 +66,19 @@ describe('pinned public demo downloads', () => {
     vi.stubGlobal('fetch', vi.fn(async () => { throw controller.signal.reason; }));
     await expect(readDemo('mem', controller.signal)).rejects.toThrow(controller.signal.reason);
   });
+  it('accepts only the audited FreeCOM ZIP from its pinned URL and rejects MEM at that address', async () => {
+    const bytes = copyBytes(await readFile('tests/fixtures/dos/FREECOM.ZIP'));
+    const fetch = vi.fn(async (url: string, init?: RequestInit) => {
+      expect(url).toBe(`${import.meta.env.BASE_URL}demos/FREECOM.ZIP`);
+      expect(init).toMatchObject({ credentials: 'omit', redirect: 'error', referrerPolicy: 'no-referrer' });
+      return reply(bytes);
+    });
+    vi.stubGlobal('fetch', fetch);
+    const file = await readDemo('freecom', new AbortController().signal);
+    expect(file).toMatchObject({ name: 'FREECOM.ZIP', size: demos.freecom.bytes, lastModified: 0 });
+    expect(new Uint8Array(await file.arrayBuffer())).toEqual(bytes);
+    expect(fetch).toHaveBeenCalledOnce();
+    vi.stubGlobal('fetch', vi.fn(async () => reply(await memBytes())));
+    await expect(readDemo('freecom', new AbortController().signal)).rejects.toMatchObject({ code: 'DEMO_FAILED' });
+  });
 });

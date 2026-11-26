@@ -16,6 +16,15 @@ describe('private diagnostics', () => {
     expect(entries[1]).toEqual({ event: 'app.error', timestamp: expect.any(Number) });
     expect(JSON.stringify(entries)).not.toMatch(/private|SECRET|PRIVATE/);
   });
+  it('drops unknown error codes instead of recording them as diagnostics', () => {
+    const logger = createLogger();
+    logger.record('app.error', 'ZIP_INVALID');
+    Reflect.apply(logger.record, logger, ['app.error', 'not-a-code']);
+    expect(logger.snapshot()).toEqual([
+      { event: 'app.error', timestamp: expect.any(Number), code: 'ZIP_INVALID' },
+      { event: 'app.error', timestamp: expect.any(Number) },
+    ]);
+  });
   it('replaces an arbitrary thrown message with a fixed safe explanation', () => {
     expect(safeError(new Error('private-file.exe: SECRET CONTENT')).message).not.toMatch(/private|SECRET/);
     expect(safeError('PRIVATE PATH')).toMatchObject({ code: 'UNEXPECTED', message: expect.not.stringMatching(/PRIVATE/) });

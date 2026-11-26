@@ -129,4 +129,22 @@ describe('session lifecycle', () => {
     expect(sessionReducer(running, { type: 'FAIL', jobId: 'job-1', code: 'READ_FAILED' })).toBe(running);
     expect(sessionReducer(running, { type: 'FAIL', code: 'UNEXPECTED' })).toEqual({ status: 'error', code: 'UNEXPECTED', pkg });
   });
+  it('keeps inspection on a running runtime failure and ignores stop/cancel leftovers after teardown', () => {
+    const eligible = { ...unsupported, decision: 'candidate' as const, canLaunch: true, engineInstalled: true, issues: [], runtimeId: 'js-dos' as const, runtimeBuildId: 'unit-test', entrypoint: 'chosen.exe' };
+    const ready = sessionReducer(inspecting(), { type: 'INSPECTED', jobId: 'job-1', inspection, plan: eligible });
+    const running = sessionReducer(sessionReducer(ready, { type: 'PREPARE' }), { type: 'STARTED', sessionId: 'live' });
+    const crashed = sessionReducer(running, { type: 'RUNTIME_FAIL', code: 'RUNTIME_FAILED' });
+    expect(crashed).toMatchObject({ status: 'error', code: 'RUNTIME_FAILED', pkg, plan: eligible });
+    if ('inspection' in crashed) expect(crashed.inspection).toBe(inspection);
+    expect(sessionReducer(crashed, { type: 'PREPARE' }).status).toBe('preparing');
+    expect(sessionReducer(running, { type: 'CANCEL_INSPECTION' })).toBe(running);
+    expect(sessionReducer(running, { type: 'CLEAR' })).toEqual(initialSession);
+    expect(sessionReducer(running, { type: 'SELECT', pkg: { ...pkg, id: 'next' } })).toEqual({ status: 'selected', pkg: { ...pkg, id: 'next' } });
+    const stopped = sessionReducer(running, { type: 'STOP' });
+    expect(sessionReducer(stopped, { type: 'STOP' })).toBe(stopped);
+    expect(sessionReducer(stopped, { type: 'CANCEL_INSPECTION' })).toBe(stopped);
+    expect(sessionReducer(stopped, { type: 'REPLAN', packageId: pkg.id, plan: eligible }).status).toBe('ready');
+    expect(sessionReducer(initialSession, { type: 'STOP' })).toBe(initialSession);
+    expect(sessionReducer(initialSession, { type: 'STARTED', sessionId: 'invented' })).toBe(initialSession);
+  });
 });

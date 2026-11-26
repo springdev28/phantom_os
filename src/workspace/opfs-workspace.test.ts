@@ -116,6 +116,21 @@ describe('opt-in bounded OPFS workspace', () => {
     (await revision(root)).files.set('manifest.json', new File(['{}'], 'manifest.json'));
     await expect(storage.readManifest(signal())).rejects.toMatchObject({ code: 'STORAGE_CORRUPT' });
   });
+  it('a tampered head hash is corrupt without restoring bytes, and unsaved software is not read back', async () => {
+    const { root, storage } = setup(), source = await input();
+    await storage.save(source, signal());
+    const dir = await root.getDirectoryHandle(WORKSPACE_ROOT);
+    dir.files.set('head.json', new File([JSON.stringify({
+      schemaVersion: 1, revision: JSON.parse(await dir.files.get('head.json')!.text()).revision, sha256: 'a'.repeat(64),
+    })], 'head.json'));
+    await expect(storage.readManifest(signal())).rejects.toMatchObject({ code: 'STORAGE_CORRUPT' });
+    await expect(storage.restore(signal())).rejects.toMatchObject({ code: 'STORAGE_CORRUPT' });
+    const { storage: next } = setup();
+    await next.save({ ...source, saveSoftware: false, saveDocuments: true }, signal());
+    const restored = await next.restore(signal());
+    expect(restored.application).toBeNull();
+    expect(new TextDecoder().decode(await restored.documents[0]!.read(0, 20, signal()))).toBe('changed inside guest');
+  });
   it('serialized saves commit whole generations and delete only the owned root', async () => {
     const { root, storage } = setup(), source = await input();
     await root.getDirectoryHandle('unrelated-origin-data', { create: true });
@@ -175,6 +190,17 @@ describe('stored metadata is untrusted and never execution verification', () => 
       application: { ...m.application!, files: [{ ...m.application!.files[0]!, chunks: ['a'.repeat(64)] }] },
     })).toThrow();
     expect(() => validateWorkspaceManifest({ ...m, application: { ...m.application!, origin: 'http' } } as unknown)).toThrow();
+  });
+  it('rejects a file that collides with a declared application directory', async () => {
+    const m = createWorkspaceManifest(await input());
+    expect(() => validateWorkspaceManifest({
+      ...m,
+      application: {
+        ...m.application!,
+        directories: [...m.application!.directories, m.application!.files[0]!.path],
+        files: m.application!.files,
+      },
+    })).toThrow();
   });
   it('live imports reject collisions, traversal, long names, excessive sizes and multiple documents before byte reads', () => {
     const f = document(); expect(validateDocumentImport([f], [])).toBe(f);

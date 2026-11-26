@@ -97,4 +97,17 @@ describe('ZIP worker lifecycle (unit doubles only)', () => {
     expect(() => importZipInWorker(new Blob(), controller.signal, vi.fn())).toThrow();
     expect(TestWorker.latest).toBeUndefined();
   });
+  it('forwards only a known error code from a worker error and ignores progress after completion', async () => {
+    vi.stubGlobal('Worker', TestWorker);
+    const progress = vi.fn();
+    const task = importZipInWorker(new Blob(), new AbortController().signal, progress);
+    TestWorker.latest!.onmessage?.({ data: { type: 'progress', progress: { phase: 'extracting', completed: 1, total: 1 } } } as MessageEvent);
+    TestWorker.latest!.onmessage?.({ data: { type: 'complete', contents: { files: [], directories: [] } } } as MessageEvent);
+    await expect(task).resolves.toEqual({ files: [], directories: [] });
+    expect(progress).toHaveBeenCalledOnce();
+    expect(TestWorker.latest!.terminate).toHaveBeenCalledOnce();
+    const unknown = importZipInWorker(new Blob(), new AbortController().signal, vi.fn());
+    TestWorker.latest!.onmessage?.({ data: { type: 'error', code: 'DEMO_FAILED', detail: 'PRIVATE_FILE_DATA' } } as MessageEvent);
+    await expect(unknown).rejects.toMatchObject({ code: 'DEMO_FAILED', message: expect.not.stringMatching(/PRIVATE/) });
+  });
 });

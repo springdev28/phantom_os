@@ -88,8 +88,13 @@ describe('25R1 package/configuration boundary; not launch acceptance', () => {
       [pkg, { ...p, limits: { ...p.limits, guestMemoryMiB: 64 } }],
       [pkg, { ...p, entrypoint: null }],
       [pkg, { ...p, mounts: [{ packagePath: '.', guestPath: 'C:/', readOnly: false }] }],
+      [pkg, { ...p, mounts: [{ packagePath: '.', guestPath: 'D:/', readOnly: true }] }],
+      [pkg, { ...p, dos: { cycles: 3000, core: 'auto', machine: 'svga_s3', xms: true, ems: true } }],
+      [pkg, { ...p, diskEnvironment: 'unit-disk' }],
     ];
     for (const [candidate, settings] of variants) expect(() => createBoxedwineMountPlan(candidate, settings, inspection)).toThrow('Boxedwine trial');
+    const probe = inspection.get('MAIN.EXE')!;
+    expect(() => createBoxedwineMountPlan(pkg, p, new Map([['MAIN.EXE', { ...probe, fileSize: probe.fileSize + 1 }]]))).toThrow('Boxedwine trial');
   });
   it('bounds the inner memory bridge before filesystem writes', () => {
     const fs = { mkdirTree: vi.fn(), writeFile: vi.fn(), readFile: vi.fn() };
