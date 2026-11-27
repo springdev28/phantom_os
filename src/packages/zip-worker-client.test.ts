@@ -110,4 +110,23 @@ describe('ZIP worker lifecycle (unit doubles only)', () => {
     TestWorker.latest!.onmessage?.({ data: { type: 'error', code: 'DEMO_FAILED', detail: 'PRIVATE_FILE_DATA' } } as MessageEvent);
     await expect(unknown).rejects.toMatchObject({ code: 'DEMO_FAILED', message: expect.not.stringMatching(/PRIVATE/) });
   });
+  it('keeps a completed job resolved if a late error, abort or timeout arrives', async () => {
+    vi.useFakeTimers();
+    vi.stubGlobal('Worker', TestWorker);
+    const controller = new AbortController();
+    const task = importZipInWorker(new Blob(), controller.signal, vi.fn());
+    TestWorker.latest!.onmessage?.({ data: { type: 'complete', contents: { files: [], directories: [] } } } as MessageEvent);
+    await expect(task).resolves.toEqual({ files: [], directories: [] });
+    TestWorker.latest!.onmessage?.({ data: { type: 'error', code: 'ZIP_INVALID', detail: 'PRIVATE_FILE_DATA' } } as MessageEvent);
+    controller.abort();
+    await vi.advanceTimersByTimeAsync(PACKAGE_LIMITS.timeoutMs);
+    await expect(task).resolves.toEqual({ files: [], directories: [] });
+  });
+  it('does not publish a complete payload after the worker has already failed', async () => {
+    vi.stubGlobal('Worker', TestWorker);
+    const task = importZipInWorker(new Blob(), new AbortController().signal, vi.fn());
+    TestWorker.latest!.onmessage?.({ data: { type: 'error', code: 'ZIP_UNSUPPORTED' } } as MessageEvent);
+    TestWorker.latest!.onmessage?.({ data: { type: 'complete', contents: { files: [{ path: 'SECRET.EXE' }], directories: [] } } } as MessageEvent);
+    await expect(task).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED', message: expect.not.stringMatching(/SECRET/) });
+  });
 });

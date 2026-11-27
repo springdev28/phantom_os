@@ -116,6 +116,35 @@ describe('bounded static format analysis', () => {
     change(badReference, directory + 42, 0xfffffff0);
     expect((await inspect(badReference)).warnings.some(warning => warning.code === 'ZIP_LOCAL_REFERENCE')).toBe(true);
   });
+  it.each([
+    ['this-disk', 4],
+    ['central-directory disk', 6],
+  ] as const)('keeps a spanning EOCD %s as a partial ZIP, not a complete archive', async (_label, field) => {
+    const bytes = zipFixture();
+    change(bytes, bytes.length - 22 + field, 1, 2);
+    expect(await inspect(bytes)).toMatchObject({ format: 'zip', validity: 'partial' });
+    expect((await inspect(bytes)).warnings.some(warning => warning.code === 'ZIP_MULTIVOLUME')).toBe(true);
+  });
+  it('does not treat a local 0xffffffff size as an ordinary ZIP', async () => {
+    const compressed = zipFixture();
+    change(compressed, 18, 0xffffffff);
+    expect(await inspect(compressed)).toMatchObject({ format: 'zip', validity: 'partial' });
+    expect((await inspect(compressed)).warnings.some(warning => warning.code === 'ZIP64')).toBe(true);
+    const uncompressed = zipFixture();
+    change(uncompressed, 22, 0xffffffff);
+    expect((await inspect(uncompressed)).warnings.some(warning => warning.code === 'ZIP64')).toBe(true);
+  });
+  it.each([
+    ['split spanning marker', [0x50, 0x4b, 7, 8]],
+    ['ZIP64 end record', [0x50, 0x4b, 6, 6]],
+    ['ZIP64 locator', [0x50, 0x4b, 6, 7]],
+    ['central-directory prefix', [0x50, 0x4b, 1, 2]],
+  ] as const)('does not promote a %s into a complete ZIP', async (_kind, signature) => {
+    const bytes = new Uint8Array(32);
+    bytes.set(signature);
+    expect(await inspect(bytes)).toMatchObject({ format: 'zip', validity: 'partial' });
+    expect((await inspect(bytes)).warnings.some(warning => warning.code === 'ZIP_FRAGMENT')).toBe(true);
+  });
   it('finds an ISO primary descriptor after a boot descriptor', async () => {
     const bytes = isoFixture(), pvd = bytes.slice(32768, 34816);
     bytes.set(pvd, 34816); bytes[32768] = 0;

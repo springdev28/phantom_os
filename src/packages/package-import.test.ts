@@ -271,4 +271,32 @@ describe('ZIP-slip and path collisions', () => {
     new DataView(commented.buffer).setUint16(original.length - 2, 4, true);
     expect((await unpack(commented)).files.map(file => file.path)).toEqual(['SAFE.TXT']);
   });
+  it.each([
+    ['this-disk', 4, 1],
+    ['central-directory disk', 6, 1],
+    ['entries-on-this-disk mismatch', 8, 0],
+  ] as const)('rejects a spanning EOCD %s before any payload is published', async (_label, offset, value) => {
+    const bytes = packageZip([entry('SAFE.TXT')]);
+    new DataView(bytes.buffer).setUint16(bytes.length - 22 + offset, value, true);
+    await expect(unpack(bytes)).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+  });
+  it.each([
+    ['compressed size', 20],
+    ['uncompressed size', 24],
+    ['local-header offset', 42],
+  ] as const)('rejects a ZIP64 0xffffffff %s sentinel before any payload is published', async (_label, field) => {
+    const bytes = packageZip([entry('SAFE.TXT')]);
+    const start = new DataView(bytes.buffer).getUint32(bytes.length - 6, true);
+    new DataView(bytes.buffer).setUint32(start + field, 0xffffffff, true);
+    await expect(unpack(bytes)).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+  });
+  it('rejects ZIP64 directory length/offset sentinels in the end record', async () => {
+    const bytes = packageZip([entry('SAFE.TXT')]);
+    const end = bytes.length - 22;
+    new DataView(bytes.buffer).setUint32(end + 12, 0xffffffff, true);
+    await expect(unpack(bytes)).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+    const offset = packageZip([entry('SAFE.TXT')]);
+    new DataView(offset.buffer).setUint32(offset.length - 6, 0xffffffff, true);
+    await expect(unpack(offset)).rejects.toMatchObject({ code: 'ZIP_UNSUPPORTED' });
+  });
 });

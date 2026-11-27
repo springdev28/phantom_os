@@ -3,7 +3,7 @@ import { dosAdapter } from './adapter';
 import { dosDescriptor } from './descriptor';
 import { createLaunchProfile } from '../../profiles/launch-profile';
 import { inspectedFixture } from '../../../tests/fixtures/planner-fixtures';
-import { mzFixture } from '../../../tests/fixtures/probe-fixtures';
+import { mzFixture, peFixture } from '../../../tests/fixtures/probe-fixtures';
 import { compatibilityPlanner } from '../../planner/compatibility-planner';
 
 afterEach(() => { vi.unstubAllGlobals(); });
@@ -83,5 +83,18 @@ describe('pinned DOS runtime asset staging (no guest execution)', () => {
     await expect(dosAdapter.prepare(observed, profile, new AbortController().signal)).rejects.toMatchObject({ code: 'RUNTIME_ASSETS' });
     expect(lengths.every(length => length <= 65536)).toBe(true);
     expect(lengths.reduce((sum, length) => sum + length, 0)).toBe(70_000);
+  });
+  it('treats only DOS MZ/COM headers as launch candidates and never PE or a missing entrypoint', async () => {
+    const mz = await inspectedFixture(mzFixture(), 'MEM.EXE');
+    expect(dosAdapter.probe(mz.pkg, mz.inspection)).toMatchObject({
+      candidate: true,
+      reasons: [expect.stringMatching(/experimental/)],
+    });
+    const pe = await inspectedFixture(peFixture(), 'WIN.EXE');
+    expect(dosAdapter.probe(pe.pkg, pe.inspection).candidate).toBe(false);
+    expect(dosAdapter.probe({ ...mz.pkg, entrypoint: '' }, mz.inspection).candidate).toBe(false);
+    const com = await inspectedFixture(new Uint8Array(20), 'raw.com');
+    expect(com.inspection.get('raw.com')).toMatchObject({ format: 'dos-com-ambiguous' });
+    expect(dosAdapter.probe(com.pkg, com.inspection).candidate).toBe(true);
   });
 });
